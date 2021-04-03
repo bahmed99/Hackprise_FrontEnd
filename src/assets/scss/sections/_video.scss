@@ -1,0 +1,12 @@
+.video-conainer{
+    .btn-outline {
+        border-color: $beige;
+        color: $beige;
+  
+        &:hover {
+          border-color: $bleu-ciel;
+          background-color: $bleu-ciel;
+          color: $beige;
+        }
+    }
+}

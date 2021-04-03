@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "quote": "‘‘Le forum de l’ENSI est chaque année une très belle et très rafraichissant expérience. Il est aussi le lieu ou s’ecrit chaque année une nouvelle page de l’histoire qui unit Talan à l’ENSI. Nous sommes la cette année , nous serons là l’année prochaine pour développer ensemble de la valeur au profit de notre ecosysteme commun. ’’",
+    "author": "Talan",
+    "authorThumb": "testimonial/talan.jpg"
+  },
+  {
+    "id": 2,
+    "quote": "‘‘Les liens entre Cognira et l'ENSI Junior Entreprise se sont fortifiés au cours des années. Le forum de l'ENSI est une éxpérience unique et nous sommes fier de devenir un partenaire pour cette édition excéptionnelle.’’",
+    "author": "Cognira",
+    "authorThumb": "testimonial/cognira.jpg"
+  }
+]
