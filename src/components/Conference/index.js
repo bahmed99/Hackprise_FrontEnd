@@ -4,7 +4,7 @@ import SlickSlider from "../Utilities/Slick";
 
 import {Reveal} from 'react-reveal';
 import teamBg from '../../assets/img/team/tec.png';
-import Teams from '../../data/Conference/home-one';
+import Teams from '../../data/Conference/conference';
 import ServiceItem from '../Partenaires/ServiceItem';
 
 function Conference() {

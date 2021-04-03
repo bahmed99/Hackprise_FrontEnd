@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import Hackathon from './Hackathon'
 import Event from './Event'
+import './Style.css'
 
 export default function Formulaire() {
 
@@ -27,9 +28,9 @@ if(displayEvent){
 
     return (
         <div>
-            <div style={{display:displayChoice}}>
-                <button onClick={DisplayHack}>Participer au HackAthon</button>
-                <button onClick={DisplayEvent}>Participer au eventment</button>
+            <div style={{display:displayChoice ,textAlign:"center" ,marginTop:"100px"}}>
+                <button onClick={DisplayHack} className="btn btn-primary" style={{backgroundColor:"#2ea3dd"}}>Au Hackathon</button>
+                <button onClick={DisplayEvent} className="btn btn-primary" style={{marginLeft:"50px" ,backgroundColor:"#2ea3dd"}}>Au Evenement</button>
             </div>
             
         </div>

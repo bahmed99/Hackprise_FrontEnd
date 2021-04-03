@@ -11,16 +11,16 @@ export const emailValidator = (value) => !value ?
     "Email est requis." :
     (emailRegex.test(value) ? "" : "Email est non valide.");
 export const nameValidator = (value) => !value ?
-    "Nom Complet est requis" :""
+    "Nom Complet est requis." :""
    
 export const ProfessionValidator = (value) => !value ?
-    "Profession est requise" :""
+    "Profession est requise." :""
   
 export const userNameValidator = (value) => !value ?
     "User Name is required" :
     value.length < 5 ? "User name should be at least 3 characters long." : "";
 export const phoneValidator = (value) => !value ?
-    "Numero télephone est requis." :
+    "Numéro téléphone est requis." :
     phoneRegex.test(value) ? "" : "Not a valid phone number.";
 export const cardValidator = (value) => !value ?
     "Credit card number is required. " :
@@ -34,7 +34,7 @@ export const guestsValidator = (value) => !value ?
 export const nightsValidator = (value) => value ? "" : "Number of Nights is required";
 export const arrivalDateValidator = (value) => value ? "" : "Arriaval Date is required";
 export const colorValidator = (value) => value ? "" : "Color is required.";
-export const requiredValidator = (value) => value ? "" : "Error: This field is required.";
+export const requiredValidator = (value) => value ? "" : "Choix obligatoire.";
 export const passwordValidator = (value) => value && value.length > 8 ? '' : 'Password must be at least 8 symbols.';
 export const addressValidator = (value) => value ? "" : "Address is required.";
 

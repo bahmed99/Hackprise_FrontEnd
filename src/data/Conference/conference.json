@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "Nebras Gharbi",
+    "designation": "E-health expert",
+    "profilePic": "intervenants/Nebras Gharbi.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Raouf Benaissa",
+    "designation": "CEO / Co-fondateur de HOPE HORIZON",
+    "profilePic": "intervenants/raoufbenaissa.jpg"
+    
+  },
+  {
+    "id": 3,
+    "name": "Ali Lehraiki",
+    "designation": "Senior Scientist Oncology & Drug Discovery E-health Expert Startup Scientific Advisor",
+    "profilePic": "intervenants/alilehraiki.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Islam Anen",
+    "designation": "CEO Accsight LLC",
+    "profilePic": "intervenants/Islam Anen.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Youssef Zied Elhechmi",
+    "designation": "Intensive Care Associate Professor",
+    "profilePic": "intervenants/Youssef Zied Elhechmi.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Tarik Mounim",
+    "designation": "Directeur général à One Communication",
+    "profilePic": "intervenants/tarik mounim.jfif"
+  },
+  {
+    "id": 7,
+    "name": "Imen Ayari",
+    "designation": "Innovation catalyst - Head of innovation factory @ Talan Innovation, Ideation, Usability, Blockchain, AI, IOT, RPA & IPA and BPR...",
+    "profilePic": "intervenants/imen ayari.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Chaker Besbes",
+    "designation": "Journaliste",
+    "profilePic": "intervenants/chaker besbes.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Rabaa Jemli",
+    "designation": "Docteur En Medecine: psychiatrel",
+    "profilePic": "intervenants/rabaa jemli.jpg"
+  }
+]

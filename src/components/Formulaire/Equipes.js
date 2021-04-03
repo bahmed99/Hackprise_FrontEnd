@@ -15,7 +15,7 @@ import {
 export const TeamDetails = (
     <div>
         <br/>
-        <h6>Membre1</h6>
+        <h6>Participant 1</h6>
         <Field
             key={'fullName1'}
             id={'fullName1'}
@@ -42,7 +42,7 @@ export const TeamDetails = (
 
         />
         <br/>
-        <h6>Membre2</h6>
+        <h6>Participant 2</h6>
        <Field
             key={'fullName2'}
             id={'fullName2'}

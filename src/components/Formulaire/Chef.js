@@ -3,17 +3,18 @@ import * as React from 'react';
 import { Field } from '@progress/kendo-react-form';
 
 import {
-    FormInput, FormUpload
+    FormInput, FormMultiSelect,FormDropDownList
 } from './form-components.js';
 
 import {
-    emailValidator, nameValidator,phoneValidator,ProfessionValidator
+    emailValidator, nameValidator, phoneValidator, ProfessionValidator,requiredValidator
 } from './validators.js'
-
+const data = ['Stb', 'Infor'
+]
 export const ChefDetails = (
 
-    
-    
+
+
     <div>
         <Field
             key={'userName'}
@@ -23,7 +24,7 @@ export const ChefDetails = (
             component={FormInput}
             validator={nameValidator}
         />
-         <Field
+        <Field
             key={'email'}
             id={'email'}
             name={'email'}
@@ -32,7 +33,7 @@ export const ChefDetails = (
             component={FormInput}
             validator={emailValidator}
         />
-         <Field
+        <Field
             key={'Tel'}
             id={'Tel'}
             name={'tel'}
@@ -49,7 +50,17 @@ export const ChefDetails = (
             component={FormInput}
             validator={ProfessionValidator}
         />
-       
+
+        <Field
+            key={'SelectHackathon'}
+            id={'SelectHackathon'}
+            name={'SelectHackathon'}
+            label={'Choisir Hackathon'}
+            data={data}
+            validator={requiredValidator}
+            component={FormDropDownList}
+        />
+
     </div>
-    
+
 );

@@ -26,7 +26,7 @@ function Event() {
     const [msg, setMsg] = useState(false)
 
 
-    const path = "http://www.localhost:3001/register"
+    const path = "http://www.localhost:3001/event/register"
     const [step, setStep] = useState(0);
     const [formState, setFormState] = useState({});
     const [steps, setSteps] = useState([

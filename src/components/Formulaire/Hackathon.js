@@ -28,7 +28,11 @@ function Formulaire() {
     const [msg, setMsg] = useState(false)
 
 
-    const path = "http://www.localhost:3001/register"
+    const path1 = "http://www.localhost:3001/hackathonStb/register"
+    const path2 = "http://www.localhost:3001/hackathonInfor/register"
+
+
+
     const [step, setStep] = useState(0);
     const [formState, setFormState] = useState({});
     const [steps, setSteps] = useState([
@@ -57,7 +61,8 @@ function Formulaire() {
             setFormState(values);
 
             if (isLastStep && isPreviousStepsValid && isValid) {
-                axios.post(path, values)
+                if(values.SelectHackathon=='Stb') {
+                axios.post(path1, values)
                     .then(res => {
                         setLoading(false);
                         setSent(res.data.sent)
@@ -72,7 +77,27 @@ function Formulaire() {
                         setLoading(false);
                         setMsg(true)
                         setTimeout(() => setError(false), 3000)
-                    });
+                    });}
+                    if(values.SelectHackathon=='Infor') {
+                        axios.post(path2, values)
+                            .then(res => {
+                                setLoading(false);
+                                setSent(res.data.sent)
+                                setError(res.data.error)
+                                setMsg(res.data.msg)
+                                setTimeout(() => setError(false), 3000)
+                                setTimeout(() => history.push('/'), 1300)
+        
+                            })
+                            .catch(err => {
+                                setError(true);
+                                setLoading(false);
+                                setMsg(true)
+                                setTimeout(() => setError(false), 3000)
+                            });}
+        
+
+
 
             }
         },

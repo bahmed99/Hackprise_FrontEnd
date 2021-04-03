@@ -1,7 +1,7 @@
 import React from 'react';
 import SlickSlider from "../Utilities/Slick";
 import LogoItem from './LogoItem'
-import BrandLogos from '../../data/Sponsor/brandlogo'
+import BrandLogos from '../../data/Sponsor/sponsor'
 
 function BrandLogo(props) {
     const settings = {

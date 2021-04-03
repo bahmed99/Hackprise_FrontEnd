@@ -64,7 +64,7 @@ export default function Programme() {
                             <Col xs='8' sm="4" xl="8" lg="4">
                                 <Reveal bottom>
 
-                                    <TimelineWrap icon={'amphitheatre.png'} title={'Auditorium'} >
+                                    <TimelineWrap icon={'workshop.png'} title={'Hackathon'} >
 
                                         <Timeline
                                             degree={'educationItem.degree'}
@@ -95,7 +95,7 @@ export default function Programme() {
 
                             <Col xs='8' sm="4" xl="8" lg="4">
                                 <Reveal right>
-                                    <TimelineWrap icon={'workshop.png'} style={{ display: window.screen.width < 440 ? "none" : "" }} title={'Hackathon'}>
+                                    <TimelineWrap icon={'amphitheatre.png'} style={{ display: window.screen.width < 440 ? "none" : "" }} title={'Auditorium'}>
 
                                         <Timeline
                                             degree={'educationItem.degree'}

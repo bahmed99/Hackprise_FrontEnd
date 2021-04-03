@@ -14,7 +14,7 @@ import '../assets/css/video.css'
 import Apropos from '../components/Apropos';
 import Programme from '../components/Programme';
 import NavBar from '../components/NavBar';
-import Plateforme from '../components/Plateforme';
+
 
 
 const HomeOne = () => {
@@ -89,7 +89,7 @@ const HomeOne = () => {
             <div id='partenaires'>
                 <Services classes="sm-top-wt"/>
                 <hr style={{width:'70%',marginLeft:'15%'}}/>
-                <Plateforme/>
+                
             </div>
             <Funfact/>
             <Programme />

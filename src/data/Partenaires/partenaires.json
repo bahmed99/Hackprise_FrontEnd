@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "title": "Infor",
+    "shortDesc": "Infor is a global leader in business cloud software products for companies in industry specific markets. Infor builds complete industry suites in the cloud and efficiently deploys technology that puts the user experience first, leverages data science, and integrates easily into existing systems. Over 67,000 organizations worldwide rely on Infor to help overcome market disruptions and achieve business-wide digital transformation.",
+    "thumb": "partenaires/infor.jpg"
+    
+  },
+  {
+    "id": 2,
+    "title": "STB",
+    "shortDesc": "La Société Tunisienne de Banque est née au lendemain de l'indépendance. Entrée en activité le 26 mars 1958, c'est le premier établissement bancaire spécifiquement tunisien conçu afin de contribuer efficacement au développement économique et social du jeune Etat indépendant et ce, dans un contexte de désinvestissement, de désorganisation du marché de crédit et d'une véritable hémorragie de capitaux vers l'étranger.",
+    "thumb": "partenaires/stb.jpg"
+  }
+]
