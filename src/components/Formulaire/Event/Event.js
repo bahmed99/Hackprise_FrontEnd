@@ -3,17 +3,17 @@ import { useHistory } from 'react-router';
 import axios from 'axios';
 import { Form, FormElement } from '@progress/kendo-react-form';
 import { Button } from '@progress/kendo-react-buttons';
-import { Stepper } from '@progress/kendo-react-layout';
+
 import { Modal } from 'react-bootstrap';
-import { ChefDetails } from './Chef';
+import { FormEvent } from './FormEvent';
 
-import {Validations} from './Validations'
 
+import { Reveal } from 'react-reveal';
 
 
 import Alert from 'react-bootstrap/Alert'
 const stepPages = [
-    ChefDetails
+    FormEvent
 ];
 
 
@@ -61,7 +61,7 @@ function Event() {
                         setError(res.data.error)
                         setMsg(res.data.msg)
                         setTimeout(() => setError(false), 3000)
-                        setTimeout(() => history.push('/'), 1300)
+                        setTimeout(() => history.push('/register'), 1300)
 
                     })
                     .catch(err => {
@@ -106,7 +106,7 @@ function Event() {
 
                 </Modal.Body>
             </Modal>
-
+            <Reveal bottom>
             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 
                 <Form
@@ -144,6 +144,7 @@ function Event() {
                     )}
                 />
             </div>
+            </Reveal>
         </div>
     );
 };

@@ -1,0 +1,21 @@
+
+
+.about-section1{
+    background: url(../img/pic.jpg) no-repeat right;
+    background-size: 55%;
+    background-color: #fdfdfd;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.inner-container1{
+    width: 55%;
+    float: left;
+    background-color: #fdfdfd;
+    padding: 150px;
+}
+
+
+
+
+

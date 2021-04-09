@@ -1,7 +1,8 @@
 import React,{useState} from 'react'
-import Hackathon from './Hackathon'
-import Event from './Event'
+import Hackathon from './Hackathon/Hackathon'
+import Event from './Event/Event'
 import './Style.css'
+import { Reveal } from 'react-reveal';
 
 export default function Formulaire() {
 
@@ -29,8 +30,12 @@ if(displayEvent){
     return (
         <div>
             <div style={{display:displayChoice ,textAlign:"center" ,marginTop:"100px"}}>
+                <Reveal left>
                 <button onClick={DisplayHack} className="btn btn-primary" style={{backgroundColor:"#2ea3dd"}}>Au Hackathon</button>
+                </Reveal>
+                <Reveal right>
                 <button onClick={DisplayEvent} className="btn btn-primary" style={{marginLeft:"50px" ,backgroundColor:"#2ea3dd"}}>Au Evenement</button>
+                </Reveal>
             </div>
             
         </div>

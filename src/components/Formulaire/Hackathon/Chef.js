@@ -3,14 +3,16 @@ import * as React from 'react';
 import { Field } from '@progress/kendo-react-form';
 
 import {
-    FormInput, FormMultiSelect,FormDropDownList
-} from './form-components.js';
+    FormInput,FormDropDownList
+} from '../form-components.js';
 
 import {
     emailValidator, nameValidator, phoneValidator, ProfessionValidator,requiredValidator
-} from './validators.js'
+} from '../validators.js'
 const data = ['Stb', 'Infor'
 ]
+
+
 export const ChefDetails = (
 
 
@@ -62,5 +64,5 @@ export const ChefDetails = (
         />
 
     </div>
-
+  
 );

@@ -3,7 +3,7 @@ import React from 'react';
 
 
 function ServiceItem(props) {
-    const serviceURL = `/service/${props.title.split(' ').join('-').toLowerCase()}?id=${props.id}`
+    
     return (
         
             <div className="service-item">

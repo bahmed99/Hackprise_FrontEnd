@@ -4,14 +4,12 @@ import { Field } from '@progress/kendo-react-form';
 
 
 import {
-    FormInput, FormMaskedTextBox, FormDateInput
-} from './form-components.js';
+    FormInput
+} from '../form-components.js';
 
-import {
-   phoneValidator
-} from './validators.js'
 
 export const RestTeamDetails = (
+    
     <div>
         <br/>
         <h6>Participant 3</h6>
@@ -29,7 +27,7 @@ export const RestTeamDetails = (
             name={'tel3'}
             label={'Numéro de téléphone'}
             component={FormInput}
-           // validator={phoneValidator}
+          
             required={false}
         />
         <Field
@@ -56,7 +54,7 @@ export const RestTeamDetails = (
             name={'tel4'}
             label={'Numéro de téléphone'}
             component={FormInput}
-            //validator={phoneValidator}
+          
             required={false}
         />
         <Field
@@ -68,5 +66,6 @@ export const RestTeamDetails = (
             required={false}
         />
     </div>
+   
 );
 

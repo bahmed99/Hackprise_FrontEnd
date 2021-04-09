@@ -4,7 +4,7 @@ import ServiceItem from './ServiceItem'
 import ServicesData from '../../data/Partenaires/partenaires'
 import SlickSlider from "../Utilities/Slick"
 import serviceTopBg from '../../assets/img/tec.png'
-import { Fade } from 'react-reveal';
+import {Reveal } from 'react-reveal';
 function Services({ classes }) {
     const settings = {
         slidesToShow: 2,
@@ -36,8 +36,8 @@ function Services({ classes }) {
             </div>
 
             <div className="service-content-area">
-                <div className="container" style={{width:"65%"}}> 
-                    <Fade big >
+                <div className="container" style={{width:"50%"}}> 
+                    <Reveal top >
                         <SlickSlider settings={settings} >
 
                              {
@@ -49,7 +49,7 @@ function Services({ classes }) {
 
                         </SlickSlider>
 
-                    </Fade>
+                    </Reveal>
                 </div>
             </div>
         </div>

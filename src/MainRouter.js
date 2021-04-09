@@ -3,7 +3,7 @@
 import React from "react";
 import {
     Switch,
-    Route, Redirect,
+    Route,
 } from "react-router-dom";
 
 import HomeOne from './pages/HomeOne'

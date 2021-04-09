@@ -3,16 +3,16 @@ import * as React from 'react';
 import { Field } from '@progress/kendo-react-form';
 
 import {
-    FormInput, FormAutoComplete, FormRadioGroup,
-    FormTextArea
-} from './form-components.js';
+    FormInput
+} from '../form-components.js';
 
 import {
     ProfessionValidator,phoneValidator,userNameValidator
-} from './validators.js'
+} from '../validators.js'
 
 
 export const TeamDetails = (
+    
     <div>
         <br/>
         <h6>Participant 1</h6>
@@ -69,4 +69,5 @@ export const TeamDetails = (
 
         />
     </div>
+   
 );

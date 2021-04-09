@@ -7,6 +7,7 @@ import teamBg from '../../assets/img/team/tec.png';
 import Teams from '../../data/Conference/conference';
 import ServiceItem from '../Partenaires/ServiceItem';
 
+
 function Conference() {
     const settings = {
         slidesToShow: 4,
@@ -41,7 +42,7 @@ function Conference() {
     };
     return (
         <div className="team-area-wrapper bg-img sp-y" style={{backgroundImage: `url(${teamBg})` }} id="conferenciers">
-            <div className="container-flUtilitiesd" style={{marginLeft:"100px" ,width:'80%' ,marginRight:'70px'}}>
+            <div className="container-flUtilitiesd" style={{marginLeft:"100px" ,width:'85%' ,marginRight:'70px'}}>
                 <div className="row align-items-center">
                     <div className="col-lg-4">
                         <Reveal bottom>
@@ -54,7 +55,7 @@ function Conference() {
 
                     <div className="col-lg-8">
                         <Reveal right>
-                            <SlickSlider settings={settings}>
+                        <SlickSlider settings={settings}>
                                 {
                                     Teams.map(team => (
                                         <div key={team.id}>
@@ -62,7 +63,8 @@ function Conference() {
                                         </div>
                                     ))
                                 }
-                            </SlickSlider>
+                            </SlickSlider> 
+                        
                         </Reveal>
                     </div>
                 </div>

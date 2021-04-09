@@ -8,7 +8,7 @@ import { Modal } from 'react-bootstrap';
 import { ChefDetails } from './Chef';
 import { TeamDetails } from './Equipes';
 import { RestTeamDetails } from './ResteEquipe';
-
+import { Reveal } from 'react-reveal';
 
 
 import Alert from 'react-bootstrap/Alert'
@@ -86,7 +86,7 @@ function Formulaire() {
                                 setError(res.data.error)
                                 setMsg(res.data.msg)
                                 setTimeout(() => setError(false), 3000)
-                                setTimeout(() => history.push('/'), 1300)
+                                setTimeout(() => history.push('/register'), 1300)
         
                             })
                             .catch(err => {
@@ -134,7 +134,7 @@ function Formulaire() {
 
                 </Modal.Body>
             </Modal>
-
+<Reveal top>
             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 <Stepper value={step} items={steps}  />
                 <Form
@@ -172,6 +172,7 @@ function Formulaire() {
                     )}
                 />
             </div>
+            </Reveal>
         </div>
     );
 };

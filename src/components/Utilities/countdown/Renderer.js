@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import React, { Fragment } from "react";
-import { Container, Row } from "react-bootstrap";
 
 const Renderer = ({ days, hours, minutes, seconds }) => {
   return (

@@ -6,9 +6,8 @@ import Team from "../components/Conference";
 import BrandLogo from "../components/Sponsor";
 import Funfact from "../components/Funfact";
 import Footer from "../components/Footer";
-import Testimonials from "../components/Test";
-
-import Teaser from '../components/Teaser';
+import Exposition from '../components/Exposition';
+import Teaser from '../components/Thematique';
 import Video from '../components/Video';
 import '../assets/css/video.css'
 import Apropos from '../components/Apropos';
@@ -81,6 +80,7 @@ const HomeOne = () => {
         <Fragment>
             <NavBar y={y} screen={screen} scale={scale}/>
             <Video/>
+            <hr style={{width:'70%',marginLeft:'15%'}}/>
             <div id="apropos">
             <Apropos/>
                 <hr style={{width:'70%',marginLeft:'15%'}}/>
@@ -91,13 +91,18 @@ const HomeOne = () => {
                 <hr style={{width:'70%',marginLeft:'15%'}}/>
                 
             </div>
-            <Funfact/>
+            <Funfact />
             <Programme />
+            
+            <div id="exposition">
+            <Exposition />
+            </div>
             <Team/>
             <div id ="sponsors">
-                <Testimonials/>
+                
                 <BrandLogo/>
             </div>
+            
             
             <Footer/>
            

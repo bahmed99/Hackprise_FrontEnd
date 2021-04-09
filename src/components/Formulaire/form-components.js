@@ -12,7 +12,7 @@ import {
 } from '@progress/kendo-react-dateinputs';
 import { Label, Error, Hint, FloatingLabel } from '@progress/kendo-react-labels';
 import { Upload } from '@progress/kendo-react-upload';
-import { DropDownList, AutoComplete, MultiSelect, ComboBox, MultiColumnComboBox, DropDownTree } from '@progress/kendo-react-dropdowns';
+import { DropDownList, AutoComplete, MultiSelect, ComboBox, MultiColumnComboBox } from '@progress/kendo-react-dropdowns';
 
 
 export const FormInput = (fieldRenderProps) => {
