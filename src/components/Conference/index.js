@@ -6,6 +6,7 @@ import {Reveal} from 'react-reveal';
 import teamBg from '../../assets/img/team/tec.png';
 import Teams from '../../data/Conference/conference';
 import ServiceItem from '../Partenaires/ServiceItem';
+import Item from './item';
 
 
 function Conference() {
@@ -15,7 +16,7 @@ function Conference() {
         arrows: false,
         autoplay: true,
         dots: true,
-        className: "team-content-wrap slick-dots--light mtn-md-5",
+        className: "team-content-wrap slick-dots--light mtn-md-5 ",
         responsive: [
             {
                 breakpoint: 1550,
@@ -47,19 +48,20 @@ function Conference() {
                     <div className="col-lg-4">
                         <Reveal bottom>
                             <SectionTitle variant="light" 
-                                heading="<span style='color:#2EA3DD;'>Table ronde</span>"
+                                heading="<span style='color:#2EA3DD;'>Conférence</span>"
                                 text="Parmi les nouvelles tendances de l'e-santé, on peut citer l'augmentation humaine (Human augmentation) qUtilities en effet est un sujet qUtilities intrigue un très grand public de nos jours et qUtilities lance les futurs ingénieurs vers un débat ainsi que des questions qUtilities seront assez complexes afin de leur donner les clés d’analyse et de compréhension du monde."
                             />
                         </Reveal>
                     </div>
 
-                    <div className="col-lg-8">
+                    <div className="col-lg-8"  >
                         <Reveal right>
-                        <SlickSlider settings={settings}>
+                        <SlickSlider settings={settings} >
                                 {
                                     Teams.map(team => (
                                         <div key={team.id}>
-                                            <ServiceItem key={team.id} id={team.id} title={team.name} text={team.designation} thumb={team.profilePic}/>
+                                            {/* <ServiceItem key={team.id} id={team.id} title={team.name} text={team.designation} thumb={team.profilePic}/> */}
+                                            <Item  image={team.profilePic} name={team.name} profession={team.designation}/>
                                         </div>
                                     ))
                                 }

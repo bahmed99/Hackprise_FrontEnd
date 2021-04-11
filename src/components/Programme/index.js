@@ -61,10 +61,10 @@ export default function Programme() {
                             </Col>
 
                             
-                            <Col xs='8' sm="4" xl="8" lg="4">
+                            <Col xs='8' sm="4" xl="8" lg="4" >
                                 <Reveal bottom>
 
-                                    <TimelineWrap icon={'workshop.png'} title={'Hackathon'} >
+                                    <TimelineWrap icon={'workshop.png'} title={'Hackathon'}>
 
                                         <Timeline
                                             degree={'educationItem.degree'}

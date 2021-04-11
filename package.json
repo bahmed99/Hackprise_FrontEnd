@@ -59,8 +59,10 @@
     "react-scripts": "4.0.3",
     "react-scroll": "^1.8.2",
     "react-slick": "^0.28.1",
+    "react-spring": "^9.1.0",
     "react-visibility-sensor": "^5.1.1",
     "slick-carousel": "^1.8.1",
+    "styled-components": "^5.2.3",
     "use-is-in-viewport": "^1.0.9",
     "video-react": "^0.14.1",
     "web-vitals": "^1.1.1"

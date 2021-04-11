@@ -15,10 +15,10 @@ export default function Video (props) {
                     <Reveal top big>  
                         <div className='video-conainer' >
                             <h3 className='test' >Always Striving For Greatness</h3>
-                            <h1>La 15ème édition du forum annuel de l'ENSI</h1>
-                            <ExternalLink href="http://eventzoo-forumensi-11-2020.s3.eu-west-3.amazonaws.com/index.html" target={'_blank'}><h1 style={{fontSize:"50px"}}>Rejoindre la plateforme</h1></ExternalLink>
+                            <h1>La 1èr édition du [nom Événement]</h1>
+                            
                     <Countdown
-                            date={new Date("November 28, 2021 8:30:00")}
+                            date={new Date("May 22, 2021 8:30:00")}
                             renderer={Renderer}
                             />
                             <Link to="/register" className="btn-outline" style={{marginTop:"3%"}}>S'inscrire</Link>

@@ -15,7 +15,7 @@ export default function Navbar(props) {
     return (
         <>
             <div className='bar' style={{backgroundColor:props.y,display: visible[1]&&!props.screen? 'none' : ''}}>
-            <Link to="accueil" spy={true} smooth={true}><img style={{cursor:'pointer'}} src={require("../../assets/img/logo/whie.png").default} alt="" className='logo'/></Link>
+            <Link to="accueil" spy={true} smooth={true}><img style={{cursor:'pointer'}} src={require("../../assets/img/logo/whie.png").default} alt="logo-evenement" className='logo'/></Link>
                 <Container >
                     <ul className="list" style={{display: props.screen? '' : 'none'}}>
                         <li className="list-e"><Link activeClass="active" to="accueil" spy={true} smooth={true}>Accueil</Link></li>

@@ -61,7 +61,7 @@ function Event() {
                         setError(res.data.error)
                         setMsg(res.data.msg)
                         setTimeout(() => setError(false), 3000)
-                        setTimeout(() => history.push('/register'), 1300)
+                        setTimeout(() => history.push('/'), 1300)
 
                     })
                     .catch(err => {

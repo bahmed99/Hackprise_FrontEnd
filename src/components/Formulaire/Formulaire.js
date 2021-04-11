@@ -29,12 +29,12 @@ if(displayEvent){
 
     return (
         <div>
-            <div style={{display:displayChoice ,textAlign:"center" ,marginTop:"100px"}}>
+            <div style={{display:displayChoice ,textAlign:"center" ,marginTop:"120px"}}>
                 <Reveal left>
                 <button onClick={DisplayHack} className="btn btn-primary" style={{backgroundColor:"#2ea3dd"}}>Au Hackathon</button>
                 </Reveal>
                 <Reveal right>
-                <button onClick={DisplayEvent} className="btn btn-primary" style={{marginLeft:"50px" ,backgroundColor:"#2ea3dd"}}>Au Evenement</button>
+                <button onClick={DisplayEvent} className="btn btn-primary" style={{marginLeft:"50px" ,backgroundColor:"#2ea3dd"}}>Au Événement</button>
                 </Reveal>
             </div>
             

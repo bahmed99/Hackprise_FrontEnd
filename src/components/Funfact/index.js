@@ -23,7 +23,7 @@ function Funfact() {
                 throw (err)
             })
        
-    }, [count])
+    }, [])
     return (
         <div className="fun-fact-area sm-top parallax" style={{backgroundImage: `url(${funfactbg})`}}>
             <div className="container">
