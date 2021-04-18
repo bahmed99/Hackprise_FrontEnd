@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import SectionTitle from '../Utilities/SectionTitle'
 import data from '../../data/Exposition/exposition'
 
@@ -12,7 +12,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
+import { Loading } from '../../helpers/Provider'
 
 function Services({ classes }) {
 
@@ -29,6 +29,8 @@ function Services({ classes }) {
     }
 
 
+    const {loading,setLoading}=useContext(Loading)
+
 
     const [data, setData] = useState([])
     useEffect(() => {
@@ -37,7 +39,7 @@ function Services({ classes }) {
             .then(res => {
 
                 setData(res.data)
-                console.log(data)
+                setLoading(true)
             }
             )
             .catch(err => {
@@ -45,6 +47,7 @@ function Services({ classes }) {
             })
 
     }, [])
+
 
     return (
         <div className={`service-area-wrapper ${classes}`} style={{ paddingBottom: '3%'  }}>

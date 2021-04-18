@@ -8,14 +8,17 @@ import './index.scss'
 import {
   BrowserRouter as Router, 
 } from "react-router-dom";
+import ProviderL from './helpers/Provider';
 
 
 ReactDOM.render(
   
   <React.StrictMode>
+    <ProviderL>
     <Router>
     <App />
     </Router>
+    </ProviderL>
   </React.StrictMode>,
   document.getElementById('root')
 );

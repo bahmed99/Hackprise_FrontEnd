@@ -11,7 +11,9 @@ import Contact from "./pages/Contact";
 import Error404 from "./pages/Error404";
 
 export default function MainRouter() {
+
     return (
+        
         <div>
             <Switch>
                 <Route exact path="/" component={HomeOne} />
