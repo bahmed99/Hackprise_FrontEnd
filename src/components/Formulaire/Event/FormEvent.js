@@ -46,7 +46,7 @@ export const FormEvent = (
             key={'Profession'}
             id={'Profession'}
             name={'profession'}
-            label={'Profession'}
+            label={'Occupation'}
             component={FormInput}
             validator={ProfessionValidator}
         />

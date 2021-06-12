@@ -14,13 +14,13 @@ import "slick-carousel/slick/slick-theme.css";
 
 import { Loading } from '../../helpers/Provider'
 
-function Services({ classes }) {
+function Services({ classes , nb }) {
 
     let settings = {
         dots: true,
         infinite: true,
         speed: 700,
-        slidesToShow: 3,
+        slidesToShow: nb,
         slidesToScroll: 1,
         cssEase: "linear",
         autoplay: true,
@@ -50,7 +50,7 @@ function Services({ classes }) {
 
 
     return (
-        <div className={`service-area-wrapper ${classes}`} style={{ paddingBottom: '3%'  }}>
+        <div className={`service-area-wrapper ${classes}`} style={{ paddingBottom: '3%' }}>
             <div className="service-area-top" style={{ backgroundImage: `url("${serviceTopBg}")` }}>
                 <div className="container">
                     <div className="row">
@@ -62,7 +62,7 @@ function Services({ classes }) {
             </div>
 <br/>
             <div className="service-content-area">
-                <div className="container">
+                <div className="container" style={{width:"90%"}}>
                     <Fade big>
                         <Slider {...settings}>
 

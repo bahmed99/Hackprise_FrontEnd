@@ -34,7 +34,7 @@ export const RestTeamDetails = (
             key={'Profession3'}
             id={'Profession3'}
             name={'profession3'}
-            label={'Profession'}
+            label={'Occupation'}
             component={FormInput}
             required={false}
         />
@@ -61,7 +61,7 @@ export const RestTeamDetails = (
             key={'Profession4'}
             id={'Profession4'}
             name={'profession4'}
-            label={'Profession'}
+            label={'Occupation'}
             component={FormInput}
             required={false}
         />

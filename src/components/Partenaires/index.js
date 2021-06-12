@@ -36,7 +36,7 @@ function Services({ classes }) {
             </div>
 
             <div className="service-content-area">
-                <div className="container" style={{width:"50%"}}> 
+                <div className="container" style={{width:"60%"}}> 
                     <Reveal top >
                         <SlickSlider settings={settings} >
 

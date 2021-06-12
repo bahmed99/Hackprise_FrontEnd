@@ -22,7 +22,7 @@ $Raleway:'Raleway',sans-serif;
 .card1{
     
     width:100%;
-    height:450px;
+    height:410px;
     border-radius: 16px;
     overflow: hidden;
     position: relative;
@@ -36,8 +36,11 @@ $Raleway:'Raleway',sans-serif;
         background-color: white;
         transition:.5s;
         img{
-            width:400px;
-            height:300px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 400px;
+            height:240px;
             object-fit: cover;
         }
     }//card-image
@@ -47,6 +50,7 @@ $Raleway:'Raleway',sans-serif;
             transition:.5s;
         }
         .card-image1{
+            
             transform:translateY(-100px);
             transition:all .9s;
         }

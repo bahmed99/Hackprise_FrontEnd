@@ -14,7 +14,7 @@ export const nameValidator = (value) => !value ?
     "Nom Complet est requis." :""
    
 export const ProfessionValidator = (value) => !value ?
-    "Profession est requise." :""
+    "Occupation est requise." :""
   
 export const userNameValidator = (value) => !value ?
     "User Name is required" :

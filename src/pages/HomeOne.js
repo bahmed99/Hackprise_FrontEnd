@@ -1,4 +1,4 @@
-import React, {Fragment,useState} from 'react';
+import React, { Fragment, useState } from 'react';
 
 
 import Services from '../components/Partenaires'
@@ -17,95 +17,152 @@ import NavBar from '../components/NavBar';
 
 
 const HomeOne = () => {
-    let [screen, setScreen]=useState()
-    let [scale, setScale]=useState()
-    window.onresize = function(){
-        if(window.innerWidth>1200)
-        {
-            setScreen(true)
+    let [screen, setScreen] = useState()
+    let [scale, setScale] = useState()
+    let [nb, setNb] = useState()
+    let [wd, setWd] = useState()
+
+    window.onresize = function () {
+
+        if (window.innerWidth < 800) {
+            setWd("60%")
+
+
         }
-        else
-        {
+
+        else {
+            setWd("85%")
+        }
+
+
+        if (window.innerWidth > 1000) {
+            setNb(3)
+
+
+        }
+
+        if (window.innerWidth < 450) {
+
+            setNb(1)
+        }
+
+
+        if (window.innerWidth > 1200) {
+
+            setScreen(true)
+
+        }
+        else {
             setScreen(false)
         }
-        if(window.innerWidth<450)
-        {
+        if (window.innerWidth < 450) {
             setScale(100)
 
         }
-        else
-        {
+        else {
             setScale(40)
         }
-     }
-   
+
+
+        if (window.innerWidth > 500 && window.innerWidth < 780) {
+            setNb(2)
+        }
+        if (window.innerWidth < 600) {
+            setNb(1)
+        }
+
+    }
+
     React.useEffect(() => {
 
-    
-        if(window.innerWidth>1200)
-        {
+
+        if (window.innerWidth < 550) {
+            setWd("60%")
+        }
+
+        else {
+            setWd("85%")
+        }
+
+
+        if (window.innerWidth > 1000) {
+            setNb(3)
+
+
+        }
+
+        if (window.innerWidth < 450) {
+
+            setNb(1)
+        }
+
+
+        if (window.innerWidth > 1200) {
+
             setScreen(true)
 
         }
-        else
-        {
+        else {
             setScreen(false)
         }
-        if(window.innerWidth<450)
-        {
+        if (window.innerWidth < 450) {
             setScale(100)
 
         }
-        else
-        {
+        else {
             setScale(40)
         }
-        
+
+        if (window.innerWidth > 500 && window.innerWidth < 780) {
+            setNb(2)
+        }
+        if (window.innerWidth < 600) {
+            setNb(1)
+        }
+
     })
-    
-    const [y, setY]=useState('')
-    window.addEventListener('scroll', function(e) {
-        if(window.scrollY>0)
-        {
+
+    const [y, setY] = useState('')
+    window.addEventListener('scroll', function (e) {
+        if (window.scrollY > 0) {
             setY('rgba(31, 33, 45,0.3)')
         }
-        else
-        {
+        else {
             setY('rgba(0,0,0,0)')
         }
-        
+
     })
 
     return (
         <Fragment>
-            <NavBar y={y} screen={screen} scale={scale}/>
-            <Video/>
-            <hr style={{width:'70%',marginLeft:'15%'}}/>
+            <NavBar y={y} screen={screen} scale={scale} />
+            <Video />
+            <hr style={{ width: '70%', marginLeft: '15%' }} />
             <div id="apropos">
-            <Apropos/>
-                <hr style={{width:'70%',marginLeft:'15%'}}/>
-                <Teaser id='plateforme'/>
+                <Apropos />
+                <hr style={{ width: '70%', marginLeft: '15%' }} />
+                <Teaser id='plateforme' />
             </div>
             <div id='partenaires'>
-                <Services classes="sm-top-wt"/>
-                <hr style={{width:'70%',marginLeft:'15%'}}/>
-                
+                <Services classes="sm-top-wt" />
+                <hr style={{ width: '70%', marginLeft: '15%' }} />
+
             </div>
             <Funfact />
             <Programme />
-            
+
             <div id="exposition">
-            <Exposition />
+                <Exposition nb={nb} />
             </div>
-            <Team/>
-            <div id ="sponsors">
-                
-                <BrandLogo/>
+
+            <div id="sponsors">
+                <Team wd={wd} nb={nb} />
+                <BrandLogo />
             </div>
-            
-            
-            <Footer/>
-           
+
+
+            <Footer />
+
         </Fragment>
     );
 };

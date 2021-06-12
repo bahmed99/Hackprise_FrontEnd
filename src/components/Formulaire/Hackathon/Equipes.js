@@ -36,7 +36,7 @@ export const TeamDetails = (
             key={'Profession1'}
             id={'Profession1'}
             name={'profession1'}
-            label={'Profession'}
+            label={'Occupation'}
             component={FormInput}
             validator={ProfessionValidator}
 
@@ -63,7 +63,7 @@ export const TeamDetails = (
             key={'Profession2'}
             id={'Profession2'}
             name={'profession2'}
-            label={'Profession'}
+            label={'Occupation'}
             component={FormInput}
             validator={ProfessionValidator}
 

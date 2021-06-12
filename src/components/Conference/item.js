@@ -16,7 +16,7 @@ export default function item({ name, image, profession }) {
                     </div>
                 </div>
            
- 
+     
  
     )
 }

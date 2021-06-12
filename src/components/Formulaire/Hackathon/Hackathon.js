@@ -19,7 +19,7 @@ const stepPages = [
 ];
 
 
-function Formulaire() {
+function Formulaire({long}) {
 
     const history = useHistory();
     const [loading, setLoading] = useState(false)
@@ -113,7 +113,7 @@ function Formulaire() {
 
 
     return (
-        <div className="contact-form-wrap">
+        <div className="contact-form-wrap" >
             <Alert show={error} variant={'danger'}>
                 {msg ? "Vous êtes déjè inscrit" : "Une erreur s'est produite lors de votre inscription veuillez vous inscrire une nouvelle fois"}
             </Alert>
@@ -136,13 +136,13 @@ function Formulaire() {
             </Modal>
 <Reveal top>
             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                <Stepper value={step} items={steps}  />
-                <Form
+                <Stepper value={step} items={steps} style={{width:"109%"}}  />
+                <Form 
                     initialValues={formState}
                     onSubmitClick={onStepSubmit}
                     render={(formRenderProps) => (
                         <div style={{ alignSelf: 'center' }}>
-                            <FormElement style={{ width: 480 }}>
+                            <FormElement style={{ width: long }}>
                                 {stepPages[step]}
                                 <span style={{ marginTop: '40px' }} className={'k-form-separator'} />
                                 <div

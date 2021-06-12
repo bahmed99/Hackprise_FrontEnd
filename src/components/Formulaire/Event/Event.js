@@ -17,7 +17,7 @@ const stepPages = [
 ];
 
 
-function Event() {
+function Event({long}) {
 
     const history = useHistory();
     const [loading, setLoading] = useState(false)
@@ -114,7 +114,7 @@ function Event() {
                     onSubmitClick={onStepSubmit}
                     render={(formRenderProps) => (
                         <div style={{ alignSelf: 'center' }}>
-                            <FormElement style={{ width: 480 }}>
+                            <FormElement style={{ width: long }}>
                                 {stepPages[step]}
                                 <span style={{ marginTop: '40px' }} className={'k-form-separator'} />
                                 <div

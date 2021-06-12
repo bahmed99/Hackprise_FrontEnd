@@ -17,10 +17,10 @@ export default function Navbar(props) {
             <div className='bar' style={{backgroundColor:props.y,display: visible[1]&&!props.screen? 'none' : ''}}>
             <Link to="accueil" spy={true} smooth={true}><img style={{cursor:'pointer'}} src={require("../../assets/img/logo/whie.png").default} alt="logo-evenement" className='logo'/></Link>
                 <Container >
-                    <ul className="list" style={{display: props.screen? '' : 'none'}}>
+                        <ul className="list" style={{display: props.screen? '' : 'none'}}>
                         <li className="list-e"><Link activeClass="active" to="accueil" spy={true} smooth={true}>Accueil</Link></li>
                         <li className="list-e"><Link activeClass="active" to="apropos" spy={true} smooth={true}>À propos</Link></li>
-                        <li className="list-e"><Link activeClass="active" to="partenaires" spy={true} smooth={true}>Partenaires</Link></li>
+                        <li className="list-e"><Link activeClass="active" to="partenaires" spy={true} smooth={true}>Partenaires</Link></li> 
                         <li className="list-e"><Link activeClass="active" to="programme" spy={true} smooth={true}>Programme</Link></li>
                         <li className="list-e"><Link activeClass="active" to="exposition" spy={true} smooth={true}>Exposition</Link></li>
                         <li className="list-e"><Link activeClass="active" to="conferenciers" spy={true} smooth={true}>Conférenciers</Link></li>
@@ -29,7 +29,7 @@ export default function Navbar(props) {
                     </ul>
                 </Container>
                 
-                <button onClick={showDrawer} className='btn-menu' style={{fontSize: '30px', color:"white", position:'absolute',right:'10px',top:'10%',display: props.screen? 'none' : ''}}><i  style={{height: '180%'}}  className="fa fa-bars"></i></button>
+                <button onClick={showDrawer} className='btn-menu' style={{fontSize: '30px', color:"white", position:'absolute',right:'5px',top:'10%',display: props.screen? 'none' : ''}}><i  style={{height: '180%'}}  className="fa fa-bars"></i></button>
             </div>
             
              

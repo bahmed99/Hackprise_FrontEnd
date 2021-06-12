@@ -2,16 +2,16 @@ import React from 'react';
 import ContactInfo from "./ContactInfo";
 import Formulaire from '../Formulaire/Formulaire';
 
-const ContactPage = () => {
+const ContactPage = ({long , btn }) => {
     return (
-        <div className={'contact-page-area-wrapper sp-y'}>
+        <div className={'contact-page-area-wrapper sp-y'} >
             <div className="container">
                 <div className="contact-content-wrap">
                     <div className="row">
                         <div className="col-lg-8">
                             <div className="contact-form-area contact-method">
                                 <h3>Inscrivez vous</h3>
-                                    <Formulaire />
+                                    <Formulaire long={long} btn={btn} />
                                
                             </div>
                         </div>
