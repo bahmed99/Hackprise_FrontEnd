@@ -1,0 +1,98 @@
+.blogCard{
+    box-shadow: 5px 10px 20px 1px black !important;
+    
+}
+
+.icon:hover{
+    color:#2ea3dd
+}
+
+.blogPhoto{
+    height: 250px !important;
+}
+.readmore{
+    width: 40%;
+    height: 45px;
+    border-radius: 40px;
+    background: #2ea3dd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: .3s linear;
+    float: right;
+
+}
+
+.share-button{
+    float: left;
+    width: 40%;
+    height: 45px;
+    background:#e0ded2;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: .3s linear;
+  }
+  
+  .share-button:hover{
+    transform: scale(1.1);
+  }
+  
+  .share-button .share{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #1f212d;
+    color: #fff;
+    text-align: center;
+    line-height:40px;
+    z-index: 999;
+    transition: .6s linear;
+    border-radius: 40px;
+  }
+  
+  .share-button:hover .share{
+    transform: translateX(-100%);
+    transition-delay: .3s;
+  }
+  
+  .share-button .socialicon{
+    flex: 1;
+    font-size: 26px;
+    color: #2d3436;
+    text-align: center;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: 0.3s linear;
+  }
+  
+  .share-button:hover .socialicon{
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .share-button .socialicon:nth-of-type(1){
+    transition-delay: 1s;
+  }
+  
+  .share-button .socialicon:nth-of-type(2){
+    transition-delay: 0.8s;
+  }
+  
+  .share-button .socialicon:nth-of-type(3){
+    transition-delay: 0.6s;
+  }
+  
+  .share-button .socialicon:nth-of-type(4){
+    transition-delay: 0.4s;
+  }
+  .socialicon{
+      margin: 1%;
+  }

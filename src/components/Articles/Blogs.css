@@ -1,0 +1,25 @@
+.BlogsHeader{
+    background: url("../../assets/img/blog_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+    
+  
+  .BlogBody{
+    margin-top: 75vh;
+    display: block;
+    }
+  
+  .MuiGrid-spacing-xs-10 > .MuiGrid-item {
+      padding: 10px !important;
+  }
+  
+  .MuiFab-primary {
+    color: #fff;
+    background-color: #2ea3dd !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 50% !important;
+  }

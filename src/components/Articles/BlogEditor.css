@@ -1,0 +1,77 @@
+@font-face {
+    font-family: Gilroy-Bold;
+    src: url(../../assets/fonts/Gilroy-Bold.woff);
+  }
+  @font-face {
+    font-family: Proxima-nova;
+    src: url(../../assets/fonts/proxima-nova-light-webfont.woff);
+  }
+  @font-face {
+    font-family: Photograph-Signature;
+    src: url(../../assets/fonts/Photograph-Signature.ttf);
+  }
+.editor_page{
+background-color: white;
+width: 100vw;
+}
+.texteditor_header {
+    background-color: #e0ded2;
+    min-height: 10vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(6px + 1vmin);
+    color:#2ea3dd;
+  }
+  .App-logo {
+    height: 10vmin;
+    pointer-events: none;
+    margin-top: 1%;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  .App .editor {
+    width: 58vw;
+    margin-left: 20%;
+    margin-top: 50px;
+    border-style: solid;
+    border-color: #2ea3dd;
+    border-width: 3px;
+    border-radius: 8px;
+  }
+  .always{
+      font-family: Photograph-Signature;
+      font-size: xx-large;
+  }
+  .blogtitle{
+    font-family:  Gilroy-Bold ;
+    color: #2ea3dd;
+    font-size: 180%;
+    margin-top: 5%;
+    margin-left: 20%;
+  }
+  .content{
+    font-family:  Gilroy-Bold ;
+    color: #2ea3dd;
+    font-size: 180%;
+    margin-top: 5%;
+    margin-left: 20%;
+  }
+  .imageupload{
+    margin-top: 5%;
+    margin-left: 20%;
+  }
+  .titleinput{
+    width: 58%;
+    margin-left: 20%;
+    border-style: solid;
+    border-color: #2ea3dd;
+    border-width: 3px;
+    border-radius: 5px;
+
+  }

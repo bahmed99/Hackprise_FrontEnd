@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import SectionTitle from '../Utilities/SectionTitle'
 import data from '../../data/Exposition/exposition'
 
-import serviceTopBg from '../../assets/img/tec.png'
+import serviceTopBg from '../../assets/img/tec.jpg'
 import { Fade } from 'react-reveal';
 import axios from 'axios'
 

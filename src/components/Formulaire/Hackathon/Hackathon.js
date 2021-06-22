@@ -140,7 +140,7 @@ function Formulaire({ long }) {
                 </Modal.Header>
                 <Modal.Body style={{ textAlign: 'center' }}>
                     <i style={{ fontSize: '100px', color: '#2EA3DD' }} className="fa fa-check"></i>
-                    <h5>Vous venez de finaliser votre inscription à la 1ère édition du </h5>
+                    <h5>Vous venez de finaliser votre inscription à la 1ère édition du Hack'Prise </h5>
 
                 </Modal.Body>
             </Modal>

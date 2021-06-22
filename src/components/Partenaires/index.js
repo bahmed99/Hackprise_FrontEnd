@@ -3,7 +3,7 @@ import SectionTitle from '../Utilities/SectionTitle'
 import ServiceItem from './ServiceItem'
 import ServicesData from '../../data/Partenaires/partenaires'
 import SlickSlider from "../Utilities/Slick"
-import serviceTopBg from '../../assets/img/tec.png'
+import serviceTopBg from '../../assets/img/tec.jpg'
 import {Reveal } from 'react-reveal';
 function Services({ classes }) {
     const settings = {

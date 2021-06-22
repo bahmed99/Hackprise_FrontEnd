@@ -1,7 +1,7 @@
 import React ,{useEffect,useState} from 'react';
 import FunfactItem from "./funfactItem";
 
-import funfactbg from '../../assets/img/tec.png'
+import funfactbg from '../../assets/img/tec.jpg'
 
 import axios from 'axios'
 

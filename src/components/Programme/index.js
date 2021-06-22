@@ -40,7 +40,7 @@ export default function Programme() {
 
                     <div className="col-12" style={{ overflowX: visible ? 'auto' : 'visible', paddingTop: '35px' }}>
                         <div className="education-content-wrap mt-60 test" style={{ display: "flex", alignItems: 'center', justifyContent: !visible ? 'center' : '' }}>
-                            <Col xs='8' sm="4" xl="8" lg="4"  >
+                            {/* <Col xs='8' sm="4" xl="8" lg="4"  >
                                 <Reveal left>
                                     <TimelineWrap icon={'food-stand.png'} title={'Stand'} >
 
@@ -58,7 +58,7 @@ export default function Programme() {
 
                                     </TimelineWrap>
                                 </Reveal>
-                            </Col>
+                            </Col> */}
 
                             
                             <Col xs='8' sm="4" xl="8" lg="4" >
@@ -93,7 +93,7 @@ export default function Programme() {
                                 </Reveal>
                             </Col>
 
-                            <Col xs='8' sm="4" xl="8" lg="4">
+                            {/* <Col xs='8' sm="4" xl="8" lg="4">
                                 <Reveal right>
                                     <TimelineWrap icon={'amphitheatre.png'} style={{ display: window.screen.width < 440 ? "none" : "" }} title={'Auditorium'}>
 
@@ -111,7 +111,7 @@ export default function Programme() {
 
                                     </TimelineWrap>
                                 </Reveal>
-                            </Col>
+                            </Col> */}
 
                         </div>
                     </div>

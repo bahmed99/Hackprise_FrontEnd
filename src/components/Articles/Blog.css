@@ -1,0 +1,43 @@
+.blog{
+    margin:100px 10vw;
+    border: 2px solid #fff;
+    border-radius: 0.5%;
+    padding: 5%;
+}
+.blogImage{
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    border-style: none;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.blogImage img{
+    width: 40vw;
+}
+
+
+.blogTitle{
+    color:#2ea3dd;
+    font-family: Gilroy-Bold;
+    font-size: 40px;
+    margin-top: 5vh;
+    text-align: center;
+}
+
+.blogContent{
+    color: #fff;
+    font-family: Proxima-Nova;
+    font-weight: normal;
+    font-size: 16px;
+    margin-top: 5vh;
+}
+
+.blogWriter{
+    color:#2ea3dd;
+    font-family: Proxima-Nova;
+    font-size: 22px;
+    float:right ;
+}

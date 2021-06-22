@@ -52,7 +52,7 @@
     z-index: 1;
     text-align:"center";
     z-index: 1;
-    background-Image: url("../img/cover.jpg");
+    background-Image: url("../img/logo/Cover.jpg");
     background-position: center;
     background-repeat: no-repeat; 
     background-size: cover;
@@ -74,8 +74,8 @@
     padding-top: 10px;
     text-align: center;
     background:transparent;
-    border: solid #E0DED2 1px;
-    color: #E0DED2;
+    border: solid #1f212d 1px;
+    color: #1f212d;
     border-radius: 50%;
     /* border-top-left-radius : 10px 10px;
     border-top-right-radius : 10px 10px;
@@ -101,12 +101,12 @@
     cursor: pointer;
     text-transform: uppercase;
     padding-top:1.3%;
-    color:#E0DED2 !important;
+    color:#1f212d !important;
 }
 .video-conainer  h3{
     cursor: pointer;
     padding-top:1.3%;
-    color:#E0DED2 !important;
+    color:#1f212d !important;
     font-family: 'Photographe Signiature';
     font-size: 35px ;
 }
