@@ -455,7 +455,7 @@ export const FormUpload = (fieldRenderProps) => {
 };
 
 export const FormDropDownList = (fieldRenderProps) => {
-    const { validationMessage, touched, label, id, valid, disabled, hint, wrapperStyle, ...others } = fieldRenderProps;
+    const { validationMessage, touched, label, id, valid, disabled, hint, wrapperStyle,value, ...others } = fieldRenderProps;
     const editorRef = React.useRef(null);
 
     const showValidationMessage = touched && validationMessage;
@@ -482,6 +482,7 @@ export const FormDropDownList = (fieldRenderProps) => {
                 valid={valid}
                 id={id}
                 disabled={disabled}
+                value={value}
                 {...others}
             />
             {

@@ -24,27 +24,27 @@ const HomeOne = () => {
 
     window.onresize = function () {
 
-        if (window.innerWidth < 800) {
-            setWd("60%")
+        // if (window.innerWidth < 800) {
+        //     setWd("60%")
 
 
-        }
+        // }
 
-        else {
-            setWd("85%")
-        }
-
-
-        if (window.innerWidth > 1000) {
-            setNb(3)
+        // else {
+        //     setWd("85%")
+        // }
 
 
-        }
+        // if (window.innerWidth > 1000) {
+        //     setNb(3)
 
-        if (window.innerWidth < 450) {
 
-            setNb(1)
-        }
+        // }
+
+        // if (window.innerWidth < 450) {
+
+        //     setNb(1)
+        // }
 
 
         if (window.innerWidth > 1200) {
@@ -64,37 +64,37 @@ const HomeOne = () => {
         }
 
 
-        if (window.innerWidth > 500 && window.innerWidth < 780) {
-            setNb(2)
-        }
-        if (window.innerWidth < 600) {
-            setNb(1)
-        }
+        // if (window.innerWidth > 500 && window.innerWidth < 780) {
+        //     setNb(2)
+        // }
+        // if (window.innerWidth < 600) {
+        //     setNb(1)
+        // }
 
     }
 
     React.useEffect(() => {
 
 
-        if (window.innerWidth < 550) {
-            setWd("60%")
-        }
+        // if (window.innerWidth < 550) {
+        //     setWd("60%")
+        // }
 
-        else {
-            setWd("85%")
-        }
-
-
-        if (window.innerWidth > 1000) {
-            setNb(3)
+        // else {
+        //     setWd("85%")
+        // }
 
 
-        }
+        // if (window.innerWidth > 1000) {
+        //     setNb(3)
 
-        if (window.innerWidth < 450) {
 
-            setNb(1)
-        }
+        // }
+
+        // if (window.innerWidth < 450) {
+
+        //     setNb(1)
+        // }
 
 
         if (window.innerWidth > 1200) {
@@ -113,12 +113,12 @@ const HomeOne = () => {
             setScale(40)
         }
 
-        if (window.innerWidth > 500 && window.innerWidth < 780) {
-            setNb(2)
-        }
-        if (window.innerWidth < 600) {
-            setNb(1)
-        }
+        // if (window.innerWidth > 500 && window.innerWidth < 780) {
+        //     setNb(2)
+        // }
+        // if (window.innerWidth < 600) {
+        //     setNb(1)
+        // }
 
     })
 
@@ -156,7 +156,7 @@ const HomeOne = () => {
             </div>
 
             <div id="sponsors">
-                <Team wd={wd} nb={nb} />
+               
                 <BrandLogo />
             </div>
 
