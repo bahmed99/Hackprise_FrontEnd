@@ -18,7 +18,7 @@ function Blogs() {
     useEffect(() => {
         let unmounted = false
         if (!unmounted) {
-            Axios.get('http://localhost:5000/blogs').then(
+            Axios.get('http://localhost:3001/blogs').then(
                 (data) => {
                     console.log(data)
                     setBlogsList(data.data)

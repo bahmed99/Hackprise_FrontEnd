@@ -26,13 +26,13 @@ function Funfact() {
     }, [])
     return (
         <div className="fun-fact-area sm-top parallax" style={{backgroundImage: `url(${funfactbg})`}}>
-            <div className="container">
-                <div className="row mtn-k">
+            <div >
+                <div className="row mtn-k" >
                        
-                            <FunfactItem id={1} before={"+"} after={""} counterNumber={count.countEvent} counterText="Participants" />
-                            <FunfactItem id={2} before={"+"} after={""} counterNumber={count.countHackathon} counterText="Equipes" />
-                            <FunfactItem id={3} before={"+"} after={""} counterNumber ={count.countExposition} counterText="Stand" />
-                            <FunfactItem id={4} before={""} after={""} counterNumber="5" counterText="Intervenants" />
+                            {/* <FunfactItem id={1} before={"+"} after={""} counterNumber={count.countEvent} counterText="Participants" /> */}
+                            <FunfactItem id={1} before={"+"} after={""} counterNumber={count.countHackathon} counterText="Equipes" />
+                            {/* <FunfactItem id={3} before={"+"} after={""} counterNumber ={count.countExposition} counterText="Stand" />
+                            <FunfactItem id={4} before={""} after={""} counterNumber="5" counterText="Intervenants" /> */}
                     
                 </div>
             </div>

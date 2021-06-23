@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState ,useEffect} from 'react';
 
 
 import Services from '../components/Partenaires'
@@ -6,7 +6,7 @@ import Team from "../components/Conference";
 import BrandLogo from "../components/Sponsor";
 import Funfact from "../components/Funfact";
 import Footer from "../components/Footer";
-import Exposition from '../components/Exposition';
+import Blog from '../components/Blog/Blogs';
 import Teaser from '../components/Thematique';
 import Video from '../components/Video';
 import '../assets/css/video.css'
@@ -73,7 +73,7 @@ const HomeOne = () => {
 
     }
 
-    React.useEffect(() => {
+    useEffect(() => {
 
 
         // if (window.innerWidth < 550) {
@@ -120,7 +120,7 @@ const HomeOne = () => {
         //     setNb(1)
         // }
 
-    })
+    },[])
 
     const [y, setY] = useState('')
     window.addEventListener('scroll', function (e) {
@@ -148,11 +148,11 @@ const HomeOne = () => {
                 <hr style={{ width: '70%', marginLeft: '15%' }} />
 
             </div>
-            <Funfact />
+             <Funfact /> 
             <Programme />
 
-            <div id="exposition">
-                <Exposition nb={nb} />
+            <div id="article">
+                <Blog />
             </div>
 
             <div id="sponsors">

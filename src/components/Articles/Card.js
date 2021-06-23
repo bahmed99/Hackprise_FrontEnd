@@ -50,7 +50,7 @@ export default function BlogCard(props) {
   const img = `/uploads/${props.image}`
 
   const handleDelete = () => {
-    fetch(`http://localhost:5000/blogs/${props.id}`, {
+    fetch(`http://localhost:3001/blogs/${props.id}`, {
       method: 'DELETE'
     }).then(() => {
       window.location.reload()
@@ -90,7 +90,7 @@ export default function BlogCard(props) {
         
         </div>
 
-        <div className="button" className="readmore" style={{ fontSize: "1em" }} onClick={() => { history.push(`${props.id}`) }}>Read more</div>
+        <div className="button" className="readmore" style={{ fontSize: "1em" }} onClick={() => { history.push(`/article/${props.id}`) }}>Read more</div>
 
       </CardActions>
 

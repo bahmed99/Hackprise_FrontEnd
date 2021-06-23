@@ -56,8 +56,8 @@
     background-position: center;
     background-repeat: no-repeat; 
     background-size: cover;
-    padding-bottom: 10% ;
-    padding-top: 10% ;
+    padding-bottom: 11% ;
+    padding-top: 11% ;
 }
 .contdown{
     display: flex;
@@ -74,7 +74,7 @@
     padding-top: 10px;
     text-align: center;
     background:transparent;
-    border: solid #1f212d 1px;
+    border: solid #1f212d 2px;
     color: #1f212d;
     border-radius: 50%;
     /* border-top-left-radius : 10px 10px;

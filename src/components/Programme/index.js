@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState ,useEffect} from 'react'
 import { Col } from 'react-bootstrap'
 import TimelineWrap from '../Timeline'
 import Timeline from '../Timeline/TimelineItem'
@@ -7,7 +7,7 @@ import { Reveal, Fade } from 'react-reveal';
 
 export default function Programme() {
     const [visible, setVisible] = useState();
-    React.useEffect(() => {
+   useEffect(() => {
         if (window.screen.width < 600) {
             setVisible(true)
         }
@@ -24,7 +24,7 @@ export default function Programme() {
         }
 
 
-    });
+    },[]);
     return (
         <>
             <div className="member-details-bottom" style={{ paddingTop: '3%', paddingBottom: '7%' }} id='programme'>

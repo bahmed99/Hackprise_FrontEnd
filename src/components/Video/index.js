@@ -21,7 +21,7 @@ export default function Video (props) {
                             date={new Date("July 15, 2021 8:30:00")}
                             renderer={Renderer}
                             />
-                            <Link to="/register" className="btn-outline" style={{marginTop:"3%"}}>S'inscrire</Link>
+                            <Link to="/register" className="btn-outline" style={{marginTop:"4%"}}>S'inscrire</Link>
                         </div> 
                     </Reveal>  
                 </div> 

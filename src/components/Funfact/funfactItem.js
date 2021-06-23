@@ -18,8 +18,8 @@ class FunfactItem extends Component {
 
     render() {
         return (
-            <div className="col-6 col-md-3 text-center">
-                <div className="counter-item">
+            <div className="col-6 col-md-3 text-center" style={{marginLeft:"auto" , marginRight:"auto" }}>
+                <div className="counter-item" >
                     <h2 className="counter-number">
                         <CountUp start={this.state.appear ? 0 : null} end={this.props.counterNumber}>
                             {({ countUpRef }) => (

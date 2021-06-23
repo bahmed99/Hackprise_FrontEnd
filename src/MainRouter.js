@@ -22,6 +22,10 @@ import InforEnPresentiel from "./components/Participants/Infor/InforEnPresentiel
 import Stb from "./components/Participants/Stb/Stb"
 import Infor from "./components/Participants/Infor/Index"
 
+
+import Blog from "./components/Blog/Blog"
+import BlogEditeur from "./components/Articles/BlogEditor"
+
 export default function MainRouter() {
 
     return (
@@ -39,6 +43,8 @@ export default function MainRouter() {
                 <Route exact path={"/eje/infor/enLigne"} component={InforEnLigne} />
                 <Route exact path={"/eje/infor/enPresentiel"} component={InforEnPresentiel} />
 
+                <Route exact path={"/eje/write/blog"} component={BlogEditeur} />
+                <Route exact path={"/article/:id"} component={Blog} />
 
                 <Route exact path={"/eje/stb/:id"} component={ParticipantStb} />
                 <Route exact path={"/eje/infor/:id"} component={ParticipantInfor} />
