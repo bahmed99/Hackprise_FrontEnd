@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import HackathonSTB from './STB/Hackathon.js'
+import HackathonSTB from './STB/index'
 import HackathonINFOR from './Infor/Hackathon.js'
 
 import './Style.css'
@@ -7,50 +7,62 @@ import { Reveal } from 'react-reveal';
 
 export default function Formulaire({ long, btn }) {
 
-    const [displayHack, setDisplayHack] = useState(false)
-    const [displayEvent, setDisplayEvent] = useState(false)
-    const [displayChoice, setDisplayChoice] = useState()
+    const [displayInfor, setDisplayInfor] = useState(false)
+    const [displayStb, setDisplayStb] = useState(false)
+    const [displayChoice, setDisplayChoice] = useState("flex")
 
-    function DisplayHack() {
+    function DisplayInfor() {
         setDisplayChoice('none')
-        setDisplayHack(true);
+        setDisplayInfor(true);
 
     }
-    function DisplayEvent() {
+    function DisplayStb() {
         setDisplayChoice('none')
-        setDisplayEvent(true);
+        setDisplayStb(true);
 
     }
-    if (displayHack) {
+    if (displayInfor) {
         return <HackathonINFOR long={long} />
     }
-    if (displayEvent) {
+    if (displayStb) {
         
         return <HackathonSTB long={long} />
     }
 
     return (
-        <div>
-            {!btn ? <div style={{ display: displayChoice, textAlign: "center", marginTop: "120px" }}>
+        <div >
+            {!btn ? <div style={{ display: displayChoice, marginTop: "50px" }}>
                 <Reveal left>
-                    <button onClick={DisplayHack} className="btn btn-primary" style={{ backgroundColor: "#2ea3dd" }}>INFOR</button>
+                    <button onClick={DisplayInfor}  >
+                    
+                    <img src={require("../../assets/img/partenaires/infor.jpg").default} width="70%" alt="infor"/>
+                    </button>
                 </Reveal>
                 <Reveal right>
-                    <button onClick={DisplayEvent} className="btn btn-primary" style={{ marginLeft: "50px", backgroundColor: "#2ea3dd" }}>STB</button>
+                    <button onClick={DisplayStb}  style={{ marginLeft: "10px"}}>
+                    <img src={require("../../assets/img/partenaires/stb.jpg").default}  width="70%" alt="stb"/>
+                        
+                    </button>
                 </Reveal>
             </div> :
-                <div style={{ display: displayChoice, textAlign: "center", marginTop: "50px" }}>
+                <div style={{ display: displayChoice, marginTop: "50px" }}>
                     <Reveal left>
-                        <button onClick={DisplayHack} className="btn btn-primary" style={{ backgroundColor: "#2ea3dd" }}>INFOR</button>
-                    </Reveal>
+                    <button onClick={DisplayInfor}  >
+                    
+                    <img src={require("../../assets/img/partenaires/infor.jpg").default} width="70%" alt="infor"/>
+                    </button>
+                </Reveal>
                     <Reveal right>
-                        <button onClick={DisplayEvent} className="btn btn-primary" style={{marginLeft: "10px", backgroundColor: "#2ea3dd" }}>STB</button>
-                    </Reveal>
+                    <button onClick={DisplayStb}  style={{ marginLeft: "10px"}}>
+                    <img src={require("../../assets/img/partenaires/stb.jpg").default}  width="70%" alt="stb"/>
+                        
+                    </button>
+                </Reveal>
                 </div>
 
 
             }
-
+<br/>
         </div>
     )
 }

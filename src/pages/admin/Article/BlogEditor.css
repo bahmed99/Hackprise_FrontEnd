@@ -1,14 +1,14 @@
 @font-face {
     font-family: Gilroy-Bold;
-    src: url("../../assets/fonts/Gilroy-Bold.woff");
+    src: url("../../../assets/fonts/Gilroy-Bold.woff");
   }
   @font-face {
     font-family: Proxima-nova;
-    src: url("../../assets/fonts/proxima-nova-light-webfont.woff");
+    src: url("../../../assets/fonts/proxima-nova-light-webfont.woff");
   }
   @font-face {
     font-family: Photograph-Signature;
-    src: url("../../assets/fonts/Photograph Signature.ttf");
+    src: url("../../../assets/fonts/Photograph Signature.ttf");
   }
 .editor_page{
 background-color: white;

@@ -29,6 +29,7 @@ import Alert from 'react-bootstrap/Alert'
 function Formulaire({ long }) {
     const path = "http://www.localhost:3001/hackathonInfor/register"
     const [file, setFile] = useState()
+    const [file1, setFile1] = useState()
 
     const [fileName, setFileName] = useState('')
     const [fileName1, setFileName1] = useState('')
@@ -37,6 +38,9 @@ function Formulaire({ long }) {
     const [fileType1, setFileType1] = useState('')
 
     const [fileValue, setFileValue] = useState('')
+
+    const [fileValue1, setFileValue1] = useState('')
+
     const [nameValue, setNameValue] = useState('')
     const [mailValue, setMailValue] = useState('')
     const [phoneValue, setPhoneValue] = useState('')
@@ -54,7 +58,7 @@ function Formulaire({ long }) {
 
 
 
-
+    const history = useHistory();
     const [test, setTest] = useState(false)
 
     const [choix, setChoix] = useState('')
@@ -68,13 +72,30 @@ function Formulaire({ long }) {
         setFileType(event.target.value.slice(event.target.value.lastIndexOf('.') + 1 - event.target.value.length));
         setFileValue(event.target.value);
         setFile(event.target.files[0]);
-        console.log(event.target.value)
+
     }
     const close = () => {
         setFileName('');
         setFileType('');
         setFileValue('');
     }
+
+    const close1 = () => {
+        setFileName1('');
+        setFileType1('');
+        setFileValue1('');
+    }
+
+    const handleFile1 = (event) => {
+        setFileName1(event.target.value.replace('C:\\fakepath\\', ''));
+        setFileType1(event.target.value.slice(event.target.value.lastIndexOf('.') + 1 - event.target.value.length));
+        setFileValue1(event.target.value);
+        setFile1(event.target.files[0]);
+
+    }
+
+
+
     const handeleName = (event) => setNameValue(event.target.value)
     const handeleMail = (event) => setMailValue(event.target.value)
     const handelePhone = (event) => setPhoneValue(event.target.value)
@@ -103,6 +124,10 @@ function Formulaire({ long }) {
             setPhoneValue1("")
             setInstitutValue1("")
             setOccupation1("")
+            setFile1()
+            setFileName1('');
+            setFileType1('');
+            setFileValue1('');
         }
 
 
@@ -112,6 +137,7 @@ function Formulaire({ long }) {
         setLoading(true);
         const fd = new FormData()
         fd.append('file', file);
+        fd.append('file1', file1);
 
 
         fd.append('nom', nameValue);
@@ -133,8 +159,8 @@ function Formulaire({ long }) {
 
 
 
-
         fd.append('fileValue', fileValue);
+        fd.append('fileValue1', fileValue1);
         axios.post(path, fd)
             .then(res => {
                 setLoading(false);
@@ -142,6 +168,8 @@ function Formulaire({ long }) {
                 setError(res.data.error)
                 setMsg(res.data.msg)
                 setTimeout(() => setError(false), 3000)
+                setTimeout(() => history.push('/'), 1300)
+
             })
             .catch(() => {
                 setError(true);
@@ -152,7 +180,7 @@ function Formulaire({ long }) {
 
     }
 
-    const history = useHistory();
+
     // const [loading, setLoading] = useState(false)
     // const [error, setError] = useState(false)
     // const [sent, setSent] = useState(false)
@@ -332,13 +360,13 @@ function Formulaire({ long }) {
                 </Modal.Header>
                 <Modal.Body style={{ textAlign: 'center' }}>
                     <i style={{ fontSize: '100px', color: '#2EA3DD' }} className="fa fa-check"></i>
-                    <h5>Vous venez de finaliser votre inscription à la 15ème édition du forum annuel de l'ENSI</h5>
+                    <h5>Vous venez de finaliser votre inscription à la 1ère édition du Hack'Prise</h5>
                 </Modal.Body>
             </Modal>
             <form id="contact-form" onSubmit={(event) => handleSubmit(event)} encType="multipart/form-data">
                 <div className="row">
-                    <h5>Chef D'équipe</h5>
-                    <br />
+                    <h5 style={{ color: "#1f212d" }}>Chef D'équipe</h5>
+                    <br /><br />
                     <div className="col-md-6">
                         <FormInput
                             tag={'input'}
@@ -403,16 +431,16 @@ function Formulaire({ long }) {
                             onChange={(event) => handeleEquipe(event)}
                         />
                     </div>
-                    <div className="col-md-6">
-                        <label>Choisir</label>
+                    <div className="col-md-6" >
+                        <label style={{marginLeft:'20px'}}><strong>Choix:</strong></label>
 
-                        <div class="form-check">
+                        <div className="form-check" style={{marginLeft:'20px'}}>
                             <input class="form-check-input" type="radio" name="choix" value="En ligne" required onChange={(event) => handeleChoix(event)} />
                             <label class="form-check-label" for="flexRadioDefault1">
                                 En ligne
                             </label>
                         </div>
-                        <div class="form-check">
+                        <div className="form-check" style={{marginLeft:'20px'}}>
                             <input class="form-check-input" type="radio" name="choix" value="En Présentiel" onChange={(event) => handeleChoix(event)} />
                             <label class="form-check-label" for="flexRadioDefault2">
                                 En Présentiel
@@ -425,9 +453,9 @@ function Formulaire({ long }) {
                         <div className="col-md-6">
                             <div style={{ display: fileType !== '' ? '' : 'none', width: "60px", textAlign: 'center', paddingBottom: '15px' }}>
                                 <div style={{ width: "60px" }}>
-                                    <img src={require(`../../../assets/img/icons/pdf.png`).default} style={{ display: fileType !== 'pdf' ? 'none' : '' }} width="100%" />
-                                    <img src={require(`../../../assets/img/icons/doc.jpg`).default} style={{ display: !['docx', 'doc'].includes(fileType) ? 'none' : '' }} width="150%" />
-                                    <img src={require(`../../../assets/img/icons/ppt.png`).default} style={{ display: !['pptx', 'ppt'].includes(fileType) ? 'none' : '' }} width="150%" />
+                                    <img src={require(`../../../assets/img/icons/pdf.png`).default} style={{ display: fileType !== 'pdf' ? 'none' : '' }} width="100%" alt=''/>
+                                    <img src={require(`../../../assets/img/icons/doc.jpg`).default} style={{ display: !['docx', 'doc'].includes(fileType) ? 'none' : '' }} width="150%" alt=''/>
+                                    <img src={require(`../../../assets/img/icons/ppt.png`).default} style={{ display: !['pptx', 'ppt'].includes(fileType) ? 'none' : '' }} width="150%" alt=''/>
                                     <span onClick={() => close()} style={{ display: fileType !== 'pdf' ? 'none' : '', fontSize: '20px', position: 'absolute', top: "-11px", left: '9px', cursor: 'pointer' }}><i className='fa fa-times' /></span>
                                     <span onClick={() => close()} style={{ display: !['docx', 'doc', 'pptx', 'ppt'].includes(fileType) ? 'none' : '', fontSize: '20px', position: 'absolute', top: "-10px", left: '15px', cursor: 'pointer' }}><i className='fa fa-times' /></span>
                                 </div>
@@ -435,30 +463,21 @@ function Formulaire({ long }) {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-6">
-                        <label>Choisir nombre de participant:</label>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="nb" value="1" required onChange={(event) => handeleNombre(event)} />
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                1
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="nb" value="2" onChange={(event) => handeleNombre(event)} />
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                2
-                            </label>
-                        </div>
-
+                    <div className="col-md-4" style={{marginLeft:"auto",marginRight:"auto"}}>
+                            <label className="my-1 mr-2" >Nombre de participants</label>
+                            <select className="custom-select my-1 mr-sm-2"  onChange={(event) => handeleNombre(event)}  >
+                                <option selected value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
                     </div>
+                    <br/>
 
                     {
                         test ?
                             <>
                                 <br />
                                 <br /><br /><br /><br />
-                                <h5>Participant 2</h5>
+                                <h5 style={{ color: "#1f212d" }}>Participant 2</h5>
                                 <br /><br />
                                 <div className="col-md-6">
                                     <FormInput
@@ -514,18 +533,18 @@ function Formulaire({ long }) {
 
                                 </div>
                                 <div className="col-md-6" style={{ display: "flex" }}>
-                                    <input type='file' id='cv' style={{ display: 'none' }} name='cv' onChange={(event) => handleFile(event)} accept=".pdf,.ppt,.pptx,.doc,.docx" />
-                                    <label style={{ paddingLeft: '10px' }} htmlFor="cv"><Tooltip title='Attacher un CV'><span style={{ cursor: 'pointer' }} className='clipper-outline'><i className="fa fa-paperclip" /></span></Tooltip></label>
+                                    <input type='file' id='cv1' style={{ display: 'none' }} name='cv1' onChange={(event) => handleFile1(event)} accept=".pdf,.ppt,.pptx,.doc,.docx" />
+                                    <label style={{ paddingLeft: '10px' }} htmlFor="cv1"><Tooltip title='Attacher un CV'><span style={{ cursor: 'pointer' }} className='clipper-outline'><i className="fa fa-paperclip" /></span></Tooltip></label>
                                     <div className="col-md-6">
-                                        <div style={{ display: fileType !== '' ? '' : 'none', width: "60px", textAlign: 'center', paddingBottom: '15px' }}>
+                                        <div style={{ display: fileType1 !== '' ? '' : 'none', width: "60px", textAlign: 'center', paddingBottom: '15px' }}>
                                             <div style={{ width: "60px" }}>
-                                                <img src={require(`../../../assets/img/icons/pdf.png`).default} style={{ display: fileType !== 'pdf' ? 'none' : '' }} width="100%" />
-                                                <img src={require(`../../../assets/img/icons/doc.jpg`).default} style={{ display: !['docx', 'doc'].includes(fileType) ? 'none' : '' }} width="150%" />
-                                                <img src={require(`../../../assets/img/icons/ppt.png`).default} style={{ display: !['pptx', 'ppt'].includes(fileType) ? 'none' : '' }} width="150%" />
-                                                <span onClick={() => close()} style={{ display: fileType !== 'pdf' ? 'none' : '', fontSize: '20px', position: 'absolute', top: "-11px", left: '9px', cursor: 'pointer' }}><i className='fa fa-times' /></span>
-                                                <span onClick={() => close()} style={{ display: !['docx', 'doc', 'pptx', 'ppt'].includes(fileType) ? 'none' : '', fontSize: '20px', position: 'absolute', top: "-10px", left: '15px', cursor: 'pointer' }}><i className='fa fa-times' /></span>
+                                                <img src={require(`../../../assets/img/icons/pdf.png`).default} style={{ display: fileType1 !== 'pdf' ? 'none' : '' }} width="100%" />
+                                                <img src={require(`../../../assets/img/icons/doc.jpg`).default} style={{ display: !['docx', 'doc'].includes(fileType1) ? 'none' : '' }} width="150%" />
+                                                <img src={require(`../../../assets/img/icons/ppt.png`).default} style={{ display: !['pptx', 'ppt'].includes(fileType1) ? 'none' : '' }} width="150%" />
+                                                <span onClick={() => close1()} style={{ display: fileType1 !== 'pdf' ? 'none' : '', fontSize: '20px', position: 'absolute', top: "-11px", left: '9px', cursor: 'pointer' }}><i className='fa fa-times' /></span>
+                                                <span onClick={() => close1()} style={{ display: !['docx', 'doc', 'pptx', 'ppt'].includes(fileType1) ? 'none' : '', fontSize: '20px', position: 'absolute', top: "-10px", left: '15px', cursor: 'pointer' }}><i className='fa fa-times' /></span>
                                             </div>
-                                            <p style={{ fontSize: '10px' }}>{fileName}</p>
+                                            <p style={{ fontSize: '10px' }}>{fileName1}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -544,7 +563,7 @@ function Formulaire({ long }) {
                     <div className="col-md-12" style={{ marginLeft: '15px', paddingBottom: "20px" }}>
                         <FormControlLabel
                             control={<input onChange={(event) => handeleAccord(event)} style={{ padding: '15px' }} type='checkbox' name='accord' className="checkbox" />}
-                            label={<label style={{ fontSize: "13px", marginTop: '8px', paddingLeft: '15px', color: "#8e8e8e" }}>J'accepte de partager mes informations avec les entreprises présentes au forum annuel de l'ENSI</label>}
+                            label={<label style={{ fontSize: "13px", marginTop: '8px', paddingLeft: '15px', color: "#8e8e8e" }}>J'accepte de partager mes informations avec INFOR</label>}
                             icon={<span />}
                         />
                     </div>

@@ -24,7 +24,8 @@ import Infor from "./components/Participants/Infor/Index"
 
 
 import Blog from "./components/Blog/Blog"
-import BlogEditeur from "./components/Articles/BlogEditor"
+import BlogEditeur from "./pages/admin/Article/BlogEditor"
+import BlogDelete from "./pages/admin/Article/BlogDelete"
 
 export default function MainRouter() {
 
@@ -53,6 +54,9 @@ export default function MainRouter() {
                 <Route exact path={"/eje/infor/enPresentiel"} component={InforEnPresentiel} />
 
                 <Route exact path={"/eje/write/blog"} component={BlogEditeur} />
+                <Route exact path={"/eje/delete/blog"} component={BlogDelete} />
+
+
                 <Route exact path={"/article/:id"} component={Blog} />
 
                 <Route exact path={"/eje/stb/:id"} component={ParticipantStb} />

@@ -64,8 +64,39 @@ export default function Programme() {
                             <Col xs='8' sm="4" xl="8" lg="4" >
                                 <Reveal bottom>
 
-                                    <TimelineWrap icon={'workshop.png'} title={'Hackathon'}>
+                                    <TimelineWrap icon={'workshop.png'} title={'1ére journée'}>
 
+                                        <Timeline
+                                            degree={'educationItem.degree'}
+                                            institute={"Mot d'ouverture"}
+                                            duration={'8h30'}
+                                        />
+                                        <Timeline
+                                            degree={'food-stand.png'}
+                                            institute={'Présentation des entreprises'}
+                                            duration={'10h'}
+                                        />
+                                        <Timeline
+                                            degree={'workshop.png'}
+                                            institute={'Table Ronde'}
+                                            duration={'13h'}
+                                        />
+                                        <Timeline
+                                            degree={'workshop.png'}
+                                            institute={'Mot de clôture'}
+                                            duration={'17h'}
+                                        />
+
+                                    </TimelineWrap>
+
+
+                                </Reveal>
+                            </Col>
+                            <Col xs='8' sm="4" xl="8" lg="4" >
+                                <Reveal bottom>
+
+                                    <TimelineWrap icon={'workshop.png'} title={'2ème journée'} >
+                                      
                                         <Timeline
                                             degree={'educationItem.degree'}
                                             institute={"Mot d'ouverture"}

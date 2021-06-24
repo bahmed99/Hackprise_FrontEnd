@@ -23,14 +23,7 @@ function Services({ classes, nb }) {
         autoplay: true,
         speed: 500,
         className: ` testimonial-grid`,
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 1
-                }
-            }
-        ]
+        
     }
 
 
@@ -75,12 +68,12 @@ function Services({ classes, nb }) {
 
                             {
                                 data.map(blog => (
-                                    <div className="card" style={{ width: "18rem" }}>
-                                        <img  style={{width:"700px",height:"400px"}} className="card-img-top" src={`/uploads/${blog.image}`} alt="" />
+                                    <div  style={{ width: "18rem",height:""}} className="card" >
+                                        <img  style={{width:"600px",height:"300px"}} className="card-img-top" src={`/uploads/${blog.image}`} alt="" />
                                         <div className="card-body" style={{ textAlign: "center" }}>
                                             <h5 className="card-title">{blog.title}</h5>
-                                            <p className="card-text">{blog.content.substring(0,10)}...</p>
-                                            <a href={`/article/${blog._id}`} class="btn btn-primary">Read more</a>
+                                            <p className="card-text">{blog.content.substring(0,20)}...</p>
+                                            <a href={`/article/${blog._id}`} className="btn btn-primary">Read more</a>
                                         </div>
                                     </div>
                                 ))

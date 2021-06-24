@@ -7,7 +7,7 @@ import BrandLogo from "../components/Sponsor";
 import Funfact from "../components/Funfact";
 import Footer from "../components/Footer";
 import Blog from '../components/Blog/Blogs';
-import Teaser from '../components/Thematique';
+import Thematique from '../components/Thematique';
 import Video from '../components/Video';
 import '../assets/css/video.css'
 import Apropos from '../components/Apropos';
@@ -21,6 +21,9 @@ const HomeOne = () => {
     let [scale, setScale] = useState()
     let [nb, setNb] = useState()
     let [wd, setWd] = useState()
+
+    let [mobile, setMobile] = useState()
+    
 
     window.onresize = function () {
 
@@ -64,6 +67,15 @@ const HomeOne = () => {
         }
 
 
+        if (window.innerWidth < 800) {
+            setMobile(false)
+
+        }
+        else {
+            setMobile(true)
+        }
+
+
         // if (window.innerWidth > 500 && window.innerWidth < 780) {
         //     setNb(2)
         // }
@@ -96,6 +108,15 @@ const HomeOne = () => {
         //     setNb(1)
         // }
 
+
+        
+        if (window.innerWidth < 800) {
+            setMobile(false)
+
+        }
+        else {
+            setMobile(true)
+        }
 
         if (window.innerWidth > 1200) {
 
@@ -139,9 +160,9 @@ const HomeOne = () => {
             <Video />
             <hr style={{ width: '70%', marginLeft: '15%' }} />
             <div id="apropos">
-                <Apropos />
+                <Apropos mobile={mobile} />
                 <hr style={{ width: '70%', marginLeft: '15%' }} />
-                <Teaser id='plateforme' />
+                <Thematique id='thematique' mobile={mobile} />
             </div>
             <div id='partenaires'>
                 <Services classes="sm-top-wt" />

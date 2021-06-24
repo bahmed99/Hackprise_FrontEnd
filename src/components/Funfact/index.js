@@ -27,7 +27,7 @@ function Funfact() {
     return (
         <div className="fun-fact-area sm-top parallax" style={{backgroundImage: `url(${funfactbg})`}}>
             <div >
-                <div className="row mtn-k" >
+                <div className="container" >
                        
                             {/* <FunfactItem id={1} before={"+"} after={""} counterNumber={count.countEvent} counterText="Participants" /> */}
                             <FunfactItem id={1} before={"+"} after={""} counterNumber={count.countHackathon} counterText="Equipes" />
