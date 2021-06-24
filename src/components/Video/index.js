@@ -15,7 +15,7 @@ export default function Video (props) {
                     <Reveal top big>  
                         <div className='video-conainer' >
                             <h3 className='test'  >Always Striving For Greatness</h3>
-                            <h1>La 1èr édition du Hack'prise</h1>
+                            <h1>La 1ère édition du Hack'prise</h1>
                             
                     <Countdown
                             date={new Date("July 15, 2021 8:30:00")}

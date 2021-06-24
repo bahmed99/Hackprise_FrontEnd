@@ -34,7 +34,16 @@ export default function MainRouter() {
             <Switch>
                 <Route exact path="/" component={HomeOne} />
                 <Route exact path={"/register"} component={Contact} />
+
+
+
+
+                
                 <Route exact path={"/eje"} component={Participants} />
+
+
+
+
 
 
                 <Route exact path={"/eje/stb"} component={Stb} />

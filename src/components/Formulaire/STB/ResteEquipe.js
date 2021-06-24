@@ -17,6 +17,49 @@ export const RestTeamDetails = (
         <br/>
         <h6>Participant 3</h6>
         <Field
+            key={'fullName2'}
+            id={'fullName2'}
+            name={'nom2'}
+            label={'Nom et Prénom'}
+            component={FormInput}
+            
+        />
+
+        <Field
+            key={'email2'}
+            id={'email2'}
+            name={'email2'}
+            label={'Email'}
+            type={'email2'}
+            component={FormInput}
+            
+        />
+        <Field
+            key={'Tel2'}
+            id={'Tel2'}
+            name={'tel2'}
+            label={'Numéro de téléphone'}
+            component={FormInput}
+           
+        />
+        <Field
+            key={'Profession2'}
+            id={'Profession2'}
+            name={'profession2'}
+            label={'Occupation'}
+            component={FormInput}
+           
+        />
+        <Field
+            key={'Etablissement2'}
+            id={'Etablissement2'}
+            name={'Etablissement2'}
+            label={'Etablissement'}
+            component={FormInput}
+        />
+        <br/>   
+        <h6>Participant 4</h6>
+        <Field
             key={'fullName3'}
             id={'fullName3'}
             name={'nom3'}
@@ -54,50 +97,6 @@ export const RestTeamDetails = (
             key={'Etablissement3'}
             id={'Etablissement3'}
             name={'Etablissement3'}
-            label={'Etablissement'}
-            component={FormInput}
-            required={false}
-        />
-        <br/>
-        <h6>Participant 4</h6>
-       <Field
-            key={'fullName4'}
-            id={'fullName4'}
-            name={'nom4'}
-            label={'Nom et Prénom'}
-            component={FormInput}
-            required={false}
-        />
-        <Field
-            key={'email4'}
-            id={'email4'}
-            name={'email4'}
-            label={'Email'}
-            type={'email4'}
-            component={FormInput}
-            required={false}
-        />
-        <Field
-            key={'Tel4'}
-            id={'Tel4'}
-            name={'tel4'}
-            label={'Numéro de téléphone'}
-            component={FormInput}
-          
-            required={false}
-        />
-        <Field
-            key={'Profession4'}
-            id={'Profession4'}
-            name={'profession4'}
-            label={'Occupation'}
-            component={FormInput}
-            required={false}
-        />
-        <Field
-            key={'Etablissement4'}
-            id={'Etablissement4'}
-            name={'Etablissement4'}
             label={'Etablissement'}
             component={FormInput}
             required={false}

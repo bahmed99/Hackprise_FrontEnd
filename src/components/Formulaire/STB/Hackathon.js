@@ -37,7 +37,7 @@ function Formulaire({ long }) {
 
 
     const path1 = "http://www.localhost:3001/hackathonStb/register"
-    const path2 = "http://www.localhost:3001/hackathonInfor/register"
+    
 
 
 
@@ -69,7 +69,6 @@ function Formulaire({ long }) {
             setFormState(values);
 
             if (isLastStep && isPreviousStepsValid && isValid) {
-                if (values.SelectHackathon == 'STB') {
                     axios.post(path1, values)
                         .then(res => {
                             setLoading(false);
@@ -86,29 +85,6 @@ function Formulaire({ long }) {
                             setMsg(true)
                             setTimeout(() => setError(false), 3000)
                         });
-                }
-                if (values.SelectHackathon == 'INFOR') {
-                    axios.post(path2, values)
-                        .then(res => {
-                            setLoading(false);
-                            setSent(res.data.sent)
-                            setError(res.data.error)
-                            setMsg(res.data.msg)
-                            setTimeout(() => setError(false), 3000)
-                            setTimeout(() => history.push('/'), 1300)
-
-                        })
-                        .catch(err => {
-                            setError(true);
-                            setLoading(false);
-                            setMsg(true)
-                            setTimeout(() => setError(false), 3000)
-                        });
-                }
-
-
-
-
             }
         },
         [step, steps, setSteps, setStep, setFormState, isLastStep, isPreviousStepsValid]
@@ -154,7 +130,7 @@ function Formulaire({ long }) {
                             <div style={{ alignSelf: 'center' }}>
                                 <FormElement style={{ width: long }}>
                                     {stepPages[step]}
-                                   
+{/*                                    
                                     { step==0?formRenderProps.valueGetter('SelectHackathon') !== "INFOR" ? "" :
 
                                         <Field
@@ -169,7 +145,7 @@ function Formulaire({ long }) {
 
                                         /> :""
 
-                                    }
+                                    } */}
                                     <span style={{ marginTop: '40px' }} className={'k-form-separator'} />
                                     <div
                                         style={{ justifyContent: 'space-between', alignContent: 'center' }}

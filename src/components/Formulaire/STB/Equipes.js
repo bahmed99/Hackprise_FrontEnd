@@ -15,7 +15,7 @@ export const TeamDetails = (
 
     <div>
         <br />
-        <h6>Participant 1</h6>
+        <h6>Participant 2</h6>
         <Field
             key={'fullName1'}
             id={'fullName1'}
@@ -60,49 +60,7 @@ export const TeamDetails = (
             validator={EtablissementValidator}
         />
         <br />
-        <h6>Participant 2</h6>
-        <Field
-            key={'fullName2'}
-            id={'fullName2'}
-            name={'nom2'}
-            label={'Nom et Prénom'}
-            component={FormInput}
-            validator={nameValidator}
-        />
-
-        <Field
-            key={'email2'}
-            id={'email2'}
-            name={'email2'}
-            label={'Email'}
-            type={'email2'}
-            component={FormInput}
-            validator={emailValidator}
-        />
-        <Field
-            key={'Tel2'}
-            id={'Tel2'}
-            name={'tel2'}
-            label={'Numéro de téléphone'}
-            component={FormInput}
-            validator={phoneValidator}
-        />
-        <Field
-            key={'Profession2'}
-            id={'Profession2'}
-            name={'profession2'}
-            label={'Occupation'}
-            component={FormInput}
-            validator={ProfessionValidator}
-        />
-        <Field
-            key={'Etablissement2'}
-            id={'Etablissement2'}
-            name={'Etablissement2'}
-            label={'Etablissement'}
-            component={FormInput}
-            validator={EtablissementValidator}
-        />
+        
     </div>
 
 );

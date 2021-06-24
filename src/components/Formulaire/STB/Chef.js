@@ -64,19 +64,6 @@ export const ChefDetails = (
             component={FormInput}
             validator={EtablissementValidator}
         />  
-
-        <Field
-            key={'SelectHackathon'}
-            id={'SelectHackathon'}
-            name={'SelectHackathon'}
-            label={'Choisir Hackathon'}
-            data={data}
-            validator={requiredValidator}
-            component={FormDropDownList}
-            
-        />
-
-        
         <Field
             key={'NomEquipe'}
             id={'NomEquipe'}
@@ -85,6 +72,7 @@ export const ChefDetails = (
             component={FormInput}
             validator={NomEquipeValidator}
         />
+        
 
     </div>
   

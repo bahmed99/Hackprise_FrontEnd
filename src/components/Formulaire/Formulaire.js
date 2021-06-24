@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import Hackathon from './Hackathon/Hackathon'
-import Event from './Event/Event'
+import HackathonSTB from './STB/Hackathon.js'
+import HackathonINFOR from './Infor/Hackathon.js'
+
 import './Style.css'
 import { Reveal } from 'react-reveal';
 
@@ -21,28 +22,29 @@ export default function Formulaire({ long, btn }) {
 
     }
     if (displayHack) {
-        return <Hackathon long={long} />
+        return <HackathonINFOR long={long} />
     }
     if (displayEvent) {
-        return <Event long={long} />
+        
+        return <HackathonSTB long={long} />
     }
 
     return (
         <div>
             {!btn ? <div style={{ display: displayChoice, textAlign: "center", marginTop: "120px" }}>
                 <Reveal left>
-                    <button onClick={DisplayHack} className="btn btn-primary" style={{ backgroundColor: "#2ea3dd" }}>Au Hackathon</button>
+                    <button onClick={DisplayHack} className="btn btn-primary" style={{ backgroundColor: "#2ea3dd" }}>INFOR</button>
                 </Reveal>
                 <Reveal right>
-                    <button onClick={DisplayEvent} className="btn btn-primary" style={{ marginLeft: "50px", backgroundColor: "#2ea3dd" }}>Au Événement</button>
+                    <button onClick={DisplayEvent} className="btn btn-primary" style={{ marginLeft: "50px", backgroundColor: "#2ea3dd" }}>STB</button>
                 </Reveal>
             </div> :
                 <div style={{ display: displayChoice, textAlign: "center", marginTop: "50px" }}>
                     <Reveal left>
-                        <button onClick={DisplayHack} className="btn btn-primary" style={{ backgroundColor: "#2ea3dd" }}>Au Hackathon</button>
+                        <button onClick={DisplayHack} className="btn btn-primary" style={{ backgroundColor: "#2ea3dd" }}>INFOR</button>
                     </Reveal>
                     <Reveal right>
-                        <button onClick={DisplayEvent} className="btn btn-primary" style={{marginLeft: "10px", backgroundColor: "#2ea3dd" }}>Au Événement</button>
+                        <button onClick={DisplayEvent} className="btn btn-primary" style={{marginLeft: "10px", backgroundColor: "#2ea3dd" }}>STB</button>
                     </Reveal>
                 </div>
 

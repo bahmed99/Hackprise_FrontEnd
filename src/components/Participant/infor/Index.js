@@ -57,54 +57,7 @@ return (
                     <Card.Text>
                         {data.Etablissement1}
                     </Card.Text>
-                    <hr />
-                    <Card.Text>
-                        {data.nom2}
-                    </Card.Text>
-                    <Card.Text>
-                        {data.email2}
-                    </Card.Text>
-                    <Card.Text>
-                        {data.tel2}
-                    </Card.Text>
-                    <Card.Text>
-                        {data.profession2}
-                    </Card.Text>
-                    <Card.Text>
-                        {data.Etablissement2}
-                    </Card.Text>
-                    <hr />
-                    <Card.Text>
-                        {data.nom3}
-                    </Card.Text>
-                    <Card.Text>
-                        {data.email3}
-                    </Card.Text>
-                    <Card.Text>
-                        {data.tel3}
-                    </Card.Text>
-                    <Card.Text>
-                        {data.profession3}
-                    </Card.Text>
-                    <Card.Text>
-                        {data.Etablissement3}
-                    </Card.Text>
-                    <hr />
-                    <Card.Text>
-                        {data.nom4}
-                    </Card.Text>
-                    <Card.Text>
-                        {data.email4}
-                    </Card.Text>
-                    <Card.Text>
-                        {data.tel4}
-                    </Card.Text>
-                    <Card.Text>
-                        {data.profession4}
-                    </Card.Text>
-                    <Card.Text>
-                        {data.Etablissement4}
-                    </Card.Text>
+                   
                     
                 </Card.Body>
             </Card>

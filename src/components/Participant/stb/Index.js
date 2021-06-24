@@ -89,22 +89,7 @@ function Index() {
                     <Card.Text>
                         {data.Etablissement3}
                     </Card.Text>
-                    <hr />
-                    <Card.Text>
-                        {data.nom4}
-                    </Card.Text>
-                    <Card.Text>
-                        {data.email4}
-                    </Card.Text>
-                    <Card.Text>
-                        {data.tel4}
-                    </Card.Text>
-                    <Card.Text>
-                        {data.profession4}
-                    </Card.Text>
-                    <Card.Text>
-                        {data.Etablissement4}
-                    </Card.Text>
+                   
 
                 </Card.Body>
             </Card>

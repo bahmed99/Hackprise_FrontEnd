@@ -83,6 +83,7 @@ function handleWriterChange(e) {
 function handleImage(e) { 
   let file=e.target.files[0]
   setImage(file)
+  console.log(e.target.files[0])
 }
 const handleClose = () => {
   setLoading(false);

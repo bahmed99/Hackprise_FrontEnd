@@ -1,6 +1,6 @@
 import React from 'react';
 import ContactInfo from "./ContactInfo";
-import Hackathon from '../Formulaire/Hackathon/Hackathon';
+import Formulaire from '../Formulaire/Formulaire.js';
 
 const ContactPage = ({long , btn }) => {
     return (
@@ -11,7 +11,8 @@ const ContactPage = ({long , btn }) => {
                         <div className="col-lg-8">
                             <div className="contact-form-area contact-method">
                                 <h3>Inscrivez vous</h3>
-                                    <Hackathon long={long} btn={btn} />
+                                    {/* <Hackathon long={long} btn={btn} /> */}
+                                    <Formulaire long={long} btn={btn} />
                                
                             </div>
                         </div>
