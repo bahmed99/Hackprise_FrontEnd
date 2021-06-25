@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import SectionTitle from '../Utilities/SectionTitle'
 import data from '../../data/Exposition/exposition'
-
+import { Link } from "react-router-dom";
 import serviceTopBg from '../../assets/img/tec.jpg'
 import { Fade } from 'react-reveal';
 import axios from 'axios'
@@ -16,7 +16,7 @@ import "slick-carousel/slick/slick-theme.css";
 function Services({ classes, nb }) {
 
     const settings = {
-        slidesToShow: 3,
+        slidesToShow: nb,
         slidesToScroll: 1,
         arrows: false,
         dots: true,
@@ -55,7 +55,7 @@ function Services({ classes, nb }) {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6 col-xl-5 m-auto text-center">
-                            <SectionTitle variant="light" heading="<span style='color:#2EA3DD;'>Articles</span>" />
+                            <SectionTitle variant="light" heading="<span style='color:#2ea3dd;'>Articles</span>" />
                         </div>
                     </div>
                 </div>
@@ -73,7 +73,8 @@ function Services({ classes, nb }) {
                                         <div className="card-body" style={{ textAlign: "center" }}>
                                             <h5 className="card-title">{blog.title}</h5>
                                             <p className="card-text">{blog.content.substring(0,20)}...</p>
-                                            <a href={`/article/${blog._id}`} className="btn btn-primary">Read more</a>
+                                            {/* <a href={`/article/${blog._id}`} className="btn btn-primary" target="_blank" >Lire plus</a> */}
+                                            <Link to={`/article/${blog._id}`} className="btn-outline" target="_blank">Lire plus</Link>
                                         </div>
                                     </div>
                                 ))

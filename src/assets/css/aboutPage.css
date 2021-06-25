@@ -1,0 +1,12 @@
+.textContainer{
+    text-align: center;
+    padding: 150px 300px;
+}
+
+.logoContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 30px;
+    
+}

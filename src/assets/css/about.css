@@ -13,5 +13,18 @@
     padding: 150px;
 }
 
+.btnContainer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.btnContainer .btn-outline
+{
+   margin:10px;
+    
+}
+
 
 

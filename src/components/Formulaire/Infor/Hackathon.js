@@ -1,30 +1,12 @@
 import { FormControlLabel, Tooltip } from '@material-ui/core';
-import React, { useState, useCallback } from 'react';
+import React, { useState } from 'react';
 import FormInput from "../../Utilities/Input";
 import { useHistory } from 'react-router';
 import axios from 'axios';
-import { Form, FormElement } from '@progress/kendo-react-form';
-import { Button } from '@progress/kendo-react-buttons';
-import { Stepper } from '@progress/kendo-react-layout';
+
 import { Modal } from 'react-bootstrap';
-import { ChefDetails } from './Chef';
-import { RestTeamDetails } from './ResteEquipe';
-import { Reveal } from 'react-reveal';
-import { Field } from '@progress/kendo-react-form';
 import Alert from 'react-bootstrap/Alert'
-// import {
-//     FormInput, FormDropDownList, FormRadioGroup
-// } from '../form-components.js';
 
-// import {
-//     emailValidator, nameValidator, phoneValidator, ProfessionValidator, requiredValidator, EtablissementValidator, NomEquipeValidator
-// } from '../validators.js'
-
-// import Alert from 'react-bootstrap/Alert'
-// const stepPages = [
-//     ChefDetails,
-//     RestTeamDetails
-// ];
 
 function Formulaire({ long }) {
     const path = "http://www.localhost:3001/hackathonInfor/register"
@@ -47,6 +29,7 @@ function Formulaire({ long }) {
     const [institutValue, setInstitutValue] = useState('')
     const [occupation, setOccupation] = useState('')
     const [equipe, setEquipe] = useState('')
+    const [niveau, setNiveau] = useState('')
 
 
     const [nameValue1, setNameValue1] = useState('')
@@ -54,7 +37,7 @@ function Formulaire({ long }) {
     const [phoneValue1, setPhoneValue1] = useState('')
     const [institutValue1, setInstitutValue1] = useState('')
     const [occupation1, setOccupation1] = useState('')
-
+    const [niveau1, setNiveau1] = useState('')
 
 
 
@@ -101,16 +84,19 @@ function Formulaire({ long }) {
     const handelePhone = (event) => setPhoneValue(event.target.value)
     const handeleInstitut = (event) => setInstitutValue(event.target.value)
     const handeleOccupation = (event) => setOccupation(event.target.value)
+    const handeleNiveau = (event) => setNiveau(event.target.value)
+
 
     const handeleName1 = (event) => setNameValue1(event.target.value)
     const handeleMail1 = (event) => setMailValue1(event.target.value)
     const handelePhone1 = (event) => setPhoneValue1(event.target.value)
     const handeleInstitut1 = (event) => setInstitutValue1(event.target.value)
     const handeleOccupation1 = (event) => setOccupation1(event.target.value)
+    const handeleNiveau1 = (event) => setNiveau1(event.target.value)
 
 
 
-    const handeleAccord = (event) => setAccordValue(event.target.checked)
+    // const handeleAccord = (event) => setAccordValue(event.target.checked)
     const handeleEquipe = (event) => setEquipe(event.target.value)
     const handeleChoix = (event) => setChoix(event.target.value)
     const handeleNombre = (event) => {
@@ -128,6 +114,7 @@ function Formulaire({ long }) {
             setFileName1('');
             setFileType1('');
             setFileValue1('');
+            setNiveau1('')
         }
 
 
@@ -143,11 +130,12 @@ function Formulaire({ long }) {
         fd.append('nom', nameValue);
         fd.append('email', mailValue);
         fd.append('tel', phoneValue);
-        fd.append('accord', accordValue);
+        // fd.append('accord', accordValue);
         fd.append('Etablissement', institutValue);
         fd.append('profession', occupation);
         fd.append('NomEquipe', equipe);
         fd.append('SelectEnLigne', choix);
+        fd.append('niveau', niveau);
 
 
         fd.append('nom1', nameValue1);
@@ -155,6 +143,7 @@ function Formulaire({ long }) {
         fd.append('tel1', phoneValue1);
         fd.append('Etablissement1', institutValue1);
         fd.append('profession1', occupation1);
+        fd.append('niveau1', niveau1);
 
 
 
@@ -179,170 +168,7 @@ function Formulaire({ long }) {
             });
 
     }
-
-
-    // const [loading, setLoading] = useState(false)
-    // const [error, setError] = useState(false)
-    // const [sent, setSent] = useState(false)
-    // const [msg, setMsg] = useState(false)
-
-
-    // const path1 = "http://www.localhost:3001/hackathonInfor/register"
-
-
-
-
-    // const [step, setStep] = useState(0);
-    // const [formState, setFormState] = useState({});
-    // const [steps, setSteps] = useState([
-    //     { label: 'Chef du groupe', isValid: undefined, icon: 'k-i-user' },
-    //     { label: `Reste de l'équipe`, isValid: undefined, icon: 'k-i-track-changes-accept' }
-    // ]);
-
-    // const lastStepIndex = steps.length - 1;
-    // const isLastStep = lastStepIndex === step;
-    // const isPreviousStepsValid = steps
-    //     .slice(0, step)
-    //     .findIndex(currentStep => currentStep.isValid === false) === -1;
-
-    // const onStepSubmit = useCallback(
-    //     (event) => {
-    //         const { isValid, values } = event;
-
-    //         const currentSteps = steps.map((currentStep, index) => ({
-    //             ...currentStep,
-    //             isValid: index === step ? isValid : currentStep.isValid
-    //         }));
-
-    //         setSteps(currentSteps);
-    //         setStep(() => Math.min(step + 1, lastStepIndex));
-    //         setFormState(values);
-
-    //         console.log(values.cv[0])
-
-    //         if (isLastStep && isPreviousStepsValid && isValid) {
-    //             dataform.append('nom', values.nom)
-    //             dataform.append('email', values.email)
-    //             dataform.append('tel', values.tel)
-    //             dataform.append('profession', values.profession)
-    //             dataform.append('NomEquipe', values.NomEquipe)
-    //             dataform.append('SelectEnLigne', values.SelectEnLigne)
-    //             dataform.append('Etablissement', values.Etablissement)
-    //             dataform.append('cv', values.cv[0].name)
-    //             dataform.append('file', {name:values.cv[0].name , size:values.cv[0].size ,webkitRelativePath:""})
-
-    //             axios.post(path1, dataform)
-    //                 .then(res => {
-    //                     setLoading(false);
-    //                     setSent(res.data.sent)
-    //                     setError(res.data.error)
-    //                     setMsg(res.data.msg)
-    //                     setTimeout(() => setError(false), 3000)
-    //                     setTimeout(() => history.push('/'), 1300)
-
-    //                 })
-    //                 .catch(err => {
-    //                     setError(true);
-    //                     setLoading(false);
-    //                     setMsg(true)
-    //                     setTimeout(() => setError(false), 3000)
-    //                 });
-    //         }
-    //     },
-    //     [step, steps, setSteps, setStep, setFormState, isLastStep, isPreviousStepsValid]
-    // );
-
-    // const onPrevClick = useCallback((event) => {
-    //     event.preventDefault();
-    //     setStep(() => Math.max(step - 1, 0));
-    // },
-    //     [step, setStep]
-    // );
-
-
     return (
-        // <div className="contact-form-wrap" >
-        //     <Alert show={error} variant={'danger'}>
-        //         {msg ? "Vous êtes déjà inscrit" : "Une erreur s'est produite lors de votre inscription veuillez vous inscrire une nouvelle fois"}
-        //     </Alert>
-        //     <Modal
-        //         size="md"
-        //         show={sent}
-        //         onHide={() => setSent(false)}
-        //         aria-labelledby="example-modal-sizes-title-sm"
-        //     >
-        //         <Modal.Header closeButton>
-        //             <Modal.Title id="example-modal-sizes-title-sm" >
-        //                 Félicitations !
-        //             </Modal.Title>
-        //         </Modal.Header>
-        //         <Modal.Body style={{ textAlign: 'center' }}>
-        //             <i style={{ fontSize: '100px', color: '#2EA3DD' }} className="fa fa-check"></i>
-        //             <h5>Vous venez de finaliser votre inscription à la 1ère édition du Hack'Prise </h5>
-
-        //         </Modal.Body>
-        //     </Modal>
-        //     <Reveal top>
-        //         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-        //             <Stepper value={step} items={steps} style={{ width: "109%" }} />
-        //             <Form
-        //                 initialValues={formState}
-        //                 onSubmitClick={onStepSubmit}
-        //                 render={(formRenderProps) => (
-        //                     <div style={{ alignSelf: 'center' }}>
-        //                         <FormElement style={{ width: long }}>
-        //                             {stepPages[step]}
-        //                             {/*                                    
-        //                             { step==0?formRenderProps.valueGetter('SelectHackathon') !== "INFOR" ? "" :
-
-        //                                 <Field
-        //                                     key={'SelectEnLigne'}
-        //                                     id={'SelectEnLigne'}
-        //                                     name={'SelectEnLigne'}
-        //                                     label={'Choisir'}
-        //                                     data={data}
-        //                                     validator={requiredValidator}
-        //                                     component={FormRadioGroup}
-        //                                     layout={"horizontal"}
-
-        //                                 /> :""
-
-        //                             } */
-        //                             step===1 ?
-        //                             console.log(formRenderProps.valueGetter("cv")):""
-
-        //                             }
-        //                             <span style={{ marginTop: '40px' }} className={'k-form-separator'} />
-        //                             <div
-        //                                 style={{ justifyContent: 'space-between', alignContent: 'center' }}
-        //                                 className={'k-form-buttons k-buttons-end'}
-        //                             >
-
-        //                                 <span style={{ alignSelf: 'center' }}>Etape {step + 1} sur 2</span>
-        //                                 <div>
-        //                                     {
-        //                                         step !== 0 ? (
-        //                                             <Button style={{ marginRight: '16px', backgroudColor: '#2ea3dd' }} onClick={onPrevClick}>
-        //                                                 Retour
-        //                                             </Button>
-        //                                         ) : undefined
-        //                                     }
-        //                                     <Button style={{ backgroudColor: '#2ea3dd' }}
-        //                                         primary={true}
-        //                                         disabled={!formRenderProps.allowSubmit}
-        //                                         onClick={formRenderProps.onSubmit}
-        //                                     >
-        //                                         {isLastStep ? 'Envoyer' : 'Suivant'}
-        //                                     </Button>
-        //                                 </div>
-        //                             </div>
-        //                         </FormElement>
-        //                     </div>
-        //                 )}
-        //             />
-        //         </div>
-        //     </Reveal>
-        // </div>
         <div className="contact-form-wrap">
             <Alert show={error} variant={'danger'}>
                 {msg ? "Vous êtes déjè inscrit" : "Une erreur s'est produite lors de votre inscription veuillez vous inscrire une nouvelle fois"}
@@ -431,31 +257,63 @@ function Formulaire({ long }) {
                             onChange={(event) => handeleEquipe(event)}
                         />
                     </div>
-                    <div className="col-md-6" >
-                        <label style={{marginLeft:'20px'}}><strong>Choix:</strong></label>
 
-                        <div className="form-check" style={{marginLeft:'20px'}}>
+                    <div className="col-md-4" style={{ marginLeft: "auto", marginRight: "auto" }}>
+                        <label className="my-1 mr-2" >Niveau Scolaire</label>
+                        <select className="custom-select my-1 mr-sm-2" onChange={(event) => handeleNiveau(event)}  >
+                            <option selected value="0">Selectionner...</option>
+                            <option  value="1ére année">1ére année</option>
+                            <option value="2ème année">2ème année</option>
+                            <option value="3ème année">3ème année</option>
+                            <option value="Master">Master</option>
+                            <option value="autre">autre</option>
+                        </select>
+                    </div>
+
+
+
+
+
+                    <div className="col-md-6" >
+                        <label style={{ marginLeft: '20px', marginBottom: "5px" }}><strong>Choix:</strong></label>
+
+                        <div className="form-check" style={{ marginLeft: '20px' }}>
                             <input class="form-check-input" type="radio" name="choix" value="En ligne" required onChange={(event) => handeleChoix(event)} />
                             <label class="form-check-label" for="flexRadioDefault1">
                                 En ligne
                             </label>
                         </div>
-                        <div className="form-check" style={{marginLeft:'20px'}}>
+                        <div className="form-check" style={{ marginLeft: '20px' }}>
                             <input class="form-check-input" type="radio" name="choix" value="En Présentiel" onChange={(event) => handeleChoix(event)} />
                             <label class="form-check-label" for="flexRadioDefault2">
                                 En Présentiel
                             </label>
                         </div>
                     </div>
+
+
+
+
+
+                    <div className="col-md-4" style={{ marginLeft: "auto", marginRight: "auto" }}>
+                        <label className="my-1 mr-2" >Nombre de participants</label>
+                        <select className="custom-select my-1 mr-sm-2" onChange={(event) => handeleNombre(event)}  >
+                            <option selected value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+
+
                     <div className="col-md-6" style={{ display: "flex" }}>
                         <input type='file' id='cv' style={{ display: 'none' }} name='cv' onChange={(event) => handleFile(event)} accept=".pdf,.ppt,.pptx,.doc,.docx" />
                         <label style={{ paddingLeft: '10px' }} htmlFor="cv"><Tooltip title='Attacher un CV'><span style={{ cursor: 'pointer' }} className='clipper-outline'><i className="fa fa-paperclip" /></span></Tooltip></label>
                         <div className="col-md-6">
+
                             <div style={{ display: fileType !== '' ? '' : 'none', width: "60px", textAlign: 'center', paddingBottom: '15px' }}>
                                 <div style={{ width: "60px" }}>
-                                    <img src={require(`../../../assets/img/icons/pdf.png`).default} style={{ display: fileType !== 'pdf' ? 'none' : '' }} width="100%" alt=''/>
-                                    <img src={require(`../../../assets/img/icons/doc.jpg`).default} style={{ display: !['docx', 'doc'].includes(fileType) ? 'none' : '' }} width="150%" alt=''/>
-                                    <img src={require(`../../../assets/img/icons/ppt.png`).default} style={{ display: !['pptx', 'ppt'].includes(fileType) ? 'none' : '' }} width="150%" alt=''/>
+                                    <img src={require(`../../../assets/img/icons/pdf.png`).default} style={{ display: fileType !== 'pdf' ? 'none' : '' }} width="100%" alt='' />
+                                    <img src={require(`../../../assets/img/icons/doc.jpg`).default} style={{ display: !['docx', 'doc'].includes(fileType) ? 'none' : '' }} width="150%" alt='' />
+                                    <img src={require(`../../../assets/img/icons/ppt.png`).default} style={{ display: !['pptx', 'ppt'].includes(fileType) ? 'none' : '' }} width="150%" alt='' />
                                     <span onClick={() => close()} style={{ display: fileType !== 'pdf' ? 'none' : '', fontSize: '20px', position: 'absolute', top: "-11px", left: '9px', cursor: 'pointer' }}><i className='fa fa-times' /></span>
                                     <span onClick={() => close()} style={{ display: !['docx', 'doc', 'pptx', 'ppt'].includes(fileType) ? 'none' : '', fontSize: '20px', position: 'absolute', top: "-10px", left: '15px', cursor: 'pointer' }}><i className='fa fa-times' /></span>
                                 </div>
@@ -463,14 +321,7 @@ function Formulaire({ long }) {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-4" style={{marginLeft:"auto",marginRight:"auto"}}>
-                            <label className="my-1 mr-2" >Nombre de participants</label>
-                            <select className="custom-select my-1 mr-sm-2"  onChange={(event) => handeleNombre(event)}  >
-                                <option selected value="1">1</option>
-                                <option value="2">2</option>
-                            </select>
-                    </div>
-                    <br/>
+                    <br />
 
                     {
                         test ?
@@ -530,6 +381,8 @@ function Formulaire({ long }) {
                                         required={true}
                                         onChange={(event) => handeleInstitut1(event)}
                                     />
+                                    
+
 
                                 </div>
                                 <div className="col-md-6" style={{ display: "flex" }}>
@@ -538,9 +391,9 @@ function Formulaire({ long }) {
                                     <div className="col-md-6">
                                         <div style={{ display: fileType1 !== '' ? '' : 'none', width: "60px", textAlign: 'center', paddingBottom: '15px' }}>
                                             <div style={{ width: "60px" }}>
-                                                <img src={require(`../../../assets/img/icons/pdf.png`).default} style={{ display: fileType1 !== 'pdf' ? 'none' : '' }} width="100%" />
-                                                <img src={require(`../../../assets/img/icons/doc.jpg`).default} style={{ display: !['docx', 'doc'].includes(fileType1) ? 'none' : '' }} width="150%" />
-                                                <img src={require(`../../../assets/img/icons/ppt.png`).default} style={{ display: !['pptx', 'ppt'].includes(fileType1) ? 'none' : '' }} width="150%" />
+                                                <img src={require(`../../../assets/img/icons/pdf.png`).default} style={{ display: fileType1 !== 'pdf' ? 'none' : '' }} width="100%" alt=""/>
+                                                <img src={require(`../../../assets/img/icons/doc.jpg`).default} style={{ display: !['docx', 'doc'].includes(fileType1) ? 'none' : '' }} width="150%" alt=""/>
+                                                <img src={require(`../../../assets/img/icons/ppt.png`).default} style={{ display: !['pptx', 'ppt'].includes(fileType1) ? 'none' : '' }} width="150%" alt=""/>
                                                 <span onClick={() => close1()} style={{ display: fileType1 !== 'pdf' ? 'none' : '', fontSize: '20px', position: 'absolute', top: "-11px", left: '9px', cursor: 'pointer' }}><i className='fa fa-times' /></span>
                                                 <span onClick={() => close1()} style={{ display: !['docx', 'doc', 'pptx', 'ppt'].includes(fileType1) ? 'none' : '', fontSize: '20px', position: 'absolute', top: "-10px", left: '15px', cursor: 'pointer' }}><i className='fa fa-times' /></span>
                                             </div>
@@ -548,6 +401,17 @@ function Formulaire({ long }) {
                                         </div>
                                     </div>
                                 </div>
+                                <div className="col-md-4" style={{ marginLeft: "50px" }}>
+                                        <label className="my-1 mr-2" >Niveau Scolaire</label>
+                                        <select className="custom-select my-1 mr-sm-2" onChange={(event) => handeleNiveau1(event)}  >
+                                            <option value="0"selected >Selectionner...</option>
+                                            <option  value="1ére année">1ére année</option>
+                                            <option value="2ème année">2ème année</option>
+                                            <option value="3ème année">3ème année</option>
+                                            <option value="Master">Master</option>
+                                            <option value="autre">autre</option>
+                                        </select>
+                                    </div>
 
 
                             </>
@@ -559,16 +423,16 @@ function Formulaire({ long }) {
 
 
 
-
+{/* 
                     <div className="col-md-12" style={{ marginLeft: '15px', paddingBottom: "20px" }}>
                         <FormControlLabel
                             control={<input onChange={(event) => handeleAccord(event)} style={{ padding: '15px' }} type='checkbox' name='accord' className="checkbox" />}
                             label={<label style={{ fontSize: "13px", marginTop: '8px', paddingLeft: '15px', color: "#8e8e8e" }}>J'accepte de partager mes informations avec INFOR</label>}
                             icon={<span />}
                         />
-                    </div>
+                    </div> */}
 
-                    <div className="col-md-12" style={{ display: 'flex', justifyContent: 'center' }}>
+                    <div className="col-md-12" style={{ display: 'flex', justifyContent: 'center' ,marginTop:"10px"}}>
 
                         <FormInput
                             tag={'button'}

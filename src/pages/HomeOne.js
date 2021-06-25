@@ -38,16 +38,16 @@ const HomeOne = () => {
         // }
 
 
-        // if (window.innerWidth > 1000) {
-        //     setNb(3)
+        if (window.innerWidth > 1000) {
+            setNb(3)
 
 
-        // }
+        }
 
-        // if (window.innerWidth < 450) {
+        if (window.innerWidth < 450) {
 
-        //     setNb(1)
-        // }
+            setNb(1)
+        }
 
 
         if (window.innerWidth > 1200) {
@@ -76,12 +76,12 @@ const HomeOne = () => {
         }
 
 
-        // if (window.innerWidth > 500 && window.innerWidth < 780) {
-        //     setNb(2)
-        // }
-        // if (window.innerWidth < 600) {
-        //     setNb(1)
-        // }
+        if (window.innerWidth > 500 && window.innerWidth < 780) {
+            setNb(2)
+        }
+        if (window.innerWidth < 600) {
+            setNb(1)
+        }
 
     }
 
@@ -97,16 +97,16 @@ const HomeOne = () => {
         // }
 
 
-        // if (window.innerWidth > 1000) {
-        //     setNb(3)
+        if (window.innerWidth > 1000) {
+            setNb(3)
 
 
-        // }
+        }
 
-        // if (window.innerWidth < 450) {
+        if (window.innerWidth < 450) {
 
-        //     setNb(1)
-        // }
+            setNb(1)
+        }
 
 
         
@@ -134,12 +134,12 @@ const HomeOne = () => {
             setScale(40)
         }
 
-        // if (window.innerWidth > 500 && window.innerWidth < 780) {
-        //     setNb(2)
-        // }
-        // if (window.innerWidth < 600) {
-        //     setNb(1)
-        // }
+        if (window.innerWidth > 500 && window.innerWidth < 780) {
+            setNb(2)
+        }
+        if (window.innerWidth < 600) {
+            setNb(1)
+        }
 
     },[])
 
@@ -162,7 +162,7 @@ const HomeOne = () => {
             <div id="apropos">
                 <Apropos mobile={mobile} />
                 <hr style={{ width: '70%', marginLeft: '15%' }} />
-                <Thematique id='thematique' mobile={mobile} />
+                {/* <Thematique id='thematique' mobile={mobile} /> */}
             </div>
             <div id='partenaires'>
                 <Services classes="sm-top-wt" />
@@ -173,7 +173,7 @@ const HomeOne = () => {
             <Programme />
 
             <div id="article">
-                <Blog />
+                <Blog nb={nb}/>
             </div>
 
             <div id="sponsors">

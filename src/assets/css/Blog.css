@@ -1,0 +1,20 @@
+.textContainer1{
+    text-align: center;
+    padding: 100px 200px;
+}
+
+.logoContainer1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+#t{
+    font-size: 20px;
+    color:#1f212d;
+}
+
+.containerColor {
+    background-color: #e0ded2;
+}

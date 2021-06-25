@@ -29,11 +29,10 @@ function Funfact() {
             <div >
                 <div className="container" >
                        
-                            {/* <FunfactItem id={1} before={"+"} after={""} counterNumber={count.countEvent} counterText="Participants" /> */}
-                            <FunfactItem id={1} before={"+"} after={""} counterNumber={count.countHackathon} counterText="Equipes" />
-                            {/* <FunfactItem id={3} before={"+"} after={""} counterNumber ={count.countExposition} counterText="Stand" />
-                            <FunfactItem id={4} before={""} after={""} counterNumber="5" counterText="Intervenants" /> */}
-                    
+                <div className="row mtn-40">
+                            <FunfactItem id={1} before={"+"} after={""} counterNumber={count.infor} counterText="Equipes Infor" />
+                            <FunfactItem id={2} before={"+"} after={""} counterNumber={count.stb} counterText="Equipes STB" />
+                         </div>  
                 </div>
             </div>
         </div>

@@ -4,7 +4,7 @@ import axios from "axios"
 import Footer from '../Footer';
 
 
-
+import "../../assets/css/Blog.css"
 
 
 function Blog() {
@@ -25,26 +25,15 @@ function Blog() {
 
 
     return (
-        <>
-        <nav className="navbar navbar-expand-lg" style={{backgroundColor:"#1f212d"}}>
-            <div className="container" >
-                <a className="navbar-brand"  href="" style={{color:"white"}}>Article</a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li className="nav-item"><a className="nav-link" href="/" style={{color:"white"}}>Accueil</a></li>
-                        <li className="nav-item"><a className="nav-link active" aria-current="page" href="/register"  style={{color:"white"}}>Inscription</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div className="container mt-5">
+        <div className="containerColor">
+       
+        {/* <div className="container mt-5">
             <div className="row">
                 <div className="col-lg-8">
                     <article>
                         <header className="mb-4">
                             <h1 className="fw-bolder mb-1">{blog.title}</h1>
-                            <div className="text-muted fst-italic mb-2">Posté en {blog.createdAt}</div>
+                            <div className="text-muted fst-italic mb-2">Posté le {blog.createdAt}</div>
                            
                         </header>
                         <figure className="mb-4"><img className="img-fluid rounded" src={`/uploads/${blog.image}`} alt="..." /></figure>
@@ -55,8 +44,18 @@ function Blog() {
                 </div>
             </div>
         </div>
+ */}
+        <div className="textContainer1">
+                <h1> {blog.title}</h1>
+                <div className="text-muted fst-italic mb-2">Posté le {blog.createdAt}</div>
+                <div className="logoContainer1">
+                    <img src={`/uploads/${blog.image}`}  alt="blog" />
+                </div>
+                <p id="t">{blog.content}.</p>
+                
+            </div>
         <Footer />
-        </>
+        </div>
     )
 }
 

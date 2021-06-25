@@ -1,7 +1,7 @@
 import React, { useState ,useEffect} from 'react'
 import { Card, Button } from 'react-bootstrap';
 import axios from 'axios'
-
+import { Link } from "react-router-dom";
 function Item({ element, hack }) {
 
     const [color, setColor] = useState("")
@@ -51,7 +51,8 @@ function Item({ element, hack }) {
                     <Card.Text>
                         {element.email}
                     </Card.Text>
-                    <Card.Link href={`/eje/${hack}/${element._id}`}>Informations</Card.Link>
+                    <Link to={`/eje/${hack}/${element._id}`}  >Informations</Link>
+                    {/* <Card.Link href={`/eje/${hack}/${element._id}`}>Informations</Card.Link> */}
                     <Button type="submit" style={{marginLeft:"16px"}} onClick={()=>{Done(hack,element._id)}} > done</Button>
                     <Button type="submit" style={{marginLeft:"16px"}} onClick={()=>{NotDone(hack,element._id)}} > Not Done</Button>
                 </Card.Body>

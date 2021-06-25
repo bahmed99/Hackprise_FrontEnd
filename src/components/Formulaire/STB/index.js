@@ -3,14 +3,10 @@ import React, { useState, useCallback } from 'react';
 import FormInput from "../../Utilities/Input";
 import { useHistory } from 'react-router';
 import axios from 'axios';
-import { Form, FormElement } from '@progress/kendo-react-form';
-import { Button } from '@progress/kendo-react-buttons';
-import { Stepper } from '@progress/kendo-react-layout';
+
 import { Modal } from 'react-bootstrap';
-import { ChefDetails } from './Chef';
-import { RestTeamDetails } from './ResteEquipe';
 import { Reveal } from 'react-reveal';
-import { Field } from '@progress/kendo-react-form';
+
 import Alert from 'react-bootstrap/Alert'
 
 function Formulaire({ long }) {

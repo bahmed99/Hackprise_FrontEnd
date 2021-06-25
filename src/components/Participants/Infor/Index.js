@@ -1,33 +1,21 @@
 import React from 'react'
 import { Reveal } from 'react-reveal';
-import { useHistory } from 'react-router';
 
+import { Link } from "react-router-dom";
 
 function Index() {
 
-    const history = useHistory();
-
-
     
-    function DisplayEnLigne() {
-        
-    history.push('/eje/infor/enLigne')
-    }
-    function DisplayEnPresentiel() {
-        history.push('/eje/infor/enPresentiel')
-    
-    }
     
 
 
     return (
-        <div style={{  textAlign: "center", marginTop: "120px" }}>
+        <div style={{  textAlign: "center", marginTop: "120px" , display:"flex" ,justifyContent:"center"}}>
                 <Reveal left>
-                    <button onClick={DisplayEnLigne} className="btn btn-primary" style={{ backgroundColor: "#2ea3dd" }}>En ligne</button>
+                <Link to={`/eje/infor/enLigne`} className="btn-outline" >En Ligne</Link>
                 </Reveal>
                 <Reveal right>
-                    <button onClick={DisplayEnPresentiel} className="btn btn-primary" style={{ marginLeft: "50px", backgroundColor: "#2ea3dd" }}>En Présentiel</button>
-                </Reveal>
+                <Link to={`/eje/infor/enPresentiel`} className="btn-outline" style={{marginLeft:"10px"}} >En Présentiel</Link>                </Reveal>
         </div>
     )
 }

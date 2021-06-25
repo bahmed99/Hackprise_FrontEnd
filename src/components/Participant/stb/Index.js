@@ -21,7 +21,7 @@ function Index() {
     }, [])
 
     return (
-        <div style={{ textAlign: "center", marginTop: "16px", marginLeft: "550px" }}>
+        <div style={{ textAlign: "center",display:"flex",justifyContent:"center",alignItems: "center"}}>
             <Card style={{ width: '18rem' }}>
                 <Card.Body>
                     <Card.Title>{data.NomEquipe}</Card.Title>
