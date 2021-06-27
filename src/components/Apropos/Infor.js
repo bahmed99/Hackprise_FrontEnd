@@ -12,7 +12,7 @@ export default function Infor() {
 
         <div>
             <Video />
-            <div className="textContainer">
+            <div className="textContainer container">
                 <h1>
                     À propos Hackathon Infor</h1>
 

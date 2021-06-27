@@ -7,9 +7,9 @@ import { Link } from "react-router-dom";
 function Stb() {
     return (
         
-            <div>
+            <div >
             
-            <div className="textContainer">
+            <div className="textContainer container">
                 <h1>
                     À propos Hackathon STB</h1>
 

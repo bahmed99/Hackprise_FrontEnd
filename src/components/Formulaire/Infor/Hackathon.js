@@ -306,7 +306,7 @@ function Formulaire({ long }) {
 
                     <div className="col-md-6" style={{ display: "flex" }}>
                         <input type='file' id='cv' style={{ display: 'none' }} name='cv' onChange={(event) => handleFile(event)} accept=".pdf,.ppt,.pptx,.doc,.docx" />
-                        <label style={{ paddingLeft: '10px' }} htmlFor="cv"><Tooltip title='Attacher un CV'><span style={{ cursor: 'pointer' }} className='clipper-outline'><i className="fa fa-paperclip" /></span></Tooltip></label>
+                        <label style={{ paddingLeft: '10px' }} htmlFor="cv"><strong>Curriculum Vitae : </strong><Tooltip title='Attacher un CV'><span style={{ cursor: 'pointer' }} className='clipper-outline'><i className="fa fa-paperclip" /></span></Tooltip></label>
                         <div className="col-md-6">
 
                             <div style={{ display: fileType !== '' ? '' : 'none', width: "60px", textAlign: 'center', paddingBottom: '15px' }}>
@@ -387,7 +387,7 @@ function Formulaire({ long }) {
                                 </div>
                                 <div className="col-md-6" style={{ display: "flex" }}>
                                     <input type='file' id='cv1' style={{ display: 'none' }} name='cv1' onChange={(event) => handleFile1(event)} accept=".pdf,.ppt,.pptx,.doc,.docx" />
-                                    <label style={{ paddingLeft: '10px' }} htmlFor="cv1"><Tooltip title='Attacher un CV'><span style={{ cursor: 'pointer' }} className='clipper-outline'><i className="fa fa-paperclip" /></span></Tooltip></label>
+                                    <label style={{ paddingLeft: '10px' }} htmlFor="cv1"><strong>Curriculum Vitae : </strong><Tooltip title='Attacher un CV'><span style={{ cursor: 'pointer' }} className='clipper-outline'><i className="fa fa-paperclip" /></span></Tooltip></label>
                                     <div className="col-md-6">
                                         <div style={{ display: fileType1 !== '' ? '' : 'none', width: "60px", textAlign: 'center', paddingBottom: '15px' }}>
                                             <div style={{ width: "60px" }}>

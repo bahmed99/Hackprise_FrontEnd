@@ -25,9 +25,9 @@ function Blog() {
 
 
     return (
-        <div className="containerColor">
+        <div >
        
-        {/* <div className="container mt-5">
+        <div className="container mt-5">
             <div className="row">
                 <div className="col-lg-8">
                     <article>
@@ -44,8 +44,8 @@ function Blog() {
                 </div>
             </div>
         </div>
- */}
-        <div className="textContainer1">
+
+        {/* <div className="textContainer1">
                 <h1> {blog.title}</h1>
                 <div className="text-muted fst-italic mb-2">Posté le {blog.createdAt}</div>
                 <div className="logoContainer1">
@@ -53,7 +53,7 @@ function Blog() {
                 </div>
                 <p id="t">{blog.content}.</p>
                 
-            </div>
+            </div> */}
         <Footer />
         </div>
     )
