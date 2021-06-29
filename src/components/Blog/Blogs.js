@@ -23,7 +23,7 @@ function Services({ classes, nb }) {
         autoplay: true,
         speed: 500,
         className: ` testimonial-grid`,
-        
+
     }
 
 
@@ -62,7 +62,7 @@ function Services({ classes, nb }) {
             </div>
             <br />
             <div className="service-content-area">
-                <div className="container" style={{ width: "90%" }}>
+                <div className="container " style={{ width: "90%" }}>
                     <Fade big>
                         <Slider {...settings}>
 
@@ -77,16 +77,20 @@ function Services({ classes, nb }) {
                                             <Link to={`/article/${blog._id}`} className="btn-outline" target="_blank">Lire plus</Link>
                                         </div>
                                     </div>
-                                ))
+                                    
+
+
+                                        ))
                             }
                         </Slider>
 
                     </Fade>
                 </div>
-            </div>
+                </div>
 
-        </div>
-    );
+            </div>
+            );
 }
 
-export default Services;
+
+            export default Services;

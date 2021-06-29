@@ -18,3 +18,26 @@
 .containerColor {
     background-color: #e0ded2;
 }
+
+.haver:hover{
+    color:red;
+}
+
+.containerIcons i  {
+    display: inline-block;
+  padding: 5px;
+}
+
+.post{
+
+   
+    border-radius:3px;
+    background-color:#fff;
+  
+   
+
+}
+.containerPost{
+    background-color: #f2f3f5;
+   
+}

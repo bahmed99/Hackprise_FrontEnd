@@ -64,7 +64,7 @@ export default function Programme() {
                             <Col xs='8' sm="4" xl="8" lg="4" >
                                 <Reveal bottom>
 
-                                    <TimelineWrap icon={'workshop.png'} title={'1ére journée'}>
+                                    <TimelineWrap icon={'workshop.png'} title={'Infor'}>
 
                                         <Timeline
                                             degree={'educationItem.degree'}
@@ -95,7 +95,7 @@ export default function Programme() {
                             <Col xs='8' sm="4" xl="8" lg="4" >
                                 <Reveal bottom>
 
-                                    <TimelineWrap icon={'workshop.png'} title={'2ème journée'} >
+                                    <TimelineWrap icon={'workshop.png'} title={'STB'} >
                                       
                                         <Timeline
                                             degree={'educationItem.degree'}
