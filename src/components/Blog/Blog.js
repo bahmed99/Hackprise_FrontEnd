@@ -48,7 +48,7 @@ function Blog() {
 
                                 <i className="fa fa-clock-o haver"></i> {date} <strong>/</strong>
                                 
-                                    <span className="share haver"><FaShareAlt />Share </span>
+                                    <span className="share haver"><FaShareAlt />Share</span>
                                     <FacebookShareButton url={`http://localhost:3001/blogs/${blog._id}`}>
                                         <FacebookIcon logoFillColor="white" round={true} size={30} className="socialicon"></FacebookIcon>
                                     </FacebookShareButton>

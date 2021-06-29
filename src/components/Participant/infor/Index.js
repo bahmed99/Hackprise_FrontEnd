@@ -41,6 +41,9 @@ return (
                     <Card.Text>
                         {data.Etablissement}
                     </Card.Text>
+                    <Card.Text>
+                        {data.niveau}
+                    </Card.Text>
                     <hr />
                     <Card.Text>
                         {data.nom1}
@@ -56,6 +59,9 @@ return (
                     </Card.Text>
                     <Card.Text>
                         {data.Etablissement1}
+                    </Card.Text>
+                    <Card.Text>
+                        {data.niveau1}
                     </Card.Text>
                    
                     

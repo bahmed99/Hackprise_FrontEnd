@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import HackathonSTB from './STB/index'
 import HackathonINFOR from './Infor/Hackathon.js'
 
-import './Style.css'
+
 import { Reveal } from 'react-reveal';
 
 export default function Formulaire({ long, btn }) {
