@@ -8,7 +8,7 @@ function Infor({ pres }) {
     const [data, setData] = useState([])
     useEffect(() => {
 
-        axios.get(`http://localhost:3001/participants/Infor/Enligne`)
+        axios.get(`http://localhost:3001/participants/Infor`)
             .then(res => {
 
                 setData(res.data)

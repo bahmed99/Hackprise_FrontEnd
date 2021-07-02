@@ -270,40 +270,6 @@ function Formulaire({ long }) {
                         </select>
                     </div>
 
-
-
-
-
-                    <div className="col-md-6" >
-                        <label style={{ marginLeft: '20px', marginBottom: "5px" }}><strong>Choix:</strong></label>
-
-                        <div className="form-check" style={{ marginLeft: '20px' }}>
-                            <input class="form-check-input" type="radio" name="choix" value="En ligne" required onChange={(event) => handeleChoix(event)} />
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                En ligne
-                            </label>
-                        </div>
-                        <div className="form-check" style={{ marginLeft: '20px' }}>
-                            <input class="form-check-input" type="radio" name="choix" value="En Présentiel" onChange={(event) => handeleChoix(event)} />
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                En Présentiel
-                            </label>
-                        </div>
-                    </div>
-
-
-
-
-
-                    <div className="col-md-4" style={{ marginLeft: "auto", marginRight: "auto" }}>
-                        <label className="my-1 mr-2" >Nombre de participants</label>
-                        <select className="custom-select my-1 mr-sm-2" onChange={(event) => handeleNombre(event)}  >
-                            <option selected value="1">1</option>
-                            <option value="2">2</option>
-                        </select>
-                    </div>
-
-
                     <div className="col-md-6" style={{ display: "flex" }}>
                         <input type='file' id='cv' style={{ display: 'none' }} name='cv' onChange={(event) => handleFile(event)} accept=".pdf,.ppt,.pptx,.doc,.docx" />
                         <label style={{ paddingLeft: '10px' }} htmlFor="cv"><strong>Curriculum Vitae : </strong><Tooltip title='Attacher un CV'><span style={{ cursor: 'pointer' }} className='clipper-outline'><i className="fa fa-paperclip" /></span></Tooltip></label>
@@ -321,6 +287,40 @@ function Formulaire({ long }) {
                             </div>
                         </div>
                     </div>
+
+
+
+                    {/* <div className="col-md-6" >
+                        <label style={{ marginLeft: '20px', marginBottom: "5px" }}><strong>Choix:</strong></label>
+
+                        <div className="form-check" style={{ marginLeft: '20px' }}>
+                            <input class="form-check-input" type="radio" name="choix" value="En ligne" required onChange={(event) => handeleChoix(event)} />
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                En ligne
+                            </label>
+                        </div>
+                        <div className="form-check" style={{ marginLeft: '20px' }}>
+                            <input class="form-check-input" type="radio" name="choix" value="En Présentiel" onChange={(event) => handeleChoix(event)} />
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                En Présentiel
+                            </label>
+                        </div>
+                    </div> */}
+
+
+
+
+
+                    <div className="col-md-4" style={{ marginLeft: "auto", marginRight: "auto" }}>
+                        <label className="my-1 mr-2" >Nombre de participants</label>
+                        <select className="custom-select my-1 mr-sm-2" onChange={(event) => handeleNombre(event)}  >
+                            <option selected value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+
+
+                    
                     <br />
 
                     {
