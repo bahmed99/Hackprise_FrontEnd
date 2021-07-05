@@ -10,7 +10,7 @@ import { Reveal } from 'react-reveal';
 import Alert from 'react-bootstrap/Alert'
 
 function Formulaire({ long }) {
-    const path = "http://www.localhost:3001/hackathonStb/register"
+    const path = "https://back.hackprise.com/hackathonStb/register"
 
     const [nameValue, setNameValue] = useState('')
     const [mailValue, setMailValue] = useState('')
@@ -18,26 +18,30 @@ function Formulaire({ long }) {
     const [institutValue, setInstitutValue] = useState('')
     const [occupation, setOccupation] = useState('')
     const [equipe, setEquipe] = useState('')
-
+    const [discord, setDiscord] = useState('')
 
     const [nameValue1, setNameValue1] = useState('')
     const [mailValue1, setMailValue1] = useState('')
     const [phoneValue1, setPhoneValue1] = useState('')
     const [institutValue1, setInstitutValue1] = useState('')
     const [occupation1, setOccupation1] = useState('')
-
+    const [discord1, setDiscord1] = useState('')
 
     const [nameValue2, setNameValue2] = useState('')
     const [mailValue2, setMailValue2] = useState('')
     const [phoneValue2, setPhoneValue2] = useState('')
     const [institutValue2, setInstitutValue2] = useState('')
     const [occupation2, setOccupation2] = useState('')
+    const [discord2, setDiscord2] = useState('')
+
+
 
     const [nameValue3, setNameValue3] = useState('')
     const [mailValue3, setMailValue3] = useState('')
     const [phoneValue3, setPhoneValue3] = useState('')
     const [institutValue3, setInstitutValue3] = useState('')
     const [occupation3, setOccupation3] = useState('')
+    const [discord3, setDiscord3] = useState('')
 
 
 
@@ -60,25 +64,28 @@ function Formulaire({ long }) {
     const handeleInstitut = (event) => setInstitutValue(event.target.value)
     const handeleOccupation = (event) => setOccupation(event.target.value)
     const handeleEquipe = (event) => setEquipe(event.target.value)
-
+    const handeleDiscord = (event) => setDiscord(event.target.value)
 
     const handeleName1 = (event) => setNameValue1(event.target.value)
     const handeleMail1 = (event) => setMailValue1(event.target.value)
     const handelePhone1 = (event) => setPhoneValue1(event.target.value)
     const handeleInstitut1 = (event) => setInstitutValue1(event.target.value)
     const handeleOccupation1 = (event) => setOccupation1(event.target.value)
+    const handeleDiscord1 = (event) => setDiscord1(event.target.value)
 
     const handeleName2 = (event) => setNameValue2(event.target.value)
     const handeleMail2 = (event) => setMailValue2(event.target.value)
     const handelePhone2 = (event) => setPhoneValue2(event.target.value)
     const handeleInstitut2 = (event) => setInstitutValue2(event.target.value)
     const handeleOccupation2 = (event) => setOccupation2(event.target.value)
+    const handeleDiscord2 = (event) => setDiscord2(event.target.value)
 
     const handeleName3 = (event) => setNameValue3(event.target.value)
     const handeleMail3 = (event) => setMailValue3(event.target.value)
     const handelePhone3 = (event) => setPhoneValue3(event.target.value)
     const handeleInstitut3 = (event) => setInstitutValue3(event.target.value)
     const handeleOccupation3 = (event) => setOccupation3(event.target.value)
+    const handeleDiscord3 = (event) => setDiscord3(event.target.value)
 
 
 
@@ -97,6 +104,8 @@ function Formulaire({ long }) {
             setPhoneValue3("")
             setInstitutValue3("")
             setOccupation3("")
+            setDiscord2("")
+            setDiscord3("")
         }
 
         else if (event.target.value === "3") {
@@ -106,6 +115,7 @@ function Formulaire({ long }) {
             setPhoneValue3("")
             setInstitutValue3("")
             setOccupation3("")
+            setDiscord3("")
         }
         else {
             setTest(4)
@@ -115,64 +125,40 @@ function Formulaire({ long }) {
     const handleSubmit = (event) => {
         event.preventDefault();
         setLoading(true);
-        const fd = new FormData()
 
 
-        fd.append('nom', nameValue);
-        fd.append('email', mailValue);
-        fd.append('tel', phoneValue);
-        fd.append('Etablissement', institutValue);
-        fd.append('profession', occupation);
-        fd.append('NomEquipe', equipe);
-
-
-        fd.append('nom1', nameValue1);
-        fd.append('email1', mailValue1);
-        fd.append('tel1', phoneValue1);
-        fd.append('Etablissement1', institutValue1);
-        fd.append('profession1', occupation1);
         const values = {
-            nom:nameValue,
-            email:mailValue,
-            tel:phoneValue,
-            Etablissement:institutValue,
-            profession:occupation,
-            NomEquipe:equipe,
-            nom1:nameValue1,
-            email1:mailValue1,
-            tel1:phoneValue1,
-            Etablissement1:institutValue1,
-            profession1:occupation1,
-            nom2:nameValue2,
-            email2:mailValue2,
-            tel2:phoneValue2,
-            Etablissement2:institutValue2,
-            profession2:occupation2,
-            nom3:nameValue3,
-            email3:mailValue3,
-            tel3:phoneValue3,
-            Etablissement3:institutValue3,
-            profession3:occupation3,
-            
-
+            nom: nameValue,
+            email: mailValue,
+            tel: phoneValue,
+            Etablissement: institutValue,
+            profession: occupation,
+            NomEquipe: equipe,
+            nom1: nameValue1,
+            email1: mailValue1,
+            tel1: phoneValue1,
+            Etablissement1: institutValue1,
+            profession1: occupation1,
+            nom2: nameValue2,
+            email2: mailValue2,
+            tel2: phoneValue2,
+            Etablissement2: institutValue2,
+            profession2: occupation2,
+            nom3: nameValue3,
+            email3: mailValue3,
+            tel3: phoneValue3,
+            Etablissement3: institutValue3,
+            profession3: occupation3,
+            discord: discord,
+            discord1: discord1,
+            discord2: discord2,
+            discord3: discord3,
         }
 
-        fd.append('nom2', nameValue2);
-        fd.append('email2', mailValue2);
-        fd.append('tel2', phoneValue2);
-        fd.append('Etablissement2', institutValue2);
-        fd.append('profession2', occupation2);
 
 
 
-        fd.append('nom3', nameValue3);
-        fd.append('email3', mailValue3);
-        fd.append('tel3', phoneValue3);
-        fd.append('Etablissement3', institutValue3);
-        fd.append('profession3', occupation3);
-
-
-        console.log(values)
+        
 
         axios.post(path, values)
             .then(res => {
@@ -197,7 +183,7 @@ function Formulaire({ long }) {
     return (
         <div className="contact-form-wrap">
             <Alert show={error} variant={'danger'}>
-                {msg ? "Vous êtes déjè inscrit" : "Une erreur s'est produite lors de votre inscription veuillez vous inscrire une nouvelle fois"}
+                {msg ? "Vous êtes déjà inscrit" : "Une erreur s'est produite lors de votre inscription veuillez vous inscrire une nouvelle fois"}
             </Alert>
             <Modal
                 size="md"
@@ -283,8 +269,21 @@ function Formulaire({ long }) {
                             onChange={(event) => handeleEquipe(event)}
                         />
                     </div>
+                    <div className="col-md-6">
+                        <FormInput
+                            tag={'input'}
+                            type={'text'}
+                            name={'discord'}
+                            placeholder={`Identifiant Discord *`}
+                            required={true}
+                            onChange={(event) => handeleDiscord(event)}
+                        />
+                    </div>
+                    
 
-                    <div className="col-md-4" style={{ marginLeft: "auto", marginRight: "auto" }}>
+
+
+                    <div  style={{ marginLeft: "auto", marginRight: "auto",width:"51%" }}>
                         <label className="my-1 mr-2" >Nombre de participants</label>
                         <select className="custom-select my-1 mr-sm-2" onChange={(event) => handeleNombre(event)}  >
                             <option selected value="2">2</option>
@@ -348,8 +347,17 @@ function Formulaire({ long }) {
                             required={true}
                             onChange={(event) => handeleInstitut1(event)}
                         />
-
                     </div>
+                    <div className="col-md-6">
+                            <FormInput
+                                tag={'input'}
+                                type={'text'}
+                                name={'discord1'}
+                                placeholder={`Identifiant Discord *`}
+                                required={true}
+                                onChange={(event) => handeleDiscord1(event)}
+                            />
+                        </div>
 
                     {
                         test === 3 ?
@@ -409,8 +417,17 @@ function Formulaire({ long }) {
                                         required={true}
                                         onChange={(event) => handeleInstitut2(event)}
                                     />
-
                                 </div>
+                                <div className="col-md-6">
+                            <FormInput
+                                tag={'input'}
+                                type={'text'}
+                                name={'discord2'}
+                                placeholder={`Identifiant Discord *`}
+                                required={true}
+                                onChange={(event) => handeleDiscord2(event)}
+                            />
+                        </div>
                             </>
                             : test === 4 ?
                                 <>
@@ -471,6 +488,16 @@ function Formulaire({ long }) {
                                         />
 
                                     </div>
+                                    <div className="col-md-6">
+                                    <FormInput
+                                        tag={'input'}
+                                        type={'text'}
+                                        name={'discord2'}
+                                        placeholder={`Identifiant Discord *`}
+                                        required={true}
+                                        onChange={(event) => handeleDiscord2(event)}
+                                    />
+                                </div>
 
                                     <>
                                         <br />
@@ -530,6 +557,16 @@ function Formulaire({ long }) {
                                             />
 
                                         </div>
+                                        <div className="col-md-6">
+                                    <FormInput
+                                        tag={'input'}
+                                        type={'text'}
+                                        name={'discord3'}
+                                        placeholder={`Identifiant Discord *`}
+                                        required={true}
+                                        onChange={(event) => handeleDiscord3(event)}
+                                    />
+                                </div>
                                     </>
                                 </>
                                 : ""

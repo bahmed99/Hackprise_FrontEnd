@@ -8,10 +8,10 @@ function Index() {
     const [data, setData] = useState([])
 
     useEffect(() => {
-    axios.get(`http://localhost:3001/participants/Infor/${id}`)
+    axios.get(`https://back.hackprise.com/participants/Infor/${id}`)
         .then(res => {
             setData(res.data)
-            console.log(res.data)
+           
         }
         )
         .catch(err => {
@@ -22,46 +22,53 @@ function Index() {
 
 return (
     <div style={{ textAlign: "center",display:"flex",justifyContent:"center",alignItems: "center"}}>
-       <Card style={{ width: '18rem' }}>
+       <Card style={{ width: '25rem' }}>
                 <Card.Body>
-                    <Card.Title>{data.NomEquipe}</Card.Title>
+                    <Card.Title><strong>Nom équipe:  </strong>{data.NomEquipe}</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted">Chef d'équipe</Card.Subtitle>
                     <Card.Text>
-                        {data.nom}
+                    <strong>Nom:  </strong>   {data.nom}
                     </Card.Text>
                     <Card.Text>
-                        {data.email}
+                    <strong>Email:  </strong>   {data.email}
                     </Card.Text>
                     <Card.Text>
-                        {data.tel}
+                    <strong>Phone:  </strong>    {data.tel}
                     </Card.Text>
                     <Card.Text>
-                        {data.profession}
+                    <strong>Profession:  </strong>   {data.profession}
                     </Card.Text>
                     <Card.Text>
-                        {data.Etablissement}
+                    <strong>Etablissement:  </strong>   {data.Etablissement}
                     </Card.Text>
                     <Card.Text>
-                        {data.niveau}
+                    <strong>niveau:  </strong> {data.niveau}
+                    </Card.Text>
+                    
+                    <Card.Text>
+                       <strong>discord:  </strong> {data.d}
                     </Card.Text>
                     <hr />
                     <Card.Text>
-                        {data.nom1}
+                    <strong>Nom:  </strong>    {data.nom1}
                     </Card.Text>
                     <Card.Text>
-                        {data.email1}
+                    <strong>Email:  </strong>    {data.email1}
                     </Card.Text>
                     <Card.Text>
-                        {data.tel1}
+                    <strong>Phone:  </strong>    {data.tel1}
                     </Card.Text>
                     <Card.Text>
-                        {data.profession1}
+                    <strong>Profession:  </strong>    {data.profession1}
                     </Card.Text>
                     <Card.Text>
-                        {data.Etablissement1}
+                    <strong>Etablissement:  </strong>   {data.Etablissement1}
                     </Card.Text>
                     <Card.Text>
-                        {data.niveau1}
+                    <strong>niveau:  </strong>  {data.niveau1}
+                    </Card.Text>
+                    <Card.Text>
+                    <strong>discord:  </strong>   {data.discord1}
                     </Card.Text>
                    
                     

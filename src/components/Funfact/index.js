@@ -12,9 +12,9 @@ function Funfact() {
 
     useEffect(() => {
 
-        axios.get("http://localhost:3001/count")
+        axios.get("https://back.hackprise.com/count")
             .then(res => {
-                console.log(res.data)
+               
                 setCount(res.data)
                
             }

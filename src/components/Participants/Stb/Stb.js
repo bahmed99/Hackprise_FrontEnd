@@ -9,10 +9,10 @@ function Stb() {
     const [data, setData] = useState([])
     useEffect(() => {
 
-        axios.get("http://localhost:3001/participants/Stb")
+        axios.get("https://back.hackprise.com/participants/Stb")
             .then(res => {
                 setData(res.data)
-                console.log(res.data)
+           
             }
             )
             .catch(err => {

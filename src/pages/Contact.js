@@ -73,6 +73,7 @@ const PageContact = () => {
     return (
         <Fragment>
             <ContactPage long={screen?480:250} btn={btn} />
+            <br /><br /><br /><br />
             <Footer/>
         </Fragment>
     );

@@ -9,7 +9,7 @@ import Alert from 'react-bootstrap/Alert'
 
 
 function Formulaire({ long }) {
-    const path = "http://www.localhost:3001/hackathonInfor/register"
+    const path = "http://back.hackprise.com/hackathonInfor/register"
     const [file, setFile] = useState()
     const [file1, setFile1] = useState()
 
@@ -29,7 +29,9 @@ function Formulaire({ long }) {
     const [institutValue, setInstitutValue] = useState('')
     const [occupation, setOccupation] = useState('')
     const [equipe, setEquipe] = useState('')
-    const [niveau, setNiveau] = useState('')
+    const [niveau, setNiveau] = useState('0')
+    const [discord, setDiscord] = useState('')
+    const [forgot, setForgot] = useState(false)
 
 
     const [nameValue1, setNameValue1] = useState('')
@@ -38,14 +40,14 @@ function Formulaire({ long }) {
     const [institutValue1, setInstitutValue1] = useState('')
     const [occupation1, setOccupation1] = useState('')
     const [niveau1, setNiveau1] = useState('')
-
+    const [discord1, setDiscord1] = useState('')
 
 
     const history = useHistory();
     const [test, setTest] = useState(false)
 
-    const [choix, setChoix] = useState('')
-    const [accordValue, setAccordValue] = useState(false)
+
+
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(false)
     const [sent, setSent] = useState(false)
@@ -85,6 +87,9 @@ function Formulaire({ long }) {
     const handeleInstitut = (event) => setInstitutValue(event.target.value)
     const handeleOccupation = (event) => setOccupation(event.target.value)
     const handeleNiveau = (event) => setNiveau(event.target.value)
+    const handeleDiscord = (event) => {setDiscord(event.target.value)
+       
+    }
 
 
     const handeleName1 = (event) => setNameValue1(event.target.value)
@@ -93,15 +98,17 @@ function Formulaire({ long }) {
     const handeleInstitut1 = (event) => setInstitutValue1(event.target.value)
     const handeleOccupation1 = (event) => setOccupation1(event.target.value)
     const handeleNiveau1 = (event) => setNiveau1(event.target.value)
+    const handeleDiscord1 = (event) => setDiscord1(event.target.value)
 
 
 
     // const handeleAccord = (event) => setAccordValue(event.target.checked)
     const handeleEquipe = (event) => setEquipe(event.target.value)
-    const handeleChoix = (event) => setChoix(event.target.value)
+
     const handeleNombre = (event) => {
         if (event.target.value === "2") {
             setTest(true)
+            setNiveau1("0")
         }
         else {
             setTest(false)
@@ -115,6 +122,8 @@ function Formulaire({ long }) {
             setFileType1('');
             setFileValue1('');
             setNiveau1('')
+            setDiscord1('')
+            setNiveau1("")
         }
 
 
@@ -134,8 +143,9 @@ function Formulaire({ long }) {
         fd.append('Etablissement', institutValue);
         fd.append('profession', occupation);
         fd.append('NomEquipe', equipe);
-        fd.append('SelectEnLigne', choix);
+
         fd.append('niveau', niveau);
+        fd.append('discord', discord);
 
 
         fd.append('nom1', nameValue1);
@@ -144,13 +154,22 @@ function Formulaire({ long }) {
         fd.append('Etablissement1', institutValue1);
         fd.append('profession1', occupation1);
         fd.append('niveau1', niveau1);
+        fd.append('discord1', discord1);
+
 
 
 
 
         fd.append('fileValue', fileValue);
         fd.append('fileValue1', fileValue1);
-        axios.post(path, fd)
+        if(niveau==="0" ||niveau1==="0"  )
+        {
+            setForgot(true)
+            setLoading(false)
+        }
+        else
+        {setForgot(false)
+            axios.post(path, fd)
             .then(res => {
                 setLoading(false);
                 setSent(res.data.sent)
@@ -165,13 +184,16 @@ function Formulaire({ long }) {
                 setLoading(false);
                 setMsg(true)
                 setTimeout(() => setError(false), 3000)
-            });
+            });}
 
     }
     return (
         <div className="contact-form-wrap">
             <Alert show={error} variant={'danger'}>
-                {msg ? "Vous êtes déjè inscrit" : "Une erreur s'est produite lors de votre inscription veuillez vous inscrire une nouvelle fois"}
+                {msg ? "Vous êtes déjà inscrit" : "Une erreur s'est produite lors de votre inscription veuillez vous inscrire une nouvelle fois"}
+            </Alert>
+            <Alert show={forgot} variant={'danger'}>
+                { "Veuillez choisir votre niveau scolaire" }
             </Alert>
             <Modal
                 size="md"
@@ -191,7 +213,7 @@ function Formulaire({ long }) {
             </Modal>
             <form id="contact-form" onSubmit={(event) => handleSubmit(event)} encType="multipart/form-data">
                 <div className="row">
-                    <h5 style={{ color: "#1f212d" }}>Chef D'équipe</h5>
+                    <h5 style={{ color: "#1f212d" }}>Chef d'équipe</h5>
                     <br /><br />
                     <div className="col-md-6">
                         <FormInput
@@ -257,12 +279,22 @@ function Formulaire({ long }) {
                             onChange={(event) => handeleEquipe(event)}
                         />
                     </div>
+                    <div className="col-md-6">
+                        <FormInput
+                            tag={'input'}
+                            type={'text'}
+                            name={'discord'}
+                            placeholder={`Identifiant Discord *`}
+                            required={true}
+                            onChange={(event) => handeleDiscord(event)}
+                        />
+                    </div>
 
                     <div className="col-md-4" style={{ marginLeft: "auto", marginRight: "auto" }}>
                         <label className="my-1 mr-2" >Niveau Scolaire</label>
                         <select className="custom-select my-1 mr-sm-2" onChange={(event) => handeleNiveau(event)}  >
                             <option selected value="0">Selectionner...</option>
-                            <option  value="1ére année">1ére année</option>
+                            <option value="1ére année">1ére année</option>
                             <option value="2ème année">2ème année</option>
                             <option value="3ème année">3ème année</option>
                             <option value="Master">Master</option>
@@ -320,7 +352,7 @@ function Formulaire({ long }) {
                     </div>
 
 
-                    
+
                     <br />
 
                     {
@@ -381,9 +413,17 @@ function Formulaire({ long }) {
                                         required={true}
                                         onChange={(event) => handeleInstitut1(event)}
                                     />
-                                    
 
-
+                                </div>
+                                <div className="col-md-6">
+                                    <FormInput
+                                        tag={'input'}
+                                        type={'text'}
+                                        name={'discord1'}
+                                        placeholder={`Identifiant Discord *`}
+                                        required={true}
+                                        onChange={(event) => handeleDiscord1(event)}
+                                    />
                                 </div>
                                 <div className="col-md-6" style={{ display: "flex" }}>
                                     <input type='file' id='cv1' style={{ display: 'none' }} name='cv1' onChange={(event) => handleFile1(event)} accept=".pdf,.ppt,.pptx,.doc,.docx" />
@@ -391,9 +431,9 @@ function Formulaire({ long }) {
                                     <div className="col-md-6">
                                         <div style={{ display: fileType1 !== '' ? '' : 'none', width: "60px", textAlign: 'center', paddingBottom: '15px' }}>
                                             <div style={{ width: "60px" }}>
-                                                <img src={require(`../../../assets/img/icons/pdf.png`).default} style={{ display: fileType1 !== 'pdf' ? 'none' : '' }} width="100%" alt=""/>
-                                                <img src={require(`../../../assets/img/icons/doc.jpg`).default} style={{ display: !['docx', 'doc'].includes(fileType1) ? 'none' : '' }} width="150%" alt=""/>
-                                                <img src={require(`../../../assets/img/icons/ppt.png`).default} style={{ display: !['pptx', 'ppt'].includes(fileType1) ? 'none' : '' }} width="150%" alt=""/>
+                                                <img src={require(`../../../assets/img/icons/pdf.png`).default} style={{ display: fileType1 !== 'pdf' ? 'none' : '' }} width="100%" alt="" />
+                                                <img src={require(`../../../assets/img/icons/doc.jpg`).default} style={{ display: !['docx', 'doc'].includes(fileType1) ? 'none' : '' }} width="150%" alt="" />
+                                                <img src={require(`../../../assets/img/icons/ppt.png`).default} style={{ display: !['pptx', 'ppt'].includes(fileType1) ? 'none' : '' }} width="150%" alt="" />
                                                 <span onClick={() => close1()} style={{ display: fileType1 !== 'pdf' ? 'none' : '', fontSize: '20px', position: 'absolute', top: "-11px", left: '9px', cursor: 'pointer' }}><i className='fa fa-times' /></span>
                                                 <span onClick={() => close1()} style={{ display: !['docx', 'doc', 'pptx', 'ppt'].includes(fileType1) ? 'none' : '', fontSize: '20px', position: 'absolute', top: "-10px", left: '15px', cursor: 'pointer' }}><i className='fa fa-times' /></span>
                                             </div>
@@ -402,17 +442,17 @@ function Formulaire({ long }) {
                                     </div>
                                 </div>
                                 <div className="col-md-4" style={{ marginLeft: "50px" }}>
-                                        <label className="my-1 mr-2" >Niveau Scolaire</label>
-                                        <select className="custom-select my-1 mr-sm-2" onChange={(event) => handeleNiveau1(event)}  >
-                                            <option value="0"selected >Selectionner...</option>
-                                            <option  value="1ére année">1ére année</option>
-                                            <option value="2ème année">2ème année</option>
-                                            <option value="3ème année">3ème année</option>
-                                            <option value="Master">Master</option>
-                                            <option value="autre">autre</option>
-                                        </select>
-                                    </div>
-
+                                    <label className="my-1 mr-2" >Niveau Scolaire</label>
+                                    <select className="custom-select my-1 mr-sm-2" onChange={(event) => handeleNiveau1(event)}  >
+                                        <option value="0" selected >Selectionner...</option>
+                                        <option value="1ére année">1ére année</option>
+                                        <option value="2ème année">2ème année</option>
+                                        <option value="3ème année">3ème année</option>
+                                        <option value="Master">Master</option>
+                                        <option value="autre">autre</option>
+                                    </select>
+                                </div>
+                                <br /><br /><br /><br />
 
                             </>
                             : ""
@@ -423,7 +463,7 @@ function Formulaire({ long }) {
 
 
 
-{/* 
+                    {/* 
                     <div className="col-md-12" style={{ marginLeft: '15px', paddingBottom: "20px" }}>
                         <FormControlLabel
                             control={<input onChange={(event) => handeleAccord(event)} style={{ padding: '15px' }} type='checkbox' name='accord' className="checkbox" />}
@@ -432,7 +472,7 @@ function Formulaire({ long }) {
                         />
                     </div> */}
 
-                    <div className="col-md-12" style={{ display: 'flex', justifyContent: 'center' ,marginTop:"10px"}}>
+                    <div className="col-md-12" style={{ display: 'flex', justifyContent: 'center', marginTop: "10px" }}>
 
                         <FormInput
                             tag={'button'}

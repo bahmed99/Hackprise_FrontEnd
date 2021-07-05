@@ -8,10 +8,10 @@ function Index() {
     const [data, setData] = useState([])
 
     useEffect(() => {
-        axios.get(`http://localhost:3001/participants/Stb/${id}`)
+        axios.get(`https://back.hackprise.com/participants/Stb/${id}`)
             .then(res => {
                 setData(res.data)
-                console.log(res.data)
+               
             }
             )
             .catch(err => {
@@ -21,75 +21,88 @@ function Index() {
     }, [])
 
     return (
-        <div style={{ textAlign: "center",display:"flex",justifyContent:"center",alignItems: "center"}}>
-            <Card style={{ width: '18rem' }}>
+        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <Card style={{ width: '25rem' }}>
                 <Card.Body>
-                    <Card.Title>{data.NomEquipe}</Card.Title>
+                    <Card.Title><strong>Nom équipe:  </strong>{data.NomEquipe}</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted">Chef d'équipe</Card.Subtitle>
                     <Card.Text>
-                        {data.nom}
+                        <strong>Nom:  </strong>{data.nom}
                     </Card.Text>
                     <Card.Text>
-                        {data.email}
+                        <strong>Email:  </strong>   {data.email}
                     </Card.Text>
                     <Card.Text>
-                        {data.tel}
+                        <strong>Tel:  </strong>    {data.tel}
                     </Card.Text>
                     <Card.Text>
-                        {data.profession}
+                        <strong>Profession: </strong>  {data.profession}
                     </Card.Text>
                     <Card.Text>
-                        {data.Etablissement}
+                        <strong>Etablissement: </strong> {data.Etablissement}
+                    </Card.Text>
+
+                    <Card.Text>
+                        <strong>Discord:  </strong>   {data.d}
                     </Card.Text>
                     <hr />
                     <Card.Text>
-                        {data.nom1}
+                        <strong>Nom:  </strong>    {data.nom1}
                     </Card.Text>
                     <Card.Text>
-                        {data.email1}
+                        <strong>Email:  </strong>   {data.email1}
                     </Card.Text>
                     <Card.Text>
-                        {data.tel1}
+                        <strong>Tel:  </strong>    {data.tel1}
                     </Card.Text>
                     <Card.Text>
-                        {data.profession1}
+                        <strong>Profession:  </strong>     {data.profession1}
                     </Card.Text>
                     <Card.Text>
-                        {data.Etablissement1}
+                        <strong>Etablissement:  </strong>    {data.Etablissement1}
+                    </Card.Text>
+                    <Card.Text>
+                        <strong>Discord:  </strong>    {data.discord1}
                     </Card.Text>
                     <hr />
                     <Card.Text>
-                        {data.nom2}
+                        <strong>Nom:  </strong>   {data.nom2}
                     </Card.Text>
                     <Card.Text>
-                        {data.email2}
+                        <strong>Email:  </strong>    {data.email2}
                     </Card.Text>
                     <Card.Text>
-                        {data.tel2}
+                        <strong>Tel:  </strong>    {data.tel2}
                     </Card.Text>
                     <Card.Text>
-                        {data.profession2}
+                        <strong>Profession:  </strong>   {data.profession2}
                     </Card.Text>
                     <Card.Text>
-                        {data.Etablissement2}
+                        <strong>Etablissement:  </strong>     {data.Etablissement2}
+                    </Card.Text>
+                    <Card.Text>
+                        <strong>Discord:  </strong>   {data.discord2}
                     </Card.Text>
                     <hr />
                     <Card.Text>
-                        {data.nom3}
+                        <strong>Nom:  </strong>   {data.nom3}
                     </Card.Text>
                     <Card.Text>
-                        {data.email3}
+                        <strong>Email:  </strong>   {data.email3}
                     </Card.Text>
                     <Card.Text>
-                        {data.tel3}
+                        <strong>Tel:  </strong>    {data.tel3}
                     </Card.Text>
                     <Card.Text>
-                        {data.profession3}
+                        <strong>Profession:  </strong>    {data.profession3}
                     </Card.Text>
                     <Card.Text>
-                        {data.Etablissement3}
+                        <strong>Etablissement:  </strong>    {data.Etablissement3}
                     </Card.Text>
-                   
+                    <Card.Text>
+                        <strong>Discord:  </strong>   {data.discord3}
+                    </Card.Text>
+
 
                 </Card.Body>
             </Card>

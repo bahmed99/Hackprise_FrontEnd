@@ -23,7 +23,6 @@ export default function Navbar(props) {
                         <li className="list-e"><Link activeClass="active" to="partenaires" spy={true} smooth={true}>Partenaires</Link></li> 
                         <li className="list-e"><Link activeClass="active" to="programme" spy={true} smooth={true}>Programme</Link></li>
                         <li className="list-e"><Link activeClass="active" to="article" spy={true} smooth={true}>Articles</Link></li>
-                        <li className="list-e"><Link activeClass="active" to="sponsors" spy={true} smooth={true}>Sponsors</Link></li>
                         <li className="list-e"><RouterLink to="/register" style={{color:'white'}}>S'inscrire</RouterLink></li>
                     </ul>
                 </Container>
@@ -44,7 +43,6 @@ export default function Navbar(props) {
                                 <li className="list-e-m"><Link activeClass="active" to="partenaires" spy={true} smooth={true}>Partenaires</Link></li>
                                 <li className="list-e-m"><Link activeClass="active" to="programme" spy={true} smooth={true}>Programme</Link></li>
                                 <li className="list-e-m"><Link activeClass="active" to="article" spy={true} smooth={true}>Articles</Link></li>
-                                <li className="list-e-m"><Link activeClass="active" to="sponsors" spy={true} smooth={true}>Sponsors</Link></li>
                                 <li className="list-e-m"><RouterLink to="/register" style={{color:'white'}}>S'inscrire</RouterLink></li>
                             </ul>
                         </div>

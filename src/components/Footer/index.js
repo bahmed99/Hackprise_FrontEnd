@@ -15,7 +15,7 @@ function Footer() {
                         <div className="widget-item">
                             <div className="about-widget">
                                 <Link to="/">
-                                    <img src={require("../../assets/img/logo/eje.png").default} alt="Logo"/>
+                                    <img src={require("../../assets/img/logo/f.png").default} alt="Logo"/>
                                 </Link>
 
 

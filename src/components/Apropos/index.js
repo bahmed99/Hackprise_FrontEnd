@@ -15,9 +15,11 @@ export default function index({ mobile }) {
                             <h1 >À propos du Hack'Prise</h1>
 
                             <p>
-                                La journée porte ouverte est l’événement phare et la fierté de l’ENSI. Cette année, la quinzième édition du forum annuel aura un aspect innovant pour garantir la sécurité des entreprises et des étudiants. En effet, une éxperience 3D vous attend pour vivre une édition exceptionnelle, soyez les bienvenus le 28 Novembre 2020.
-                                Durant cette journée, L’ENSI ouvrira grand ses portes virtuelles, aux étudiants, enseignants et surtout aux entreprises les plus prestigieuses à l’échelle nationale et internationale. Ces entreprises auront des stands en 3D mis à leur disposition afin de tisser des liens et rencontrer nos meilleurs éléments ainsi que d’accepter les candidatures de PFE et de stage.
-                                Ainsi, pendant cette journée, nous mettons à votre disposition un espace ouvert de recrutement et d’interaction avec les responsables des plus grandes entreprises.                            </p>
+                                Suite au succès incontestable de la 15ème édition du Forum Annuel de l'ENSI, l’ENSI Junior Entreprise est de retour pour organiser la première édition de son nouvel évènement Hack ’Prise.
+                                Fidèle à ses traditions, L’ENSI Junior Entreprise, ne cesse pas d’innover et vous présente l’opportunité de participer à une compétition hybride qui se déroulera le 14 Juillet.
+                                L'événement est reparti en deux hackathons avec deux entreprises de grande renommée et des sujets diversifiés qui varient de l'IT à l'entrepreneuriat qui ont un fort impact social et technologique.
+                                Accompagné par un soutien technique tout au long de la compétition, vous auriez la chance de gagner des prix exceptionnels.
+                                Soyez parmi les créateurs des solutions futures aux problèmes de la Tunisie d’aujourd’hui en participant à une expérience aussi enrichissante sur le plan personnel que sur le plan professionnel.                            </p>
                             <div className="btnContainer">
 
                                 <Link to="/about/infor" className="btn-outline" >Hackathon Infor</Link>
@@ -38,9 +40,11 @@ export default function index({ mobile }) {
                                 </Fade>
                                 <Reveal bottom>
                                     <p className="description">
-                                        La journée porte ouverte est l’événement phare et la fierté de l’ENSI. Cette année, la quinzième édition du forum annuel aura un aspect innovant pour garantir la sécurité des entreprises et des étudiants. En effet, une éxperience 3D vous attend pour vivre une édition exceptionnelle, soyez les bienvenus le 28 Novembre 2020.
-                                        Durant cette journée, L’ENSI ouvrira grand ses portes virtuelles, aux étudiants, enseignants et surtout aux entreprises les plus prestigieuses à l’échelle nationale et internationale. Ces entreprises auront des stands en 3D mis à leur disposition afin de tisser des liens et rencontrer nos meilleurs éléments ainsi que d’accepter les candidatures de PFE et de stage.
-                                        Ainsi, pendant cette journée, nous mettons à votre disposition un espace ouvert de recrutement et d’interaction avec les responsables des plus grandes entreprises.
+                                        Suite au succès incontestable de la 15ème édition du Forum Annuel de l'ENSI, l’ENSI Junior Entreprise est de retour pour organiser la première édition de son nouvel évènement Hack ’Prise.
+                                        Fidèle à ses traditions, L’ENSI Junior Entreprise, ne cesse pas d’innover et vous présente l’opportunité de participer à une compétition hybride qui se déroulera le 14 Juillet.
+                                        L'événement est reparti en deux hackathons avec deux entreprises de grande renommée et des sujets diversifiés qui varient de l'IT à l'entrepreneuriat qui ont un fort impact social et technologique.
+                                        Accompagné par un soutien technique tout au long de la compétition, vous auriez la chance de gagner des prix exceptionnels.
+                                        Soyez parmi les créateurs des solutions futures aux problèmes de la Tunisie d’aujourd’hui en participant à une expérience aussi enrichissante sur le plan personnel que sur le plan professionnel.
                                     </p>
                                     <div className="btnContainer">
 

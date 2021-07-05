@@ -161,12 +161,16 @@ const HomeOne = () => {
             <hr style={{ width: '70%', marginLeft: '15%' }} />
             <div id="apropos">
                 <Apropos mobile={mobile} />
-                <hr style={{ width: '70%', marginLeft: '15%' }} />
+                
+                <hr style={{ width: '70%', marginLeft: '15%',marginTop:'6%' }} />
+            
+
                 {/* <Thematique id='thematique' mobile={mobile} /> */}
             </div>
+            
             <div id='partenaires'>
                 <Services classes="sm-top-wt" />
-                <hr style={{ width: '70%', marginLeft: '15%' }} />
+                <hr style={{ width: '70%', marginLeft: '15%',marginTop:'3%' }} />
 
             </div>
              <Funfact /> 
@@ -176,10 +180,13 @@ const HomeOne = () => {
                 <Blog nb={nb}/>
             </div>
 
-            <div id="sponsors">
+            {/* <div id="sponsors">
                
                 <BrandLogo />
-            </div>
+            </div> */}
+            <br/>
+            <br/>
+            <br/>
 
 
             <Footer />

@@ -45,24 +45,18 @@ export default function MainRouter() {
 
 
 
-
-                
-                <Route exact path={"/eje"} component={Participants} />
+                <Route exact path={"/2021eje2021"} component={Participants} />
 
 
-
-
-
-
-                <Route exact path={"/eje/stb"} component={Stb} />
-                <Route exact path={"/eje/infor"} component={Infor} />
+                <Route exact path={"/2021eje2021/99stb99"} component={Stb} />
+                <Route exact path={"/2021eje2021/55infor55"} component={Infor} />
 {/* 
                 <Route exact path={"/eje/infor/enLigne"} component={InforEnLigne} />
                 <Route exact path={"/eje/infor/enPresentiel"} component={InforEnPresentiel} /> */}
 
 
-                <Route exact path={"/eje/write/blog"} component={BlogEditeur} />
-                <Route exact path={"/eje/delete/blog"} component={BlogDelete} />
+                <Route exact path={"/2021eje2021/write/blog"} component={BlogEditeur} />
+                <Route exact path={"/2021eje2021/delete/blog"} component={BlogDelete} />
 
                 <Route exact path={"/about/infor"} component={InforAbout} />
                 <Route exact path={"/about/stb"} component={StbAbout} />

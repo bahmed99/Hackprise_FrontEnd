@@ -22,8 +22,8 @@ function Blog() {
 
     useEffect(() => {
 
-        axios.get(`http://localhost:3001/blogs/${id}`).then((res) => {
-            console.log(res.data)
+        axios.get(`https://back.hackprise.com/blogs/${id}`).then((res) => {
+            
             setBlog(res.data)
             setDate(res.data.createdAt.substring(8, 10) + '-' + res.data.createdAt.substring(5, 7) + "-" + res.data.createdAt.substring(0, 4))
         }).catch(console.log('error'))
@@ -49,15 +49,17 @@ function Blog() {
                                 <i className="fa fa-clock-o haver"></i> {date} <strong>/</strong>
                                 
                                     <span className="share haver"><FaShareAlt />Share</span>
-                                    <FacebookShareButton url={`http://localhost:3001/blogs/${blog._id}`}>
-                                        <FacebookIcon logoFillColor="white" round={true} size={30} className="socialicon"></FacebookIcon>
+                                  
+                                    <FacebookShareButton url={`https://hackprise.com/article/${blog._id}`} quote={blog.title}>
+                                        <FacebookIcon logoFillColor="white" round={true} size={30} className="socialicon haver1"></FacebookIcon>
                                     </FacebookShareButton>
-                                    <LinkedinShareButton url={`http://localhost:3001/blogs/${blog._id}`}>
-                                        <LinkedinIcon logoFillColor="white" round={true} size={30} className="socialicon"> </LinkedinIcon>
+                                    <LinkedinShareButton url={`https://hackprise.com/article/${blog._id}`} quote={blog.title}>
+                                        <LinkedinIcon logoFillColor="white" round={true} size={30} className="socialicon haver1"> </LinkedinIcon>
                                     </LinkedinShareButton>
-                                    <TwitterShareButton url={`http://localhost:3001/blogs/${blog._id}`}>
-                                        <TwitterIcon logoFillColor="white" round={true} size={30} className="socialicon"> </TwitterIcon>
+                                    <TwitterShareButton url={`https://hackprise.com/article/${blog._id}`} quote={blog.title}>
+                                        <TwitterIcon logoFillColor="white" round={true} size={30} className="socialicon haver1"> </TwitterIcon>
                                     </TwitterShareButton>
+                                    
                                 </div>
  
 

@@ -11,11 +11,11 @@ function BlogDelete() {
     const [data, setData] = useState([])
     useEffect(() => {
 
-        axios.get("http://localhost:3001/blogs")
+        axios.get("https://back.hackprise.com/blogs")
             .then(res => {
 
                 setData(res.data)
-                console.log(res.data)
+            
             }
             )
             .catch(err => {
@@ -26,10 +26,9 @@ function BlogDelete() {
 
     function Delete(e) {
         let id =e.target.id
-        axios.delete(`http://localhost:3001/blogs/${id}`)
+        axios.delete(`https://back.hackprise.com/blogs/${id}`)
             .then(res => {
-                console.log(res);
-                console.log(res.data)
+               
             })
 
         window.location.reload();

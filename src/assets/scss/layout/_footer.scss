@@ -2,11 +2,12 @@
 --. Footer Style CSS
 ===========================*/
 .footer-area,.call-top-action-wrap {
-  background-color: #1f212d;
-  color: $beige;
+  // background-color: #1f212d;
+  background-image: url('../../img/tec.jpg');
+  color: white;
   .btn-outline {
     border-color: $beige;
-    color: $beige;
+    color:white;
 
     &:hover {
       border-color: $bleu-ciel;
@@ -20,8 +21,8 @@
   margin-top: 38px;
 
   .widget-title {
-    color: $beige;
-    font-size: 22px;
+    color: white;
+    font-size: 25px;
     font-weight: 600;
     line-height: 1;
     margin-top: -1px;
@@ -44,7 +45,7 @@
     line-height: 2;
 
     a {
-      color: $beige;
+      color: white;
       font-weight: 500;
       transition: 0.2s;
 

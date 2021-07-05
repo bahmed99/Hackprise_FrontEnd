@@ -18,7 +18,7 @@ export default function Video (props) {
                             {/* <h1>La 1ère édition du Hack'prise</h1> */}
                             
                     <Countdown
-                            date={new Date("July 14, 2021 8:30:00")}
+                            date={new Date("July 14, 2021 8:00:00")}
                             renderer={Renderer}
                             />
                             <Link to="/register" className="btn-outline" >S'inscrire</Link>

@@ -63,7 +63,7 @@ const classes = useStyles();
     
     const blocks = convertToRaw(e.getCurrentContent()).blocks;
     const value = blocks.map(block => (!block.text.trim() && '\n') || block.text).join('\n');
-    console.log(value)
+    
     setContent(e)
     setArticle(value)
 
@@ -72,12 +72,12 @@ const classes = useStyles();
 //Title Handler
 function handleTitleChange(e) {
   setTitle(e.target.value)
-  console.log(title)
+  
 }
 //Writer Handler
 function handleWriterChange(e) {
   setWriter(e.target.value)
-  console.log(writer)
+  
 }
 //Image Handler
 function handleImage(e) { 
@@ -98,14 +98,14 @@ dataform.append('writer',writer)
 
 setLoading(true)
  Axios({
-   url:'http://localhost:3001/blogs/',
+   url:'https://back.hackprise.com/blogs/',
    method:'POST',
    headers:{
     'Content-Type': ' '
    },
    data: dataform
   }).then(response => {
-        console.log("Success ===>", response);
+        
         setLoading(false)
         handleClickSuccesAlert();
         setTimeout(()=>{
@@ -115,7 +115,7 @@ setLoading(true)
         
   
     .catch(error => {
-        console.log("Error ===>", error);
+        
         handleClickErrorAlert();
             setLoading(false)
         

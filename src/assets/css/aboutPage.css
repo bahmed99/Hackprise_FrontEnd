@@ -1,6 +1,11 @@
+@font-face {
+    font-family: 'Photographe Signiature';
+    src: url('../fonts/Photograph\ Signature.ttf');
+  }
+
 .textContainer{
     text-align: center;
-    padding: 150px 300px;
+    padding: 150px 200px;
 }
 
 .logoContainer{
@@ -9,4 +14,11 @@
     justify-content: space-evenly;
     padding: 30px; 
     
+}
+
+.test1
+{
+    color: #1f212d;
+    font-family:'Photographe Signiature';
+    font-size: 200px;
 }

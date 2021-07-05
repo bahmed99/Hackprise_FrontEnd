@@ -27,7 +27,7 @@ export default function Programme() {
     },[]);
     return (
         <>
-            <div className="member-details-bottom" style={{ paddingTop: '3%', paddingBottom: '7%' }} id='programme'>
+            <div className="member-details-bottom" style={{ paddingTop: '1%', paddingBottom: '7%' }} id='programme'>
 
                 <div className="col-xl-6 m-auto text-center" >
                     <div className="member-education mem-achieve-item">
@@ -39,7 +39,7 @@ export default function Programme() {
                     </div>
 
                     <div className="col-12" style={{ overflowX: visible ? 'auto' : 'visible', paddingTop: '35px' }}>
-                        <div className="education-content-wrap mt-60 test" style={{ display: "flex", alignItems: 'center', justifyContent: !visible ? 'center' : '' }}>
+                        <div className="education-content-wrap mt-60 test" style={{ display: "flex", alignItems: 'center', justifyContent: !visible ? 'center' : '', paddingTop: '40px' }}>
                             {/* <Col xs='8' sm="4" xl="8" lg="4"  >
                                 <Reveal left>
                                     <TimelineWrap icon={'food-stand.png'} title={'Stand'} >
@@ -64,7 +64,7 @@ export default function Programme() {
                             <Col xs='8' sm="4" xl="8" lg="4" >
                                 <Reveal bottom>
 
-                                    <TimelineWrap icon={'workshop.png'} title={'Infor'}>
+                                    <TimelineWrap icon={'data.png'} title={'Infor'}>
 
                                         <Timeline
                                             degree={'educationItem.degree'}
@@ -95,7 +95,7 @@ export default function Programme() {
                             <Col xs='8' sm="4" xl="8" lg="4" >
                                 <Reveal bottom>
 
-                                    <TimelineWrap icon={'workshop.png'} title={'STB'} >
+                                    <TimelineWrap icon={'entrepreneur.png'} title={'STB'} >
                                       
                                         <Timeline
                                             degree={'educationItem.degree'}

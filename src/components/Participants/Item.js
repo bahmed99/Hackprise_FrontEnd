@@ -17,11 +17,10 @@ function Item({ element, hack }) {
 
     function Done(hack, id) {
 
-        axios.put(`http://localhost:3001/participants/${hack}/${id}`,
+        axios.put(`https://back.hackprise.com/participants/${hack}/${id}`,
             {done:true
             }).then(res => {
-                console.log(res);
-                console.log(res.data)
+                
             })
 
         window.location.reload();
@@ -29,11 +28,10 @@ function Item({ element, hack }) {
 
     function NotDone(hack, id) {
 
-        axios.put(`http://localhost:3001/participants/${hack}/not/${id}`,
+        axios.put(`https://back.hackprise.com/participants/${hack}/not/${id}`,
             {done:false
             }).then(res => {
-                console.log(res);
-                console.log(res.data)
+               
             })
 
         window.location.reload();

@@ -58,8 +58,37 @@
     background-repeat: no-repeat; 
     background-size: cover;
     padding-bottom: 18% ;
-    padding-top: 15% ;
+    padding-top: 10% ;
 }
+
+@media (min-width: 1800px) {
+    .video-text{
+        width: 100%;
+        z-index: 1;
+        text-align:"center";
+        z-index: 1;
+        background-Image: url("../img/logo/Cover.jpg");
+        background-position: center;
+        background-repeat: no-repeat; 
+        background-size: cover;
+        padding-bottom: 18% ;
+        padding-top: 16% ;
+    }
+  }
+  @media (max-width: 1336px) and (min-width: 1330px) {
+    .video-text{
+        width: 100%;
+        z-index: 1;
+        text-align:"center";
+        z-index: 1;
+        background-Image: url("../img/logo/Cover.jpg");
+        background-position: center;
+        background-repeat: no-repeat; 
+        background-size: cover;
+        padding-bottom: 18% ;
+        padding-top: 10% ;
+    }
+  }
 .contdown{
     display: flex;
     flex-wrap: wrap;

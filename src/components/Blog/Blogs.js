@@ -33,11 +33,11 @@ function Services({ classes, nb }) {
     const [data, setData] = useState([])
     useEffect(() => {
 
-        axios.get("http://localhost:3001/blogs")
+        axios.get("https://back.hackprise.com/blogs")
             .then(res => {
 
                 setData(res.data)
-                console.log(res.data)
+               
             }
             )
             .catch(err => {
@@ -68,29 +68,29 @@ function Services({ classes, nb }) {
 
                             {
                                 data.map(blog => (
-                                    <div  style={{ width: "18rem",height:""}} className="card" >
-                                        <img  style={{width:"600px",height:"300px"}} className="card-img-top" src={`/uploads/${blog.image}`} alt="" />
+                                    <div style={{ width: "18rem", height: "" }} className="card" >
+                                        <img style={{ width: "500px", height: "250px" }} className="card-img-top" src={`/uploads/${blog.image}`} alt="" />
                                         <div className="card-body" style={{ textAlign: "center" }}>
                                             <h5 className="card-title">{blog.title}</h5>
-                                            <p className="card-text">{blog.content.substring(0,20)}...</p>
+                                            <p className="card-text">{blog.content.substring(0, 20)}...</p>
                                             {/* <a href={`/article/${blog._id}`} className="btn btn-primary" target="_blank" >Lire plus</a> */}
                                             <Link to={`/article/${blog._id}`} className="btn-outline" target="_blank">Lire plus</Link>
                                         </div>
                                     </div>
-                                    
 
 
-                                        ))
+
+                                ))
                             }
                         </Slider>
 
                     </Fade>
                 </div>
-                </div>
-
             </div>
-            );
+
+        </div>
+    );
 }
 
 
-            export default Services;
+export default Services;
