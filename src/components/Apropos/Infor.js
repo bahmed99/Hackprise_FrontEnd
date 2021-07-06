@@ -1,10 +1,8 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import Navbar from "../NavBar/index.js"
 import Footer from "../Footer/index.js"
 
 import "../../assets/css/aboutPage.css"
-import Video from '../Video/index.js';
 
 export default function Infor() {
     return (

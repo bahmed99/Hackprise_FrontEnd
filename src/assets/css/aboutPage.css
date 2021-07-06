@@ -62,8 +62,20 @@
             text-align: center;
             padding: 50px 20px;
         }
-    
+        .Image2 {
+            width: 170px;
+        }
+        .Image3{
+            width: 160px;
+        }
+       
+       
+       
   }
+
+  .Image3{
+    width: 200px;
+}
   .Image1{
     width:390px
   }

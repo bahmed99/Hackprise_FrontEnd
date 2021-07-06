@@ -23,6 +23,7 @@ function Blog() {
 
     useEffect(() => {
 
+
         axios.get(`https://back.hackprise.com/blogs/${id}`).then((res) => {
 
             setBlog(res.data)
@@ -39,7 +40,7 @@ function Blog() {
                 <meta property="og:title" content={blog.title} />
                 <meta property="og:description" content={blog.txt} />
                 <meta property="og:image" content={`https://hackprise.com/uploads/${blog.image}`} /></Helmet>
-
+                <meta property="og:url"   content={`https://hackprise.com/article/${blog._id}`} />
             <div className="container  post">
 
                 <div className="col-lg-12">

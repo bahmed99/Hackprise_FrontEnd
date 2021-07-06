@@ -103,7 +103,7 @@ export default function BlogEditor() {
 
     setLoading(true)
     axios.post(
-     'http://localhost:3001/blogs',
+     'https://back.hackprise.com/blogs',
       
      dataform
     ).then(response => {
