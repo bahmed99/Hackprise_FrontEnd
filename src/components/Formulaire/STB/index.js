@@ -158,7 +158,7 @@ function Formulaire({ long }) {
 
 
 
-        
+
 
         axios.post(path, values)
             .then(res => {
@@ -279,18 +279,13 @@ function Formulaire({ long }) {
                             onChange={(event) => handeleDiscord(event)}
                         />
                     </div>
-                    
 
 
 
-                    <div  style={{ marginLeft: "auto", marginRight: "auto",width:"51%" }}>
-                        <label className="my-1 mr-2" >Nombre de participants</label>
-                        <select className="custom-select my-1 mr-sm-2" onChange={(event) => handeleNombre(event)}  >
-                            <option selected value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                        </select>
-                    </div>
+
+
+
+
                     <br />
                     <br />
                     <br /><br /><br /><br />
@@ -349,15 +344,15 @@ function Formulaire({ long }) {
                         />
                     </div>
                     <div className="col-md-6">
-                            <FormInput
-                                tag={'input'}
-                                type={'text'}
-                                name={'discord1'}
-                                placeholder={`Identifiant Discord *`}
-                                required={true}
-                                onChange={(event) => handeleDiscord1(event)}
-                            />
-                        </div>
+                        <FormInput
+                            tag={'input'}
+                            type={'text'}
+                            name={'discord1'}
+                            placeholder={`Identifiant Discord *`}
+                            required={true}
+                            onChange={(event) => handeleDiscord1(event)}
+                        />
+                    </div>
 
                     {
                         test === 3 ?
@@ -419,15 +414,15 @@ function Formulaire({ long }) {
                                     />
                                 </div>
                                 <div className="col-md-6">
-                            <FormInput
-                                tag={'input'}
-                                type={'text'}
-                                name={'discord2'}
-                                placeholder={`Identifiant Discord *`}
-                                required={true}
-                                onChange={(event) => handeleDiscord2(event)}
-                            />
-                        </div>
+                                    <FormInput
+                                        tag={'input'}
+                                        type={'text'}
+                                        name={'discord2'}
+                                        placeholder={`Identifiant Discord *`}
+                                        required={true}
+                                        onChange={(event) => handeleDiscord2(event)}
+                                    />
+                                </div>
                             </>
                             : test === 4 ?
                                 <>
@@ -489,15 +484,15 @@ function Formulaire({ long }) {
 
                                     </div>
                                     <div className="col-md-6">
-                                    <FormInput
-                                        tag={'input'}
-                                        type={'text'}
-                                        name={'discord2'}
-                                        placeholder={`Identifiant Discord *`}
-                                        required={true}
-                                        onChange={(event) => handeleDiscord2(event)}
-                                    />
-                                </div>
+                                        <FormInput
+                                            tag={'input'}
+                                            type={'text'}
+                                            name={'discord2'}
+                                            placeholder={`Identifiant Discord *`}
+                                            required={true}
+                                            onChange={(event) => handeleDiscord2(event)}
+                                        />
+                                    </div>
 
                                     <>
                                         <br />
@@ -558,20 +553,30 @@ function Formulaire({ long }) {
 
                                         </div>
                                         <div className="col-md-6">
-                                    <FormInput
-                                        tag={'input'}
-                                        type={'text'}
-                                        name={'discord3'}
-                                        placeholder={`Identifiant Discord *`}
-                                        required={true}
-                                        onChange={(event) => handeleDiscord3(event)}
-                                    />
-                                </div>
+                                            <FormInput
+                                                tag={'input'}
+                                                type={'text'}
+                                                name={'discord3'}
+                                                placeholder={`Identifiant Discord *`}
+                                                required={true}
+                                                onChange={(event) => handeleDiscord3(event)}
+                                            />
+                                        </div>
                                     </>
                                 </>
                                 : ""
                     }
 
+                    <div className="nbr">
+                    <div className="col-md-4 " ><div className="single-input-item">
+                        <label className="my-1 mr-2" >Nombre de participants</label>
+                        <select className="" onChange={(event) => handeleNombre(event)}  >
+                            <option selected value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div></div>
+                    </div>
 
 
                     <div className="col-md-12" style={{ display: 'flex', justifyContent: 'center' }}>

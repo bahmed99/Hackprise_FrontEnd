@@ -26,6 +26,14 @@
     
 }
 
+@media (max-width:336px){
+  .btnContainer .btn-outline
+{
+   margin:3px!important;
+    
+}
+}
+
 .blogCard{
     box-shadow: 5px 10px 20px 1px black !important;
     

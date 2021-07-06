@@ -67,14 +67,15 @@
   }
 
   &.contact-information {
-    background-color: $brandColor;
-    // background-image: url('../../img/p.jpg');
+   // background-color: $brandColor;
+    //  background-image: url('../../img/f1.jpg');
     height: 100%;
     color: $white;
     padding: 45px 30px;
     display: flex;
     align-items: center;
-
+    background: rgb(46,163,221);
+background: linear-gradient(360deg, rgba(46,163,221,1) 0%, rgba(31,33,45,0.9727241238292192) 100%);
     @media #{$lg-device,$xl-device} {
       justify-content: center;
     }

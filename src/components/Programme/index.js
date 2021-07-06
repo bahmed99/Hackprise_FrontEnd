@@ -40,6 +40,8 @@ export default function Programme() {
 
                     <div className="col-12" style={{ overflowX: visible ? 'auto' : 'visible', paddingTop: '35px' }}>
                         <div className="education-content-wrap mt-60 test" style={{ display: "flex", alignItems: 'center', justifyContent: !visible ? 'center' : '', paddingTop: '40px' }}>
+                            
+                        <h2 className='test1'  >#Stay-Tuned</h2>
                             {/* <Col xs='8' sm="4" xl="8" lg="4"  >
                                 <Reveal left>
                                     <TimelineWrap icon={'food-stand.png'} title={'Stand'} >
@@ -61,7 +63,7 @@ export default function Programme() {
                             </Col> */}
 
                             
-                            <Col xs='8' sm="4" xl="8" lg="4" >
+                            {/* <Col xs='8' sm="4" xl="8" lg="4" >
                                 <Reveal bottom>
 
                                     <TimelineWrap icon={'data.png'} title={'Infor'}>
@@ -122,7 +124,7 @@ export default function Programme() {
 
 
                                 </Reveal>
-                            </Col>
+                            </Col> */}
 
                             {/* <Col xs='8' sm="4" xl="8" lg="4">
                                 <Reveal right>

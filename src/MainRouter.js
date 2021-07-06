@@ -16,8 +16,7 @@ import ParticipantInfor from "./components/Participant/infor/Index"
 
 
 
-import InforEnLigne from "./components/Participants/Infor/index1"
-import InforEnPresentiel from "./components/Participants/Infor/InforEnPresentiel"
+
 
 import Stb from "./components/Participants/Stb/Stb"
 import Infor from "./components/Participants/Infor/index1"

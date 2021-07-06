@@ -5,6 +5,7 @@ import ServicesData from '../../data/Partenaires/partenaires'
 import SlickSlider from "../Utilities/Slick"
 import serviceTopBg from '../../assets/img/tec.jpg'
 import {Reveal } from 'react-reveal';
+
 function Services({ classes }) {
     const settings = {
         slidesToShow: 2,
@@ -36,7 +37,7 @@ function Services({ classes }) {
             </div>
 
             <div className="service-content-area">
-                <div className="container" style={{width:"50%"}}> 
+                <div className="container partenaire" > 
                     <Reveal top >
                         <SlickSlider settings={settings} >
 

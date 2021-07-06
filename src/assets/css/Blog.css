@@ -1,5 +1,8 @@
 
-
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Bold.woff');
+  }
 .textContainer1{
     text-align: center;
     padding: 100px 200px;
@@ -50,4 +53,11 @@
 
 .haver1{
     padding: 2px;
+}
+h3{
+    font-family: 'Gilroy';
+}
+.card-body{
+    height: 200px!important;
+
 }

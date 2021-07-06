@@ -6,7 +6,6 @@ import {useEffect , useContext} from 'react';
 
 import { Loading } from './helpers/Provider'
 
-
 const loader = document.querySelector(".loader");
 const showLoader = () => loader.classList.remove("loader");
 const addClass = () => loader.classList.add("loader-hide");

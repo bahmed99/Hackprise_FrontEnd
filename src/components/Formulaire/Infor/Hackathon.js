@@ -9,7 +9,7 @@ import Alert from 'react-bootstrap/Alert'
 
 
 function Formulaire({ long }) {
-    const path = "http://back.hackprise.com/hackathonInfor/register"
+    const path = "https://back.hackprise.com/hackathonInfor/register"
     const [file, setFile] = useState()
     const [file1, setFile1] = useState()
 
@@ -87,8 +87,9 @@ function Formulaire({ long }) {
     const handeleInstitut = (event) => setInstitutValue(event.target.value)
     const handeleOccupation = (event) => setOccupation(event.target.value)
     const handeleNiveau = (event) => setNiveau(event.target.value)
-    const handeleDiscord = (event) => {setDiscord(event.target.value)
-       
+    const handeleDiscord = (event) => {
+        setDiscord(event.target.value)
+
     }
 
 
@@ -162,29 +163,29 @@ function Formulaire({ long }) {
 
         fd.append('fileValue', fileValue);
         fd.append('fileValue1', fileValue1);
-        if(niveau==="0" ||niveau1==="0"  )
-        {
+        if (niveau === "0" || niveau1 === "0") {
             setForgot(true)
             setLoading(false)
         }
-        else
-        {setForgot(false)
+        else {
+            setForgot(false)
             axios.post(path, fd)
-            .then(res => {
-                setLoading(false);
-                setSent(res.data.sent)
-                setError(res.data.error)
-                setMsg(res.data.msg)
-                setTimeout(() => setError(false), 3000)
-                setTimeout(() => history.push('/'), 1300)
+                .then(res => {
+                    setLoading(false);
+                    setSent(res.data.sent)
+                    setError(res.data.error)
+                    setMsg(res.data.msg)
+                    setTimeout(() => setError(false), 3000)
+                    setTimeout(() => history.push('/'), 1300)
 
-            })
-            .catch(() => {
-                setError(true);
-                setLoading(false);
-                setMsg(true)
-                setTimeout(() => setError(false), 3000)
-            });}
+                })
+                .catch(() => {
+                    setError(true);
+                    setLoading(false);
+                    setMsg(true)
+                    setTimeout(() => setError(false), 3000)
+                });
+        }
 
     }
     return (
@@ -193,7 +194,7 @@ function Formulaire({ long }) {
                 {msg ? "Vous êtes déjà inscrit" : "Une erreur s'est produite lors de votre inscription veuillez vous inscrire une nouvelle fois"}
             </Alert>
             <Alert show={forgot} variant={'danger'}>
-                { "Veuillez choisir votre niveau scolaire" }
+                {"Veuillez choisir votre niveau scolaire"}
             </Alert>
             <Modal
                 size="md"
@@ -289,18 +290,20 @@ function Formulaire({ long }) {
                             onChange={(event) => handeleDiscord(event)}
                         />
                     </div>
+                    <div className="col-md-6"><div className="single-input-item">
 
-                    <div className="col-md-4" style={{ marginLeft: "auto", marginRight: "auto" }}>
-                        <label className="my-1 mr-2" >Niveau Scolaire</label>
-                        <select className="custom-select my-1 mr-sm-2" onChange={(event) => handeleNiveau(event)}  >
-                            <option selected value="0">Selectionner...</option>
+                        <select className="my-1 mr-sm-2" onChange={(event) => handeleNiveau(event)}  >
+                            <option selected value="0">Niveau Scolaire</option>
                             <option value="1ére année">1ére année</option>
                             <option value="2ème année">2ème année</option>
                             <option value="3ème année">3ème année</option>
                             <option value="Master">Master</option>
                             <option value="autre">autre</option>
                         </select>
-                    </div>
+                    </div></div>
+
+
+
 
                     <div className="col-md-6" style={{ display: "flex" }}>
                         <input type='file' id='cv' style={{ display: 'none' }} name='cv' onChange={(event) => handleFile(event)} accept=".pdf,.ppt,.pptx,.doc,.docx" />
@@ -343,13 +346,6 @@ function Formulaire({ long }) {
 
 
 
-                    <div className="col-md-4" style={{ marginLeft: "auto", marginRight: "auto" }}>
-                        <label className="my-1 mr-2" >Nombre de participants</label>
-                        <select className="custom-select my-1 mr-sm-2" onChange={(event) => handeleNombre(event)}  >
-                            <option selected value="1">1</option>
-                            <option value="2">2</option>
-                        </select>
-                    </div>
 
 
 
@@ -425,6 +421,17 @@ function Formulaire({ long }) {
                                         onChange={(event) => handeleDiscord1(event)}
                                     />
                                 </div>
+                                <div className="col-md-6"><div className="single-input-item">
+
+                                    <select className="my-1 mr-sm-2" onChange={(event) => handeleNiveau1(event)}  >
+                                        <option selected value="0">Niveau Scolaire</option>
+                                        <option value="1ére année">1ére année</option>
+                                        <option value="2ème année">2ème année</option>
+                                        <option value="3ème année">3ème année</option>
+                                        <option value="Master">Master</option>
+                                        <option value="autre">autre</option>
+                                    </select>
+                                </div></div>
                                 <div className="col-md-6" style={{ display: "flex" }}>
                                     <input type='file' id='cv1' style={{ display: 'none' }} name='cv1' onChange={(event) => handleFile1(event)} accept=".pdf,.ppt,.pptx,.doc,.docx" />
                                     <label style={{ paddingLeft: '10px' }} htmlFor="cv1"><strong>Curriculum Vitae : </strong><Tooltip title='Attacher un CV'><span style={{ cursor: 'pointer' }} className='clipper-outline'><i className="fa fa-paperclip" /></span></Tooltip></label>
@@ -441,17 +448,7 @@ function Formulaire({ long }) {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-md-4" style={{ marginLeft: "50px" }}>
-                                    <label className="my-1 mr-2" >Niveau Scolaire</label>
-                                    <select className="custom-select my-1 mr-sm-2" onChange={(event) => handeleNiveau1(event)}  >
-                                        <option value="0" selected >Selectionner...</option>
-                                        <option value="1ére année">1ére année</option>
-                                        <option value="2ème année">2ème année</option>
-                                        <option value="3ème année">3ème année</option>
-                                        <option value="Master">Master</option>
-                                        <option value="autre">autre</option>
-                                    </select>
-                                </div>
+
                                 <br /><br /><br /><br />
 
                             </>
@@ -471,6 +468,15 @@ function Formulaire({ long }) {
                             icon={<span />}
                         />
                     </div> */}
+                    <div className="nbr">
+                        <div className="col-md-4 " ><div className="single-input-item">
+                            <label className="my-1 mr-2" >Nombre de participants</label>
+                            <select className=" " onChange={(event) => handeleNombre(event)}  >
+                                <option selected value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div></div>
+                    </div>
 
                     <div className="col-md-12" style={{ display: 'flex', justifyContent: 'center', marginTop: "10px" }}>
 

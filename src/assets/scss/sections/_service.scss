@@ -1,6 +1,14 @@
 /*======================
 10. Services Style CSS
 ========================*/
+.partenaire{
+  width: 50%;
+}
+@media (max-width: 500px) {
+  .partenaire{
+    width: 70%;
+  }
+}
 
 .service-area-top {
   padding: 110px 0 130px;

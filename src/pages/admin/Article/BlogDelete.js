@@ -46,7 +46,7 @@ function BlogDelete() {
                     <img style={{ width: "600px", height: "300px" }} className="card-img-top" src={`/uploads/${blog.image}`} alt="" />
                     <div className="card-body" style={{ textAlign: "center" }}>
                         <h5 className="card-title">{blog.title}</h5>
-                        <p className="card-text">{blog.content.substring(0, 20)}...</p>
+                        <p className="card-text">{blog.txt.substring(0, 30)}...</p>
                         <button onClick={Delete} id={blog._id} className="btn btn-primary">Supprimer</button>
                     </div>
                 </div>

@@ -11,10 +11,22 @@
 .logoContainer{
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 30px; 
+    
+}
+.logoContainer1{
+    display: flex;
+    align-items: center;
     justify-content: space-evenly;
     padding: 30px; 
     
 }
+
+.ima{
+    margin: 15px;
+}
+
 
 .test1
 {
@@ -22,3 +34,39 @@
     font-family:'Photographe Signiature';
     font-size: 200px;
 }
+
+.txt{
+    font-size: 20px;
+}
+
+
+@media (max-width: 540px) {
+    .logoContainer1{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 30px; 
+        
+    }
+        
+        .logoContainer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* justify-content: center; */
+            padding: 30px; 
+            
+        }
+        
+        .textContainer{
+            text-align: center;
+            padding: 50px 20px;
+        }
+    
+  }
+  .Image1{
+    width:390px
+  }
+  .Image2{
+    width:200px
+  }

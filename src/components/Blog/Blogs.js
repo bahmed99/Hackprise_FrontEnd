@@ -45,9 +45,7 @@ function Services({ classes, nb }) {
             })
 
     }, [])
-    function Send() {
-        alert("grbrb")
-    }
+   
 
     return (
         <div className={`service-area-wrapper ${classes}`} style={{ paddingBottom: '3%' }}>
@@ -68,11 +66,12 @@ function Services({ classes, nb }) {
 
                             {
                                 data.map(blog => (
-                                    <div style={{ width: "18rem", height: "" }} className="card" >
+                                    <div style={{ width: "18rem" }} className="card" >
                                         <img style={{ width: "500px", height: "250px" }} className="card-img-top" src={`/uploads/${blog.image}`} alt="" />
                                         <div className="card-body" style={{ textAlign: "center" }}>
                                             <h5 className="card-title">{blog.title}</h5>
-                                            <p className="card-text">{blog.content.substring(0, 20)}...</p>
+                                            <p className="card-text">{blog.txt.substring(0, 30)}...</p>
+                                            {/* <div className="card-text" dangerouslySetInnerHTML={{__html:blog.content.substring(50, 100)} }></div> */}
                                             {/* <a href={`/article/${blog._id}`} className="btn btn-primary" target="_blank" >Lire plus</a> */}
                                             <Link to={`/article/${blog._id}`} className="btn-outline" target="_blank">Lire plus</Link>
                                         </div>

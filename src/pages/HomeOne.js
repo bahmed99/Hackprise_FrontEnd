@@ -169,8 +169,8 @@ const HomeOne = () => {
             </div>
             
             <div id='partenaires'>
-                <Services classes="sm-top-wt" />
-                <hr style={{ width: '70%', marginLeft: '15%',marginTop:'3%' }} />
+                <Services classes="sm-top-wt"/>
+                {mobile?<hr style={{ width: '70%', marginLeft: '15%',marginTop:'3%' }} />:""}
 
             </div>
              <Funfact /> 
@@ -184,6 +184,8 @@ const HomeOne = () => {
                
                 <BrandLogo />
             </div> */}
+            <br/>
+            <br/>
             <br/>
             <br/>
             <br/>

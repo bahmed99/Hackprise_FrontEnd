@@ -3,7 +3,9 @@
 ===========================*/
 .footer-area,.call-top-action-wrap {
   // background-color: #1f212d;
-  background-image: url('../../img/tec.jpg');
+  // background-image: url('../../img/f.jpg');
+  background: rgb(46,163,221);
+  background: linear-gradient(90deg, rgba(46,163,221,1) 0%, rgba(31,33,45,0.9727241238292192) 100%);
   color: white;
   .btn-outline {
     border-color: $beige;

@@ -80,11 +80,21 @@ a {
   }
 }
 
-textarea, input {
+textarea, input,select {
   &:focus, &:active {
     outline: none;
+
   }
 }
+.nbr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  
+
+}
+option:hover { background-color: #1f212d!important; }
 
 /* Heading Default Style */
 h1,

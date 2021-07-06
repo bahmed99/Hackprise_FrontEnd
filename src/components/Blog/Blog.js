@@ -5,11 +5,12 @@ import Footer from '../Footer';
 import { FacebookShareButton, LinkedinShareButton, TwitterShareButton } from "react-share"
 import { FacebookIcon, LinkedinIcon, TwitterIcon } from "react-share"
 import { FaShareAlt } from 'react-icons/fa';
-
 import "../../assets/css/Blog.css"
-
-
-
+import { Helmet } from "react-helmet";
+// import FaTwitter from "react-icons/lib/fa/twitter";
+// import FaFacebook from "react-icons/lib/fa/facebook";
+// import FaLinkedin from "react-icons/lib/fa/linkedin";
+import MetaTags from 'react-meta-tags';
 function Blog() {
 
 
@@ -23,7 +24,7 @@ function Blog() {
     useEffect(() => {
 
         axios.get(`https://back.hackprise.com/blogs/${id}`).then((res) => {
-            
+
             setBlog(res.data)
             setDate(res.data.createdAt.substring(8, 10) + '-' + res.data.createdAt.substring(5, 7) + "-" + res.data.createdAt.substring(0, 4))
         }).catch(console.log('error'))
@@ -34,8 +35,12 @@ function Blog() {
     return (
         <div className="containerPost">
             <br /> <br /><br />
+            <Helmet>
+                <meta property="og:title" content={blog.title} />
+                <meta property="og:description" content={blog.txt} />
+                <meta property="og:image" content={`https://hackprise.com/uploads/${blog.image}`} /></Helmet>
 
-            {<div className="container  post">
+            <div className="container  post">
 
                 <div className="col-lg-12">
                     <article>
@@ -47,85 +52,37 @@ function Blog() {
                                 <i className="fa fa-user haver"></i> by <strong className="haver">{blog.writer} /</strong>
 
                                 <i className="fa fa-clock-o haver"></i> {date} <strong>/</strong>
-                                
-                                    <span className="share haver"><FaShareAlt />Share</span>
-                                  
-                                    <FacebookShareButton url={`https://hackprise.com/article/${blog._id}`} quote={blog.title}>
-                                        <FacebookIcon logoFillColor="white" round={true} size={30} className="socialicon haver1"></FacebookIcon>
-                                    </FacebookShareButton>
-                                    <LinkedinShareButton url={`https://hackprise.com/article/${blog._id}`} quote={blog.title}>
-                                        <LinkedinIcon logoFillColor="white" round={true} size={30} className="socialicon haver1"> </LinkedinIcon>
-                                    </LinkedinShareButton>
-                                    <TwitterShareButton url={`https://hackprise.com/article/${blog._id}`} quote={blog.title}>
-                                        <TwitterIcon logoFillColor="white" round={true} size={30} className="socialicon haver1"> </TwitterIcon>
-                                    </TwitterShareButton>
-                                    
-                                </div>
- 
+
+                                <span className="share haver"><FaShareAlt />Share</span>
+
+                                <FacebookShareButton url={`https://hackprise.com/article/${blog._id}`} quote={blog.title}>
+                                    <FacebookIcon logoFillColor="white" round={true} size={30} className="socialicon haver1"></FacebookIcon>
+                                </FacebookShareButton>
+                                <LinkedinShareButton url={`https://hackprise.com/article/${blog._id}`} quote={blog.title}>
+                                    <LinkedinIcon logoFillColor="white" round={true} size={30} className="socialicon haver1"> </LinkedinIcon>
+                                </LinkedinShareButton>
+                                <TwitterShareButton url={`https://hackprise.com/article/${blog._id}`} quote={blog.title} >
+                                    <TwitterIcon logoFillColor="white" round={true} size={30} className="socialicon haver1"> </TwitterIcon>
+                                </TwitterShareButton>
+                            </div>
+
 
 
                         </header>
                         <figure className="mb-4"><img className="img-fluid rounded" src={`/uploads/${blog.image}`} alt="..." width="100%" /></figure>
                         <section className="mb-5">
-                            <p className="fs-5 mb-4">{blog.content}</p>
+                            <div dangerouslySetInnerHTML={{ __html: blog.content }}>
+
+                            </div>
                         </section>
                     </article>
                 </div>
-
-
                 <br />
-
-
             </div>
-                // <div class="section" >
-                //     <div class="row" style={{transform: "none"}}>
-                //         <div class="col-md-8 col-lg-9">
-                //             <div id="site-content" class="site-content">
-                //                 <div class="row">
-                //                     <div class="col">
-                //                         <div class="left-content">
-                //                             <div class="details-news">
-                //                             <div class="post">
-                //                                 <div class="entry-header">
-                //                                     <div class="entry-thumbnail">
-                //                                         <img class="img-fluid" src={`/uploads/${blog.image}`} alt="" />
-                //                                     </div>
-                //                                 </div>
-                //                                 <div class="post-content">
-                //                                     <div class="entry-meta">
-                //                                         <ul class="list-inline">
-                //                                             <li class="posted-by"><i class="fa fa-user"></i> by <strong>{blog.writer}</strong></li>
-                //                                             <li class="publish-date"><i class="fa fa-clock-o"></i> {blog.createdAt} </li>
 
-                //                                         </ul>
-                //                                     </div>
-                //                                     <h2 class="entry-title">
-                //                                         {blog.title}
-                //                                     </h2>
-                //                                     <div class="entry-content">
-                //                                         <p>{blog.content}</p>
-                //                                     </div>
-                //                                 </div>
-                //                             </div>
-                //                         </div>
-                //                     </div>
-                //                 </div>
-                //             </div>
-                //         </div>
-                //     </div>
-                // </div>
-                //     </div>
 
-            }
-            {/* <div className="textContainer1">
-                <h1> {blog.title}</h1>
-                <div className="text-muted fst-italic mb-2">Posté le {blog.createdAt}</div>
-                <div className="logoContainer1">
-                    <img src={`/uploads/${blog.image}`}  alt="blog" />
-                </div>
-                <p id="t">{blog.content}.</p>
-                
-            </div> */}
+
+
             <br /><br /><br /><br />
             <Footer />
         </div >

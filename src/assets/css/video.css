@@ -75,6 +75,20 @@
         padding-top: 16% ;
     }
   }
+  @media (max-width: 500px) {
+    .video-text{
+        width: 100%;
+        z-index: 1;
+        text-align:"center";
+        z-index: 1;
+        background-Image: url("../img/m.jpg");
+        background-position: center;
+        background-repeat: no-repeat; 
+        background-size: cover;
+         /* padding-bottom: 5% ; */
+        padding-top: 16% ; 
+    }
+  }
   @media (max-width: 1336px) and (min-width: 1330px) {
     .video-text{
         width: 100%;
