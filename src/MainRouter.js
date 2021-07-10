@@ -14,7 +14,7 @@ import Participants from "./pages/admin/Participants"
 import ParticipantStb from "./components/Participant/stb/Index"
 import ParticipantInfor from "./components/Participant/infor/Index"
 
-
+import deadline from "./pages/Expiration";
 
 
 
@@ -36,11 +36,14 @@ import BlogDelete from "./pages/admin/Article/BlogDelete"
 export default function MainRouter() {
 
     return (
-        
+
         <div>
             <Switch>
                 <Route exact path="/" component={HomeOne} />
                 <Route exact path={"/register"} component={Contact} />
+
+                <Route exact path={"/test"} component={deadline} />
+
 
 
 
@@ -49,7 +52,7 @@ export default function MainRouter() {
 
                 <Route exact path={"/2021eje2021/99stb99"} component={Stb} />
                 <Route exact path={"/2021eje2021/55infor55"} component={Infor} />
-{/* 
+                {/* 
                 <Route exact path={"/eje/infor/enLigne"} component={InforEnLigne} />
                 <Route exact path={"/eje/infor/enPresentiel"} component={InforEnPresentiel} /> */}
 

@@ -41,52 +41,48 @@ export default function Programme() {
                     <div className="col-12" style={{ overflowX: visible ? 'auto' : 'visible', paddingTop: '35px' }}>
                         <div className="education-content-wrap mt-60 test" style={{ display: "flex", alignItems: 'center', justifyContent: !visible ? 'center' : '', paddingTop: '40px' }}>
                             
-                        <h2 className='test1'  >#Stay-Tuned</h2>
-                            {/* <Col xs='8' sm="4" xl="8" lg="4"  >
-                                <Reveal left>
-                                    <TimelineWrap icon={'food-stand.png'} title={'Stand'} >
-
-                                        <Timeline
-                                            degree={'educationItem.degree'}
-                                            institute={'Début'}
-                                            duration={'8h30'}
-                                        />
-                                        <Timeline
-                                            degree={'educationItem.degree'}
-                                            institute={'Fin'}
-                                            duration={'17h30'}
-                                        />
-
-
-                                    </TimelineWrap>
-                                </Reveal>
-                            </Col> */}
+                     
 
                             
-                            {/* <Col xs='8' sm="4" xl="8" lg="4" >
+                             <Col xs='8' sm="4" xl="8" lg="4" >
                                 <Reveal bottom>
 
                                     <TimelineWrap icon={'data.png'} title={'Infor'}>
 
                                         <Timeline
                                             degree={'educationItem.degree'}
-                                            institute={"Mot d'ouverture"}
-                                            duration={'8h30'}
+                                            institute={"Présentation du sujet"}
+                                            duration={'9h'}
                                         />
                                         <Timeline
                                             degree={'food-stand.png'}
-                                            institute={'Présentation des entreprises'}
-                                            duration={'10h'}
+                                            institute={'Développement des solutions'}
+                                            duration={'9h30'}
                                         />
                                         <Timeline
                                             degree={'workshop.png'}
-                                            institute={'Table Ronde'}
-                                            duration={'13h'}
+                                            institute={'Pause déjeuner'}
+                                            duration={'14h30'}
                                         />
                                         <Timeline
                                             degree={'workshop.png'}
-                                            institute={'Mot de clôture'}
-                                            duration={'17h'}
+                                            institute={'Fin pause déjeuner'}
+                                            duration={'15h'}
+                                        />
+                                        <Timeline
+                                            degree={'workshop.png'}
+                                            institute={'Pitch'}
+                                            duration={'15h30'}
+                                        />
+                                        <Timeline
+                                            degree={'workshop.png'}
+                                            institute={'Fin du pitch'}
+                                            duration={'16h20'}
+                                        />
+                                         <Timeline
+                                            degree={'workshop.png'}
+                                            institute={'Déliberation'}
+                                            duration={'16h35'}
                                         />
 
                                     </TimelineWrap>
@@ -99,53 +95,48 @@ export default function Programme() {
 
                                     <TimelineWrap icon={'entrepreneur.png'} title={'STB'} >
                                       
-                                        <Timeline
+                                    <Timeline
                                             degree={'educationItem.degree'}
-                                            institute={"Mot d'ouverture"}
-                                            duration={'8h30'}
+                                            institute={"Présentation des sujets"}
+                                            duration={'9h'}
                                         />
                                         <Timeline
                                             degree={'food-stand.png'}
-                                            institute={'Présentation des entreprises'}
-                                            duration={'10h'}
+                                            institute={'Développement des solutions'}
+                                            duration={'9h30'}
+                                        />
+                                         <Timeline
+                                            long={false}
+                                        />
+                                        <Timeline
+                                            degree={'food-stand.png'}
+                                            institute={'Fin du développement'}
+                                            duration={'19h30'}
+                                        />
+                                       
+                                        <Timeline
+                                            degree={'workshop.png'}
+                                            institute={'Pitch'}
+                                            duration={'20h'}
                                         />
                                         <Timeline
                                             degree={'workshop.png'}
-                                            institute={'Table Ronde'}
-                                            duration={'13h'}
+                                            institute={'Fin du pitch'}
+                                            duration={'20h30'}
                                         />
-                                        <Timeline
+                                         <Timeline
                                             degree={'workshop.png'}
-                                            institute={'Mot de clôture'}
-                                            duration={'17h'}
+                                            institute={'Déliberation'}
+                                            duration={'20h45'}
                                         />
 
                                     </TimelineWrap>
 
 
                                 </Reveal>
-                            </Col> */}
+                            </Col> 
 
-                            {/* <Col xs='8' sm="4" xl="8" lg="4">
-                                <Reveal right>
-                                    <TimelineWrap icon={'amphitheatre.png'} style={{ display: window.screen.width < 440 ? "none" : "" }} title={'Auditorium'}>
-
-                                        <Timeline
-                                            degree={'educationItem.degree'}
-                                            institute={'Première session'}
-                                            duration={'10h'}
-                                        />
-                                        <Timeline
-                                            degree={'educationItem.degree'}
-                                            institute={'Deuxième session'}
-                                            duration={'14h'}
-                                        />
-
-
-                                    </TimelineWrap>
-                                </Reveal>
-                            </Col> */}
-
+                        
                         </div>
                     </div>
                 </div>

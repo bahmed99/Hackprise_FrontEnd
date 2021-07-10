@@ -1,20 +1,25 @@
 import React from 'react';
 
-const Timeline = ({degree,duration,institute,comment}) => {
+const Timeline = (props) => {
+    
     return (
         <div className="cd-timeline-block">
-            <div className="cd-timeline-img">
+           {props.long? <div className="cd-timeline-img">
                 <span className="dot"/>
-            </div>
+            </div>:""}
 
             <div className="cd-timeline-content">
                 <div className="cd-heading">
-                    <p>{duration} | <span>{institute}</span></p>
+                    <p>{props.duration} | <span>{props.institute}</span></p>
                 </div>
-                <h5 className="cd-description">{comment}</h5>
+                <h5 className="cd-description">{props.comment}</h5>
             </div>
         </div>
     );
 };
+Timeline.defaultProps={
+    long:true
+}
+
 
 export default Timeline;
